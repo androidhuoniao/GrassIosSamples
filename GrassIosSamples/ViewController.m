@@ -7,7 +7,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController () <UITableViewDataSource>
+@interface ViewController () <UITableViewDataSource,UITableViewDelegate>
 
 @property(nonnull,nonatomic,strong) UITableView *myTableView;
 
@@ -30,6 +30,7 @@
         _myTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _myTableView.backgroundColor = UIColor.blueColor;
         _myTableView.dataSource = self;
+        _myTableView.delegate = self;
         NSLog(@"myTabView create is working");
     }
     return _myTableView;
@@ -52,5 +53,9 @@
     return 10;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UIAlertController *alert  = [UIAlertController alertControllerWithTitle:@"提示" message:@"message" preferredStyle:UIAlertControllerStyleAlert];
+    [self presentViewController:alert animated:YES completion:nil];
+}
 
 @end
