@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"viewDidLoad is working");
+    NSLog(@"SampleListViewController.viewDidLoad is working");
     // Do any additional setup after loading the view.
 //    [self.view addSubview:[self myTableView]];
     [self.view addSubview:self.myTableView];
@@ -50,17 +50,19 @@
 //        NSString * text = [NSString stringWithFormat:@"%li",_sampleList];
         
         cell.textLabel.text = [_sampleList objectAtIndex:indexPath.row];
-        NSLog(@"UITableViewCell create is working %@",[_sampleList objectAtIndex:indexPath.row]);
+        NSLog(@"UITableViewCell create is working %@",[self.sampleList objectAtIndex:indexPath.row]);
     }
     return cell;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSLog(@"count is %li",self.sampleList.count);
     return _sampleList.count;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UIAlertController *alert  = [UIAlertController alertControllerWithTitle:@"提示" message:@"message" preferredStyle:UIAlertControllerStyleAlert];
-    [self presentViewController:alert animated:YES completion:nil];
+    [self.navigationController pushViewController:alert animated:false];
+//    [self presentViewController:alert animated:YES completion:nil];
 }
 @end
