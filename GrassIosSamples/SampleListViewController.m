@@ -6,6 +6,7 @@
 //
 
 #import "SampleListViewController.h"
+#import "ButtonViewController.h"
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
 @property(nonnull,nonatomic,strong) UITableView *myTableView;
@@ -61,8 +62,12 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIAlertController *alert  = [UIAlertController alertControllerWithTitle:@"提示" message:@"message" preferredStyle:UIAlertControllerStyleAlert];
-    [self.navigationController pushViewController:alert animated:false];
+//    UIAlertController *alert  = [UIAlertController alertControllerWithTitle:@"提示" message:@"message" preferredStyle:UIAlertControllerStyleAlert];
+    ButtonViewController *uiButtonVC = [ButtonViewController new];
+    
+    [self.navigationController pushViewController:uiButtonVC animated:false];
 //    [self presentViewController:alert animated:YES completion:nil];
+    
+    
 }
 @end
