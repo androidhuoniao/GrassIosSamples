@@ -7,10 +7,11 @@
 
 #import "SampleListViewController.h"
 #import "ButtonViewController.h"
+#import "SampleInfo.h"
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
 @property(nonnull,nonatomic,strong) UITableView *myTableView;
-@property(nonatomic,strong) NSArray *sampleList;
+@property(nonatomic,strong) NSArray<SampleInfo *> *sampleList;
 @end
 
 @implementation SampleListViewController
@@ -25,7 +26,13 @@
 }
 - (NSArray *)sampleList{
     if(_sampleList == nil){
-        _sampleList = @[@"UILable",@"UIImageView",@"UIButton",@"UITableView"];
+//        _sampleList = @[@"UILable",@"UIImageView",@"UIButton",@"UITableView"];
+        _sampleList = @[
+            [SampleInfo makeInfoWithName:@"UILable" andDes:@"" andVC:[ButtonViewController new]],
+            [SampleInfo makeInfoWithName:@"UIImageView" andDes:@"" andVC:[ButtonViewController new]],
+            [SampleInfo makeInfoWithName:@"UIButton" andDes:@"" andVC:[ButtonViewController new]],
+            [SampleInfo makeInfoWithName:@"UITableView" andDes:@"" andVC:[ButtonViewController new]]
+        ];
     }
     return _sampleList;
 }
@@ -50,7 +57,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
 //        NSString * text = [NSString stringWithFormat:@"%li",_sampleList];
         
-        cell.textLabel.text = [_sampleList objectAtIndex:indexPath.row];
+        cell.textLabel.text = [_sampleList objectAtIndex:indexPath.row].name;
         NSLog(@"UITableViewCell create is working %@",[self.sampleList objectAtIndex:indexPath.row]);
     }
     return cell;
@@ -62,12 +69,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    UIAlertController *alert  = [UIAlertController alertControllerWithTitle:@"提示" message:@"message" preferredStyle:UIAlertControllerStyleAlert];
-    ButtonViewController *uiButtonVC = [ButtonViewController new];
-    
-    [self.navigationController pushViewController:uiButtonVC animated:false];
-//    [self presentViewController:alert animated:YES completion:nil];
-    
-    
+    UIViewController *vc = [_sampleList objectAtIndex:indexPath.row].controller;
+    [self.navigationController pushViewController:vc animated:false];
 }
 @end
