@@ -9,6 +9,7 @@
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
 @property(nonnull,nonatomic,strong) UITableView *myTableView;
+@property(nonatomic,strong) NSArray *sampleList;
 @end
 
 @implementation SampleListViewController
@@ -20,6 +21,12 @@
     // Do any additional setup after loading the view.
 //    [self.view addSubview:[self myTableView]];
     [self.view addSubview:self.myTableView];
+}
+- (NSArray *)sampleList{
+    if(_sampleList == nil){
+        _sampleList = @[@"UILable",@"UIImageView",@"UIButton",@"UITableView"];
+    }
+    return _sampleList;
 }
 
 - (UITableView *)myTableView {
@@ -40,15 +47,16 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellid];
     if(cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
-        NSString * text = [NSString stringWithFormat:@"%li",(long)indexPath.row];
-        cell.textLabel.text = text;
-        NSLog(@"UITableViewCell create is working %@",text);
+//        NSString * text = [NSString stringWithFormat:@"%li",_sampleList];
+        
+        cell.textLabel.text = [_sampleList objectAtIndex:indexPath.row];
+        NSLog(@"UITableViewCell create is working %@",[_sampleList objectAtIndex:indexPath.row]);
     }
     return cell;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return _sampleList.count;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

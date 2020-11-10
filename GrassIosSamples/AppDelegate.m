@@ -6,7 +6,6 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
 #import "MainNavViewController.h"
 #import "SampleListViewController.h"
 

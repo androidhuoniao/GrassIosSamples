@@ -18,6 +18,7 @@
 		0C5A9678255A3C1700C653AF /* GrassIosSamplesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A9677255A3C1700C653AF /* GrassIosSamplesUITests.m */; };
 		0C5A968D255A785B00C653AF /* MainNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A968C255A785B00C653AF /* MainNavViewController.m */; };
 		0C5A9693255A78CF00C653AF /* SampleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A9692255A78CF00C653AF /* SampleListViewController.m */; };
+		0C5A9699255A7C7100C653AF /* SampleListStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A9698255A7C7100C653AF /* SampleListStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		0C5A968C255A785B00C653AF /* MainNavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainNavViewController.m; sourceTree = "<group>"; };
 		0C5A9691255A78CF00C653AF /* SampleListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleListViewController.h; sourceTree = "<group>"; };
 		0C5A9692255A78CF00C653AF /* SampleListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleListViewController.m; sourceTree = "<group>"; };
+		0C5A9697255A7C7100C653AF /* SampleListStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleListStore.h; sourceTree = "<group>"; };
+		0C5A9698255A7C7100C653AF /* SampleListStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleListStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				0C5A968C255A785B00C653AF /* MainNavViewController.m */,
 				0C5A9691255A78CF00C653AF /* SampleListViewController.h */,
 				0C5A9692255A78CF00C653AF /* SampleListViewController.m */,
+				0C5A9697255A7C7100C653AF /* SampleListStore.h */,
+				0C5A9698255A7C7100C653AF /* SampleListStore.m */,
 			);
 			path = GrassIosSamples;
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 				0C5A9663255A3C1600C653AF /* main.m in Sources */,
 				0C5A9655255A3C1600C653AF /* SceneDelegate.m in Sources */,
 				0C5A968D255A785B00C653AF /* MainNavViewController.m in Sources */,
+				0C5A9699255A7C7100C653AF /* SampleListStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
