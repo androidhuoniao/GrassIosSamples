@@ -6,6 +6,9 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "MainNavViewController.h"
+#import "SampleListViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +19,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    SampleListViewController *navRootVC = [SampleListViewController new];
+    navRootVC.title = @"示例列表";
+    MainNavViewController *mainNavVC = [[MainNavViewController alloc] initWithRootViewController:navRootVC];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = mainNavVC;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
