@@ -8,7 +8,6 @@
 #import "AppDelegate.h"
 #import "MainNavViewController.h"
 #import "SampleListViewController.h"
-#import "ViewController.h"
 
 @interface AppDelegate ()
 
