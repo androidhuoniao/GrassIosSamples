@@ -6,10 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SampleViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ImageUIViewController : UIViewController
+@interface ImageUIViewController : SampleViewController
 
 @end
 

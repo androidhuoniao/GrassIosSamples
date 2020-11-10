@@ -7,6 +7,7 @@
 
 #import "SampleListViewController.h"
 #import "ButtonViewController.h"
+#import "ImageUIViewController.h"
 #import "SampleInfo.h"
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
@@ -28,8 +29,8 @@
     if(_sampleList == nil){
 //        _sampleList = @[@"UILable",@"UIImageView",@"UIButton",@"UITableView"];
         _sampleList = @[
-            [SampleInfo makeInfoWithName:@"UILable" andDes:@"" andVC:[ButtonViewController new]],
-            [SampleInfo makeInfoWithName:@"UIImageView" andDes:@"" andVC:[ButtonViewController new]],
+            [SampleInfo makeInfoWithName:@"UILable" andDes:@"" andVC:[ButtonViewController new] ],
+            [SampleInfo makeInfoWithName:@"UIImageView" andDes:@"" andVC:[[ImageUIViewController alloc] initWithTitle:@"UIImageViewDemo"]],
             [SampleInfo makeInfoWithName:@"UIButton" andDes:@"" andVC:[ButtonViewController new]],
             [SampleInfo makeInfoWithName:@"UITableView" andDes:@"" andVC:[ButtonViewController new]]
         ];
