@@ -21,6 +21,8 @@
 		0C5A96BA255AA27D00C653AF /* BaseSampleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A96B9255AA27D00C653AF /* BaseSampleInfo.m */; };
 		0C5A96CA255AA45800C653AF /* SampleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A96C9255AA45800C653AF /* SampleInfo.m */; };
 		0C5A96D7255AB42A00C653AF /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A96D6255AB42A00C653AF /* SampleViewController.m */; };
+		A4928F5B255BED6E00D82EF3 /* CustomViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928F5A255BED6E00D82EF3 /* CustomViewViewController.m */; };
+		A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928F62255BEE2500D82EF3 /* CustomView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,10 @@
 		0C5A96C9255AA45800C653AF /* SampleInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleInfo.m; sourceTree = "<group>"; };
 		0C5A96D5255AB42A00C653AF /* SampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleViewController.h; sourceTree = "<group>"; };
 		0C5A96D6255AB42A00C653AF /* SampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleViewController.m; sourceTree = "<group>"; };
+		A4928F59255BED6E00D82EF3 /* CustomViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewViewController.h; sourceTree = "<group>"; };
+		A4928F5A255BED6E00D82EF3 /* CustomViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewViewController.m; sourceTree = "<group>"; };
+		A4928F61255BEE2500D82EF3 /* CustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		A4928F62255BEE2500D82EF3 /* CustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,8 @@
 		0C5A964F255A3C1600C653AF /* GrassIosSamples */ = {
 			isa = PBXGroup;
 			children = (
+				A4928F60255BEDD300D82EF3 /* customview */,
+				A4928F5F255BEDC700D82EF3 /* view */,
 				0C5A96D4255AB3FF00C653AF /* vc */,
 				0C5A96BE255AA37400C653AF /* mdoel */,
 				0C5A9650255A3C1600C653AF /* AppDelegate.h */,
@@ -178,6 +186,24 @@
 				0C5A96D6255AB42A00C653AF /* SampleViewController.m */,
 			);
 			path = vc;
+			sourceTree = "<group>";
+		};
+		A4928F5F255BEDC700D82EF3 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A4928F60255BEDD300D82EF3 /* customview */ = {
+			isa = PBXGroup;
+			children = (
+				A4928F59255BED6E00D82EF3 /* CustomViewViewController.h */,
+				A4928F5A255BED6E00D82EF3 /* CustomViewViewController.m */,
+				A4928F61255BEE2500D82EF3 /* CustomView.h */,
+				A4928F62255BEE2500D82EF3 /* CustomView.m */,
+			);
+			path = customview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,7 +339,9 @@
 				0C5A96CA255AA45800C653AF /* SampleInfo.m in Sources */,
 				0C5A96AB255A876000C653AF /* ImageUIViewController.m in Sources */,
 				0C5A9652255A3C1600C653AF /* AppDelegate.m in Sources */,
+				A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */,
 				0C5A96B1255A878600C653AF /* ButtonViewController.m in Sources */,
+				A4928F5B255BED6E00D82EF3 /* CustomViewViewController.m in Sources */,
 				0C5A9663255A3C1600C653AF /* main.m in Sources */,
 				0C5A96BA255AA27D00C653AF /* BaseSampleInfo.m in Sources */,
 				0C5A9655255A3C1600C653AF /* SceneDelegate.m in Sources */,

@@ -19,6 +19,15 @@
 }
 
 - (UIImageView *)subView{
+    if(!_subView){
+        NSLog(@"if(!_subView)");
+    }
+    
+    if(_subView){
+        NSLog(@"if(_subView)");
+    }
+    NSLog(@"%s _subView %@",__func__,_subView);
+    
     if(_subView == nil){
         _subView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 100,100)];
         _subView.image = [UIImage imageNamed:@"test"];
