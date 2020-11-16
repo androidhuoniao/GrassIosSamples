@@ -10,6 +10,7 @@
 #import "ImageUIViewController.h"
 #import "SampleInfo.h"
 #import "CustomViewViewController.h"
+#import "GetIDFAViewController.h"
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
 @property(nonnull,nonatomic,strong) UITableView *myTableView;
@@ -34,7 +35,8 @@
             [SampleInfo makeInfoWithName:@"UIImageView" andDes:@"" andVC:[[ImageUIViewController alloc] initWithTitle:@"UIImageViewDemo"]],
             [SampleInfo makeInfoWithName:@"UIButton" andDes:@"" andVC:[ButtonViewController new]],
             [SampleInfo makeInfoWithName:@"UITableView" andDes:@"" andVC:[ButtonViewController new]],
-            [SampleInfo makeInfoWithName:@"自定义view" andDes:@"" andVC:[CustomViewViewController new]]
+            [SampleInfo makeInfoWithName:@"自定义view" andDes:@"" andVC:[CustomViewViewController new]],
+            [SampleInfo makeInfoWithName:@"获取idfa" andDes:@"" andVC:[GetIDFAViewController new]]
         ];
     }
     return _sampleList;

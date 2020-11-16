@@ -27,6 +27,7 @@
 		A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928F62255BEE2500D82EF3 /* CustomView.m */; };
 		A4928FA6255CDF6000D82EF3 /* QLReCord.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928FA5255CDF6000D82EF3 /* QLReCord.m */; };
 		A4928FB6255CE1C900D82EF3 /* QLRecordTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928FB5255CE1C900D82EF3 /* QLRecordTest.m */; };
+		A4DEF4D525627BE10076D5D1 /* GetIDFAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF4D425627BE10076D5D1 /* GetIDFAViewController.m */; };
 		E99621DBCA5E5CEA4E036EE7 /* Pods_GrassIosSamples_GrassIosSamplesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C2E44BCA1168D48213D753 /* Pods_GrassIosSamples_GrassIosSamplesUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,8 @@
 		A4928FA4255CDF6000D82EF3 /* QLReCord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QLReCord.h; sourceTree = "<group>"; };
 		A4928FA5255CDF6000D82EF3 /* QLReCord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLReCord.m; sourceTree = "<group>"; };
 		A4928FB5255CE1C900D82EF3 /* QLRecordTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLRecordTest.m; sourceTree = "<group>"; };
+		A4DEF4D325627BE10076D5D1 /* GetIDFAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetIDFAViewController.h; sourceTree = "<group>"; };
+		A4DEF4D425627BE10076D5D1 /* GetIDFAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetIDFAViewController.m; sourceTree = "<group>"; };
 		BCAE541ADF8C48398ADEB95D /* Pods-GrassIosSamples-GrassIosSamplesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamples-GrassIosSamplesUITests.release.xcconfig"; path = "Target Support Files/Pods-GrassIosSamples-GrassIosSamplesUITests/Pods-GrassIosSamples-GrassIosSamplesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C7F7ADF5F5EFC89F1D351307 /* Pods-GrassIosSamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamples.release.xcconfig"; path = "Target Support Files/Pods-GrassIosSamples/Pods-GrassIosSamples.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -209,6 +212,8 @@
 			children = (
 				0C5A96D5255AB42A00C653AF /* SampleViewController.h */,
 				0C5A96D6255AB42A00C653AF /* SampleViewController.m */,
+				A4DEF4D325627BE10076D5D1 /* GetIDFAViewController.h */,
+				A4DEF4D425627BE10076D5D1 /* GetIDFAViewController.m */,
 			);
 			path = vc;
 			sourceTree = "<group>";
@@ -499,6 +504,7 @@
 				A4928F5B255BED6E00D82EF3 /* CustomViewViewController.m in Sources */,
 				0C5A9663255A3C1600C653AF /* main.m in Sources */,
 				0C5A96BA255AA27D00C653AF /* BaseSampleInfo.m in Sources */,
+				A4DEF4D525627BE10076D5D1 /* GetIDFAViewController.m in Sources */,
 				0C5A9655255A3C1600C653AF /* SceneDelegate.m in Sources */,
 				0C5A968D255A785B00C653AF /* MainNavViewController.m in Sources */,
 			);
