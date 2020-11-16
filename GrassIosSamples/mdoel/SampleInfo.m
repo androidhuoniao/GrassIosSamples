@@ -16,10 +16,10 @@
     return info;
 }
 
-+ (instancetype)makeInfoWithName:(NSString *)name andVCBlock:(UIViewController * _Nonnull (^)(void))block{
++ (instancetype)makeInfoWithName:(NSString *)name andVCFactory:(VCFactory)factory{
     SampleInfo *info = [SampleInfo new];
     info.name = name;
-    info.vcGenerateBlock = block;
+    info.vcFactory = factory;
     return info;
 }
 

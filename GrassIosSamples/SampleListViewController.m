@@ -11,7 +11,6 @@
 #import "SampleInfo.h"
 #import "CustomViewViewController.h"
 #import "GetIDFAViewController.h"
-
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
 @property(nonnull,nonatomic,strong) UITableView *myTableView;
 @property(nonatomic,strong) NSArray<SampleInfo *> *sampleList;
@@ -34,10 +33,10 @@
             [SampleInfo makeInfoWithName:@"UIImageView" andDes:@"" andVC:[[ImageUIViewController alloc] initWithTitle:@"UIImageViewDemo"]],
             [SampleInfo makeInfoWithName:@"UIButton" andDes:@"" andVC:[ButtonViewController new]],
             [SampleInfo makeInfoWithName:@"UITableView" andDes:@"" andVC:[ButtonViewController new]],
-            [SampleInfo makeInfoWithName:@"自定义view" andVCBlock:^UIViewController * _Nonnull{
+            [SampleInfo makeInfoWithName:@"自定义view"andVCFactory:^UIViewController *{
                 return [CustomViewViewController new];
             }],
-            [SampleInfo makeInfoWithName:@"获取idfa" andVCBlock: ^(void){
+            [SampleInfo makeInfoWithName:@"获取idfa" andVCFactory:^UIViewController *{
                 return [GetIDFAViewController new];
             }]
         ];
@@ -79,12 +78,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UIViewController *vc = nil;
     SampleInfo *info = [_sampleList objectAtIndex:indexPath.row];
-    if(info.vcGenerateBlock){
-        vc =  info.vcGenerateBlock();
+    if(info.vcFactory){
+        vc =  info.vcFactory();
     }else {
         vc = [_sampleList objectAtIndex:indexPath.row].controller;
-    }
-  
+    }  
     [self.navigationController pushViewController:vc animated:false];
 }
 @end
