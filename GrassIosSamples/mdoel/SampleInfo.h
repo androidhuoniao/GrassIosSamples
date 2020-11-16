@@ -14,8 +14,7 @@ typedef UIViewController* (^VCFactory)(void);
 @interface SampleInfo : BaseSampleInfo
 @property(nonatomic,strong) VCFactory vcFactory;
 
-+ (instancetype) makeInfoWithName:(NSString * )name andDes:(NSString *)desc andVC:(UIViewController *)controller;
-+ (instancetype) makeInfoWithName:(NSString * )name andVCFactory:(VCFactory) factory;
++ (instancetype) initWithName:(NSString * )name andVCFactory:(VCFactory) factory;
 @end
 
 NS_ASSUME_NONNULL_END

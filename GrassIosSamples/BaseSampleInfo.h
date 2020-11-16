@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BaseSampleInfo : NSObject
 @property(nonnull,nonatomic,strong) NSString *name;
 @property(nonnull,nonatomic,strong) NSString *desc;
-@property(nonnull,nonatomic,strong) UIViewController *controller;
 -(UIViewController *) getSampleVC;
 @end
 

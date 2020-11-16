@@ -29,14 +29,22 @@
 - (NSArray *)sampleList{
     if(_sampleList == nil){
         _sampleList = @[
-            [SampleInfo makeInfoWithName:@"UILable" andDes:@"" andVC:[ButtonViewController new] ],
-            [SampleInfo makeInfoWithName:@"UIImageView" andDes:@"" andVC:[[ImageUIViewController alloc] initWithTitle:@"UIImageViewDemo"]],
-            [SampleInfo makeInfoWithName:@"UIButton" andDes:@"" andVC:[ButtonViewController new]],
-            [SampleInfo makeInfoWithName:@"UITableView" andDes:@"" andVC:[ButtonViewController new]],
-            [SampleInfo makeInfoWithName:@"自定义view"andVCFactory:^UIViewController *{
+            [SampleInfo initWithName:@"UILable" andVCFactory:^UIViewController *{
+                return [ButtonViewController new];
+            } ],
+            [SampleInfo initWithName:@"UIImageView" andVCFactory:^UIViewController *{
+                return [[ImageUIViewController alloc] initWithTitle:@"UIImageViewDemo"];
+            }],
+            [SampleInfo initWithName:@"UIButton" andVCFactory:^UIViewController *{
+                return [ButtonViewController new];
+            }],
+            [SampleInfo initWithName:@"UITableView" andVCFactory:^UIViewController *{
+                return [ButtonViewController new];
+            }],
+            [SampleInfo initWithName:@"自定义view"andVCFactory:^UIViewController *{
                 return [CustomViewViewController new];
             }],
-            [SampleInfo makeInfoWithName:@"获取idfa" andVCFactory:^UIViewController *{
+            [SampleInfo initWithName:@"获取idfa" andVCFactory:^UIViewController *{
                 return [GetIDFAViewController new];
             }]
         ];
@@ -76,13 +84,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *vc = nil;
+   
     SampleInfo *info = [_sampleList objectAtIndex:indexPath.row];
-    if(info.vcFactory){
-        vc =  info.vcFactory();
-    }else {
-        vc = [_sampleList objectAtIndex:indexPath.row].controller;
-    }  
+    UIViewController *vc = [info getSampleVC];
     [self.navigationController pushViewController:vc animated:false];
 }
 @end
