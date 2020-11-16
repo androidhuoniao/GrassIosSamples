@@ -34,8 +34,12 @@
             [SampleInfo makeInfoWithName:@"UIImageView" andDes:@"" andVC:[[ImageUIViewController alloc] initWithTitle:@"UIImageViewDemo"]],
             [SampleInfo makeInfoWithName:@"UIButton" andDes:@"" andVC:[ButtonViewController new]],
             [SampleInfo makeInfoWithName:@"UITableView" andDes:@"" andVC:[ButtonViewController new]],
-            [SampleInfo makeInfoWithName:@"自定义view" andDes:@"" andVC:[CustomViewViewController new]],
-            [SampleInfo makeInfoWithName:@"获取idfa" andDes:@"" andVC:[GetIDFAViewController new]]
+            [SampleInfo makeInfoWithName:@"自定义view" andVCBlock:^UIViewController * _Nonnull{
+                return [CustomViewViewController new];
+            }],
+            [SampleInfo makeInfoWithName:@"获取idfa" andVCBlock: ^(void){
+                return [GetIDFAViewController new];
+            }]
         ];
     }
     return _sampleList;
@@ -73,7 +77,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *vc = [_sampleList objectAtIndex:indexPath.row].controller;
+    UIViewController *vc = nil;
+    SampleInfo *info = [_sampleList objectAtIndex:indexPath.row];
+    if(info.vcGenerateBlock){
+        vc =  info.vcGenerateBlock();
+    }else {
+        vc = [_sampleList objectAtIndex:indexPath.row].controller;
+    }
+  
     [self.navigationController pushViewController:vc animated:false];
 }
 @end

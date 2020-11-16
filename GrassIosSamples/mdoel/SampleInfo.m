@@ -15,4 +15,12 @@
     info.controller = controller;
     return info;
 }
+
++ (instancetype)makeInfoWithName:(NSString *)name andVCBlock:(UIViewController * _Nonnull (^)(void))block{
+    SampleInfo *info = [SampleInfo new];
+    info.name = name;
+    info.vcGenerateBlock = block;
+    return info;
+}
+
 @end
