@@ -17,8 +17,15 @@
 
 @implementation GetIDFAViewController
 
+-(instancetype)init{
+    self = [super init];
+    NSLog(@"init is working %@",self);
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"viewDidLoad is working %@",self);
     UILabel *lable = [[UILabel alloc] init];
     
     lable.frame = CGRectMake(0, 0, self.view.frame.size.width, 300);
@@ -36,12 +43,23 @@
     [lable setText:lableText];
     [self getIdfa];
 }
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    NSLog(@"viewWillAppear is working %@",self);
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    NSLog(@"viewDidAppear is working %@",self);
+}
 
 - (NSString *)getIdfa{
     NSString __block *idfa = @"";
     if (@available(iOS 14, *)) {
         // iOS14及以上版本需要先请求权限
+        NSLog(@"%s is working after ios14",__func__);
         [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+            NSLog(@"ATTrackingManagerAuthorizationStatus:%li",status);
             // 获取到权限后，依然使用老方法获取idfa
             if (status == ATTrackingManagerAuthorizationStatusAuthorized) {
                 idfa = [[ASIdentifierManager sharedManager].advertisingIdentifier UUIDString];
@@ -72,6 +90,14 @@
 - (BOOL)isAdvertisingTrackingEnabled{
     BOOL isAdvertising = [[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled];
     return isAdvertising;
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    NSLog(@"viewDidDisappear is working");
+}
+- (void)dealloc{
+    NSLog(@"deallloc is working");
 }
 
 @end

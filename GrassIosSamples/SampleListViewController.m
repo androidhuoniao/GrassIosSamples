@@ -29,7 +29,6 @@
 }
 - (NSArray *)sampleList{
     if(_sampleList == nil){
-//        _sampleList = @[@"UILable",@"UIImageView",@"UIButton",@"UITableView"];
         _sampleList = @[
             [SampleInfo makeInfoWithName:@"UILable" andDes:@"" andVC:[ButtonViewController new] ],
             [SampleInfo makeInfoWithName:@"UIImageView" andDes:@"" andVC:[[ImageUIViewController alloc] initWithTitle:@"UIImageViewDemo"]],
