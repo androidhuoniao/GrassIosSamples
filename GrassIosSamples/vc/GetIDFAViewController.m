@@ -35,13 +35,12 @@
     [self.view addSubview:lable];
     NSString *lableText = [[NSString alloc] init];
     lableText = [lableText stringByAppendingFormat:@"\nisAdvertisingTrackingEnabled=%i",[self isAdvertisingTrackingEnabled]];
-    lableText = [lableText stringByAppendingFormat:@"\ngetIdfaBeforeIOS14=%@",[self getIdfaBeforeIOS14]];
+//    lableText = [lableText stringByAppendingFormat:@"\ngetIdfaBeforeIOS14=%@",[self getIdfaBeforeIOS14]];
     lableText = [lableText stringByAppendingFormat:@"\ntrackingAuthorizationStatus: %@",[self convertTrackingStatusToString:ATTrackingManager.trackingAuthorizationStatus]];
     lable.numberOfLines = 6;
     
     NSLog(@"lableText is %@",lableText);
     [lable setText:lableText];
-    [self getIdfa];
     
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 400, self.view.frame.size.width, 80)];
     button.backgroundColor = UIColor.orangeColor;
@@ -53,7 +52,7 @@
 
 -(void) onClickGetIDFAAction:(UIButton *) button{
     NSLog(@"onClickAction is working");
-    [self getIdfa];
+    [self getIdfaAfaterIOS14];
 }
 
 
@@ -71,9 +70,9 @@
     NSString __block *idfa = @"";
     if (@available(iOS 14, *)) {
         // iOS14及以上版本需要先请求权限
-        NSLog(@"%s is working after ios14",__func__);
+        NSLog(@"%s is working after ios14----1",__func__);
         [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
-            NSLog(@"ATTrackingManagerAuthorizationStatus:%li",status);
+            NSLog(@"ATTrackingManagerAuthorizationStatus:%@",[self convertTrackingStatusToString:status]);
             // 获取到权限后，依然使用老方法获取idfa
             if (status == ATTrackingManagerAuthorizationStatusAuthorized) {
                 idfa = [[ASIdentifierManager sharedManager].advertisingIdentifier UUIDString];
@@ -82,6 +81,7 @@
                 NSLog(@"请在设置-隐私-跟踪中允许App请求跟踪");
             }
         }];
+        NSLog(@"%s is working after ios14----2",__func__);
     } else {
         // iOS14以下版本依然使用老方法
         // 判断在设置-隐私里用户是否打开了广告跟踪
@@ -92,11 +92,13 @@
             NSLog(@"请在设置-隐私-广告中打开广告跟踪功能");
         }
     }
+    NSLog(@"%s is working after ios14----3",__func__);
     return idfa;
 }
 
 - (NSString *)getIdfaAfaterIOS14{
     NSString __block *idfa = @"";
+    NSLog(@"currentStatus: %@",[self convertTrackingStatusToString:[ATTrackingManager trackingAuthorizationStatus]]);
     [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
             switch (status) {
                 case ATTrackingManagerAuthorizationStatusDenied:
@@ -143,6 +145,7 @@
     NSLog(@"%@",idfa);
     return idfa;
 }
+
 - (BOOL)isAdvertisingTrackingEnabled{
     BOOL isAdvertising = [[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled];
     return isAdvertising;

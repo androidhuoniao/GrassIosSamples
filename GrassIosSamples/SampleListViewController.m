@@ -69,11 +69,8 @@
     static NSString *cellid = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellid];
     if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
-//        NSString * text = [NSString stringWithFormat:@"%li",_sampleList];
-        
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];        
         cell.textLabel.text = [_sampleList objectAtIndex:indexPath.row].name;
-        NSLog(@"UITableViewCell create is working %@",[self.sampleList objectAtIndex:indexPath.row]);
     }
     return cell;
 }
