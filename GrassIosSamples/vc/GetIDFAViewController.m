@@ -34,15 +34,29 @@
     lable.textAlignment = NSTextAlignmentLeft;
     [self.view addSubview:lable];
     NSString *lableText = [[NSString alloc] init];
-//    lableText = [lableText stringByAppendingString:@"begin-------"];
     lableText = [lableText stringByAppendingFormat:@"\nisAdvertisingTrackingEnabled=%i",[self isAdvertisingTrackingEnabled]];
     lableText = [lableText stringByAppendingFormat:@"\ngetIdfaBeforeIOS14=%@",[self getIdfaBeforeIOS14]];
-    lable.numberOfLines = 4;
+    lableText = [lableText stringByAppendingFormat:@"\ntrackingAuthorizationStatus: %@",[self convertTrackingStatusToString:ATTrackingManager.trackingAuthorizationStatus]];
+    lable.numberOfLines = 6;
     
     NSLog(@"lableText is %@",lableText);
     [lable setText:lableText];
     [self getIdfa];
+    
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 400, self.view.frame.size.width, 80)];
+    button.backgroundColor = UIColor.orangeColor;
+    [button setTitle:@"getIDFA" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(onClickGetIDFAAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+    
 }
+
+-(void) onClickGetIDFAAction:(UIButton *) button{
+    NSLog(@"onClickAction is working");
+    [self getIdfa];
+}
+
+
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     NSLog(@"viewWillAppear is working %@",self);
@@ -79,6 +93,48 @@
         }
     }
     return idfa;
+}
+
+- (NSString *)getIdfaAfaterIOS14{
+    NSString __block *idfa = @"";
+    [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+            switch (status) {
+                case ATTrackingManagerAuthorizationStatusDenied:
+                    NSLog(@"用户拒绝");
+                    break;
+                case ATTrackingManagerAuthorizationStatusAuthorized:
+                    NSLog(@"用户允许");
+                    idfa = [ASIdentifierManager.sharedManager advertisingIdentifier].UUIDString;
+                    break;
+                case ATTrackingManagerAuthorizationStatusNotDetermined:
+                    NSLog(@"用户未做选择或未弹窗");
+                    break;
+                default:
+                    break;
+            }
+        }];
+    return idfa;
+}
+
+- (NSString *)convertTrackingStatusToString:(ATTrackingManagerAuthorizationStatus) status{
+    NSString *result;
+    switch (status) {
+        case ATTrackingManagerAuthorizationStatusDenied:
+            result= @"StatusDenied";
+            break;
+        case ATTrackingManagerAuthorizationStatusAuthorized:
+            result= @"StatusAuthorized";
+            break;
+        case ATTrackingManagerAuthorizationStatusNotDetermined:
+            result= @"StatusNotDetermined";
+            break;
+        case ATTrackingManagerAuthorizationStatusRestricted:
+            result= @"StatusRestricted";
+            break;
+        default:
+            break;
+    }
+    return result;
 }
 
 - (NSString *)getIdfaBeforeIOS14{

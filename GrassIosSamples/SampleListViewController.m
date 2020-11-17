@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"SampleListViewController.viewDidLoad is working");
+//    NSLog(@"SampleListViewController.viewDidLoad is working");
     // Do any additional setup after loading the view.
 //    [self.view addSubview:[self myTableView]];
     [self.view addSubview:self.myTableView];
@@ -53,7 +53,7 @@
 }
 
 - (UITableView *)myTableView {
-    NSLog(@"myTabView create is working1: %@",_myTableView);
+//    NSLog(@"myTabView create is working1: %@",_myTableView);
     if (_myTableView == nil) {
         _myTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _myTableView.backgroundColor = UIColor.blueColor;
@@ -79,14 +79,15 @@
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"count is %li",self.sampleList.count);
-    return _sampleList.count;
+//    NSLog(@"count is %li",self.sampleList.count);
+    return self.sampleList.count;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
    
     SampleInfo *info = [_sampleList objectAtIndex:indexPath.row];
     UIViewController *vc = [info getSampleVC];
+
     [self.navigationController pushViewController:vc animated:false];
 }
 @end
