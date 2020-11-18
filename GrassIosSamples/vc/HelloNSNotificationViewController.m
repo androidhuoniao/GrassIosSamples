@@ -1,25 +1,22 @@
 //
-//  NSUserDefaultsViewController.m
+//  HelloNSNotificationViewController.m
 //  GrassIosSamples
-//  用来添加NSUserDefaults的各种用例
+//
 //  Created by grassswwang(王圣伟) on 2020/11/18.
 //
 
-#import "NSUserDefaultsViewController.h"
+#import "HelloNSNotificationViewController.h"
 
-@interface NSUserDefaultsViewController ()
+@interface HelloNSNotificationViewController ()
 
 @end
 
-@implementation NSUserDefaultsViewController
+@implementation HelloNSNotificationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    // Do any additional setup after loading the view.
 }
-
-
-
 
 /*
 #pragma mark - Navigation

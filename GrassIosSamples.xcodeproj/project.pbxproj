@@ -30,6 +30,7 @@
 		A4DEF4D525627BE10076D5D1 /* GetIDFAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF4D425627BE10076D5D1 /* GetIDFAViewController.m */; };
 		A4DEF5E42565151E0076D5D1 /* NSUserDefaultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5E32565151D0076D5D1 /* NSUserDefaultsViewController.m */; };
 		A4DEF5EA2565154A0076D5D1 /* HelloJsonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5E92565154A0076D5D1 /* HelloJsonViewController.m */; };
+		A4DEF5F0256517A30076D5D1 /* HelloNSNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5EF256517A30076D5D1 /* HelloNSNotificationViewController.m */; };
 		E99621DBCA5E5CEA4E036EE7 /* Pods_GrassIosSamples_GrassIosSamplesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C2E44BCA1168D48213D753 /* Pods_GrassIosSamples_GrassIosSamplesUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,8 @@
 		A4DEF5E32565151D0076D5D1 /* NSUserDefaultsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsViewController.m; sourceTree = "<group>"; };
 		A4DEF5E82565154A0076D5D1 /* HelloJsonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloJsonViewController.h; sourceTree = "<group>"; };
 		A4DEF5E92565154A0076D5D1 /* HelloJsonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloJsonViewController.m; sourceTree = "<group>"; };
+		A4DEF5EE256517A30076D5D1 /* HelloNSNotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloNSNotificationViewController.h; sourceTree = "<group>"; };
+		A4DEF5EF256517A30076D5D1 /* HelloNSNotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloNSNotificationViewController.m; sourceTree = "<group>"; };
 		BCAE541ADF8C48398ADEB95D /* Pods-GrassIosSamples-GrassIosSamplesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamples-GrassIosSamplesUITests.release.xcconfig"; path = "Target Support Files/Pods-GrassIosSamples-GrassIosSamplesUITests/Pods-GrassIosSamples-GrassIosSamplesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C7F7ADF5F5EFC89F1D351307 /* Pods-GrassIosSamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamples.release.xcconfig"; path = "Target Support Files/Pods-GrassIosSamples/Pods-GrassIosSamples.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -224,6 +227,8 @@
 				A4DEF5E32565151D0076D5D1 /* NSUserDefaultsViewController.m */,
 				A4DEF5E82565154A0076D5D1 /* HelloJsonViewController.h */,
 				A4DEF5E92565154A0076D5D1 /* HelloJsonViewController.m */,
+				A4DEF5EE256517A30076D5D1 /* HelloNSNotificationViewController.h */,
+				A4DEF5EF256517A30076D5D1 /* HelloNSNotificationViewController.m */,
 			);
 			path = vc;
 			sourceTree = "<group>";
@@ -507,6 +512,7 @@
 				A4DEF5EA2565154A0076D5D1 /* HelloJsonViewController.m in Sources */,
 				0C5A9693255A78CF00C653AF /* SampleListViewController.m in Sources */,
 				0C5A96CA255AA45800C653AF /* SampleInfo.m in Sources */,
+				A4DEF5F0256517A30076D5D1 /* HelloNSNotificationViewController.m in Sources */,
 				0C5A96AB255A876000C653AF /* ImageUIViewController.m in Sources */,
 				0C5A9652255A3C1600C653AF /* AppDelegate.m in Sources */,
 				A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */,
