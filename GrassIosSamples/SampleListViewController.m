@@ -56,6 +56,9 @@
             }],
             [SampleInfo initWithName:@"NSJSONSerialization" andVCFactory:^UIViewController *{
                 return [[HelloJsonViewController alloc] initWithTitle:@"HelloJson"];
+            }],
+            [SampleInfo initWithName:@"NSNotification" andVCFactory:^UIViewController *{
+                return [[HelloJsonViewController alloc] initWithTitle:@"HelloNSNotification"];
             }]
         ];
     }
