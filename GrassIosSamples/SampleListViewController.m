@@ -11,6 +11,10 @@
 #import "SampleInfo.h"
 #import "CustomViewViewController.h"
 #import "GetIDFAViewController.h"
+#import "NSUserDefaultsViewController.h"
+#import "HelloJsonViewController.h"
+
+
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
 @property(nonnull,nonatomic,strong) UITableView *myTableView;
 @property(nonatomic,strong) NSArray<SampleInfo *> *sampleList;
@@ -46,6 +50,12 @@
             }],
             [SampleInfo initWithName:@"获取idfa" andVCFactory:^UIViewController *{
                 return [GetIDFAViewController new];
+            }],
+            [SampleInfo initWithName:@"NSUserDefaults" andVCFactory:^UIViewController *{
+                return [[NSUserDefaultsViewController alloc] initWithTitle:@"HelloNSUserDefaults"];
+            }],
+            [SampleInfo initWithName:@"NSJSONSerialization" andVCFactory:^UIViewController *{
+                return [[HelloJsonViewController alloc] initWithTitle:@"HelloJson"];
             }]
         ];
     }
@@ -69,7 +79,7 @@
     static NSString *cellid = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellid];
     if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];        
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
         cell.textLabel.text = [_sampleList objectAtIndex:indexPath.row].name;
     }
     return cell;

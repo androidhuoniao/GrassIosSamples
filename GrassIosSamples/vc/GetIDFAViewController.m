@@ -155,6 +155,7 @@
     [super viewDidDisappear:animated];
     NSLog(@"viewDidDisappear is working");
 }
+
 - (void)dealloc{
     NSLog(@"deallloc is working");
 }

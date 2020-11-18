@@ -28,6 +28,8 @@
 		A4928FA6255CDF6000D82EF3 /* QLReCord.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928FA5255CDF6000D82EF3 /* QLReCord.m */; };
 		A4928FB6255CE1C900D82EF3 /* QLRecordTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928FB5255CE1C900D82EF3 /* QLRecordTest.m */; };
 		A4DEF4D525627BE10076D5D1 /* GetIDFAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF4D425627BE10076D5D1 /* GetIDFAViewController.m */; };
+		A4DEF5E42565151E0076D5D1 /* NSUserDefaultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5E32565151D0076D5D1 /* NSUserDefaultsViewController.m */; };
+		A4DEF5EA2565154A0076D5D1 /* HelloJsonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5E92565154A0076D5D1 /* HelloJsonViewController.m */; };
 		E99621DBCA5E5CEA4E036EE7 /* Pods_GrassIosSamples_GrassIosSamplesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C2E44BCA1168D48213D753 /* Pods_GrassIosSamples_GrassIosSamplesUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +96,10 @@
 		A4928FB5255CE1C900D82EF3 /* QLRecordTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLRecordTest.m; sourceTree = "<group>"; };
 		A4DEF4D325627BE10076D5D1 /* GetIDFAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetIDFAViewController.h; sourceTree = "<group>"; };
 		A4DEF4D425627BE10076D5D1 /* GetIDFAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetIDFAViewController.m; sourceTree = "<group>"; };
+		A4DEF5E22565151D0076D5D1 /* NSUserDefaultsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSUserDefaultsViewController.h; sourceTree = "<group>"; };
+		A4DEF5E32565151D0076D5D1 /* NSUserDefaultsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsViewController.m; sourceTree = "<group>"; };
+		A4DEF5E82565154A0076D5D1 /* HelloJsonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloJsonViewController.h; sourceTree = "<group>"; };
+		A4DEF5E92565154A0076D5D1 /* HelloJsonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloJsonViewController.m; sourceTree = "<group>"; };
 		BCAE541ADF8C48398ADEB95D /* Pods-GrassIosSamples-GrassIosSamplesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamples-GrassIosSamplesUITests.release.xcconfig"; path = "Target Support Files/Pods-GrassIosSamples-GrassIosSamplesUITests/Pods-GrassIosSamples-GrassIosSamplesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C7F7ADF5F5EFC89F1D351307 /* Pods-GrassIosSamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamples.release.xcconfig"; path = "Target Support Files/Pods-GrassIosSamples/Pods-GrassIosSamples.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,6 +220,10 @@
 				0C5A96D6255AB42A00C653AF /* SampleViewController.m */,
 				A4DEF4D325627BE10076D5D1 /* GetIDFAViewController.h */,
 				A4DEF4D425627BE10076D5D1 /* GetIDFAViewController.m */,
+				A4DEF5E22565151D0076D5D1 /* NSUserDefaultsViewController.h */,
+				A4DEF5E32565151D0076D5D1 /* NSUserDefaultsViewController.m */,
+				A4DEF5E82565154A0076D5D1 /* HelloJsonViewController.h */,
+				A4DEF5E92565154A0076D5D1 /* HelloJsonViewController.m */,
 			);
 			path = vc;
 			sourceTree = "<group>";
@@ -494,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C5A96D7255AB42A00C653AF /* SampleViewController.m in Sources */,
+				A4DEF5EA2565154A0076D5D1 /* HelloJsonViewController.m in Sources */,
 				0C5A9693255A78CF00C653AF /* SampleListViewController.m in Sources */,
 				0C5A96CA255AA45800C653AF /* SampleInfo.m in Sources */,
 				0C5A96AB255A876000C653AF /* ImageUIViewController.m in Sources */,
@@ -507,6 +518,7 @@
 				A4DEF4D525627BE10076D5D1 /* GetIDFAViewController.m in Sources */,
 				0C5A9655255A3C1600C653AF /* SceneDelegate.m in Sources */,
 				0C5A968D255A785B00C653AF /* MainNavViewController.m in Sources */,
+				A4DEF5E42565151E0076D5D1 /* NSUserDefaultsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
