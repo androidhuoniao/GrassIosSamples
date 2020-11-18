@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SampleViewController : UIViewController
 @property(nonatomic) NSString *topTitle;
 -(instancetype) initWithTitle:(NSString *) title;
+- (CGFloat) getBottomY:(UIView *) view;
+
 @end
 
 NS_ASSUME_NONNULL_END

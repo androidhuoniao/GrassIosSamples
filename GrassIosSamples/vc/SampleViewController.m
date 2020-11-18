@@ -23,4 +23,9 @@
     self.title = self.topTitle;
 }
 
+- (CGFloat) getBottomY:(UIView *) view{
+    CGFloat bottomY = view.frame.origin.y + view.frame.size.height;
+    return bottomY;
+}
+
 @end
