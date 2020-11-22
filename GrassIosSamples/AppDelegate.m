@@ -29,6 +29,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = mainNavVC;
     [self.window makeKeyAndVisible];
+   
+    #if DEBUG
+    NSLog(@"debug is working");
+    # else
+    NSLog(@"release is working");
+    #endif
+    
     return YES;
 }
 - (void)applicationDidBecomeActive:(UIApplication *)application{
