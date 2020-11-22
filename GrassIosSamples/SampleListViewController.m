@@ -13,6 +13,7 @@
 #import "GetIDFAViewController.h"
 #import "NSUserDefaultsViewController.h"
 #import "HelloJsonViewController.h"
+#import "MockTVViewController.h"
 
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
@@ -59,6 +60,9 @@
             }],
             [SampleInfo initWithName:@"NSNotification" andVCFactory:^UIViewController *{
                 return [[HelloJsonViewController alloc] initWithTitle:@"HelloNSNotification"];
+            }],
+            [SampleInfo initWithName:@"MockTV" andVCFactory:^UIViewController *{
+                return [[MockTVViewController alloc] initWithTitle:@"MockTV"];
             }]
         ];
     }
