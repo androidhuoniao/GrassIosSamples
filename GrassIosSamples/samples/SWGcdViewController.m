@@ -16,8 +16,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    [self logThread];
-    [self execSync];
+//    [self execSync];
 //    [self execAsync];
+    [self subThread2MainThread];
+    [self tryDispatchAfater];
     
 }
 
@@ -194,6 +196,25 @@
         NSLog(@"%@ task3 %@",methodName,NSThread.currentThread);
     });
     
+}
+
+/**
+ 从子线程切换到主线程
+ */
+-(void) subThread2MainThread{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSLog(@"subThread2MainThread %@",NSThread.currentThread);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"subThread2MainThread.dispatch_get_main_queue: %@",NSThread.currentThread);
+        });
+    });
+}
+
+-(void) tryDispatchAfater{
+    NSLog(@"tryDispatchAfater is working");
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2.0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        NSLog(@"tryDispatchAfater thread:%@",NSThread.currentThread);
+    });
 }
 
 @end
