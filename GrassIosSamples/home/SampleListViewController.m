@@ -14,6 +14,8 @@
 #import "NSUserDefaultsViewController.h"
 #import "HelloJsonViewController.h"
 #import "MockTVViewController.h"
+#import "SWGcdViewController.h"
+#import "SWAlertViewController.h"
 
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
@@ -63,6 +65,12 @@
             }],
             [SampleInfo initWithName:@"MockTV" andVCFactory:^UIViewController *{
                 return [[MockTVViewController alloc] initWithTitle:@"MockTV"];
+            }],
+            [SampleInfo initWithName:@"GCD" andVCFactory:^UIViewController *{
+                return [[SWGcdViewController alloc] initWithTitle:@"CCD"];
+            }],
+            [SampleInfo initWithName:@"Alert" andVCFactory:^UIViewController *{
+                return [[SWAlertViewController alloc] initWithTitle:@"Alert"];
             }]
         ];
     }
