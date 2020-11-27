@@ -31,6 +31,9 @@
 		A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928F62255BEE2500D82EF3 /* CustomView.m */; };
 		A4928FA6255CDF6000D82EF3 /* QLReCord.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928FA5255CDF6000D82EF3 /* QLReCord.m */; };
 		A4928FB6255CE1C900D82EF3 /* QLRecordTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928FB5255CE1C900D82EF3 /* QLRecordTest.m */; };
+		A4D4F217256BE0F30037E1F4 /* QADAdConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D4F216256BE0F30037E1F4 /* QADAdConfigManager.m */; };
+		A4D4F21E256BE1B00037E1F4 /* QADIdfaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D4F21D256BE1B00037E1F4 /* QADIdfaManager.m */; };
+		A4D4F232256BE3050037E1F4 /* QADIdfaManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D4F231256BE3050037E1F4 /* QADIdfaManagerTest.m */; };
 		A4DEF4D525627BE10076D5D1 /* GetIDFAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF4D425627BE10076D5D1 /* GetIDFAViewController.m */; };
 		A4DEF5E42565151E0076D5D1 /* NSUserDefaultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5E32565151D0076D5D1 /* NSUserDefaultsViewController.m */; };
 		A4DEF5EA2565154A0076D5D1 /* HelloJsonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5E92565154A0076D5D1 /* HelloJsonViewController.m */; };
@@ -107,6 +110,11 @@
 		A4928FA4255CDF6000D82EF3 /* QLReCord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QLReCord.h; sourceTree = "<group>"; };
 		A4928FA5255CDF6000D82EF3 /* QLReCord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLReCord.m; sourceTree = "<group>"; };
 		A4928FB5255CE1C900D82EF3 /* QLRecordTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLRecordTest.m; sourceTree = "<group>"; };
+		A4D4F215256BE0F30037E1F4 /* QADAdConfigManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QADAdConfigManager.h; sourceTree = "<group>"; };
+		A4D4F216256BE0F30037E1F4 /* QADAdConfigManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QADAdConfigManager.m; sourceTree = "<group>"; };
+		A4D4F21C256BE1B00037E1F4 /* QADIdfaManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QADIdfaManager.h; sourceTree = "<group>"; };
+		A4D4F21D256BE1B00037E1F4 /* QADIdfaManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QADIdfaManager.m; sourceTree = "<group>"; };
+		A4D4F231256BE3050037E1F4 /* QADIdfaManagerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QADIdfaManagerTest.m; sourceTree = "<group>"; };
 		A4DEF4D325627BE10076D5D1 /* GetIDFAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetIDFAViewController.h; sourceTree = "<group>"; };
 		A4DEF4D425627BE10076D5D1 /* GetIDFAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetIDFAViewController.m; sourceTree = "<group>"; };
 		A4DEF5E22565151D0076D5D1 /* NSUserDefaultsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSUserDefaultsViewController.h; sourceTree = "<group>"; };
@@ -172,6 +180,7 @@
 		0C5A964F255A3C1600C653AF /* GrassIosSamples */ = {
 			isa = PBXGroup;
 			children = (
+				A4D4F214256BE0640037E1F4 /* mockidfa */,
 				0C6F890F256A5928009D5594 /* mocktv */,
 				A4928FA3255CDF2800D82EF3 /* ut */,
 				A4928F60255BEDD300D82EF3 /* customview */,
@@ -205,6 +214,7 @@
 				0C5A966C255A3C1600C653AF /* GrassIosSamplesTests.m */,
 				0C5A966E255A3C1600C653AF /* Info.plist */,
 				A4928FB5255CE1C900D82EF3 /* QLRecordTest.m */,
+				A4D4F231256BE3050037E1F4 /* QADIdfaManagerTest.m */,
 			);
 			path = GrassIosSamplesTests;
 			sourceTree = "<group>";
@@ -277,6 +287,17 @@
 				A4928FA5255CDF6000D82EF3 /* QLReCord.m */,
 			);
 			path = ut;
+			sourceTree = "<group>";
+		};
+		A4D4F214256BE0640037E1F4 /* mockidfa */ = {
+			isa = PBXGroup;
+			children = (
+				A4D4F215256BE0F30037E1F4 /* QADAdConfigManager.h */,
+				A4D4F216256BE0F30037E1F4 /* QADAdConfigManager.m */,
+				A4D4F21C256BE1B00037E1F4 /* QADIdfaManager.h */,
+				A4D4F21D256BE1B00037E1F4 /* QADIdfaManager.m */,
+			);
+			path = mockidfa;
 			sourceTree = "<group>";
 		};
 		EAD514E11341420411E5947F /* Frameworks */ = {
@@ -527,6 +548,7 @@
 				A4DEF5F0256517A30076D5D1 /* HelloNSNotificationViewController.m in Sources */,
 				0C5A96AB255A876000C653AF /* ImageUIViewController.m in Sources */,
 				0C5A9652255A3C1600C653AF /* AppDelegate.m in Sources */,
+				A4D4F217256BE0F30037E1F4 /* QADAdConfigManager.m in Sources */,
 				A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */,
 				0C6F88FC256A5448009D5594 /* QLAppLaunchTaskList.m in Sources */,
 				0C6F890B256A573F009D5594 /* QLAppLaunchTaskList_Mainsync2.m in Sources */,
@@ -538,6 +560,7 @@
 				0C5A96BA255AA27D00C653AF /* BaseSampleInfo.m in Sources */,
 				A4DEF4D525627BE10076D5D1 /* GetIDFAViewController.m in Sources */,
 				0C5A9655255A3C1600C653AF /* SceneDelegate.m in Sources */,
+				A4D4F21E256BE1B00037E1F4 /* QADIdfaManager.m in Sources */,
 				0C6F8915256A59F8009D5594 /* MockTVViewController.m in Sources */,
 				0C5A968D255A785B00C653AF /* MainNavViewController.m in Sources */,
 				A4DEF5E42565151E0076D5D1 /* NSUserDefaultsViewController.m in Sources */,
@@ -549,6 +572,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C5A966D255A3C1600C653AF /* GrassIosSamplesTests.m in Sources */,
+				A4D4F232256BE3050037E1F4 /* QADIdfaManagerTest.m in Sources */,
 				A4928FB6255CE1C900D82EF3 /* QLRecordTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

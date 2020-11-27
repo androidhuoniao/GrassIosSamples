@@ -8,6 +8,7 @@
 #import "MockTVViewController.h"
 #import "QLAppLaunchTaskList_MainSync1.h"
 #import "QLAppLaunchTaskList_MainSync2.h"
+#import <AppTrackingTransparency/AppTrackingTransparency.h>
 
 @interface MockTVViewController ()
 @property(nonnull,nonatomic,strong) UIButton *getMainSync1Btn;
@@ -34,6 +35,10 @@
     [_getMainSync2Btn setTitle:@"MainSync2" forState:UIControlStateNormal];
     [_getMainSync2Btn addTarget:self action:@selector(onGetMainSync2BtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_getMainSync2Btn];
+    
+    
+    [ATTrackingManager setValue:ATTrackingManagerAuthorizationStatusNotDetermined forKey:@"trackingAuthorizationStatus"];
+    NSLog(@"trackingAuthorizationStatus:%i",ATTrackingManager.trackingAuthorizationStatus);
     
 }
 
