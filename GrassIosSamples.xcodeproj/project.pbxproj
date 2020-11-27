@@ -27,6 +27,8 @@
 		0C6F8915256A59F8009D5594 /* MockTVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6F8914256A59F8009D5594 /* MockTVViewController.m */; };
 		13C5F6EABCFE1B697A76C2B4 /* Pods_GrassIosSamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805926C4BFA83B1842DBC5CC /* Pods_GrassIosSamples.framework */; };
 		5CB386018485DAA39A905B31 /* Pods_GrassIosSamplesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8788A65E29FF1DBA8B7EE070 /* Pods_GrassIosSamplesTests.framework */; };
+		A42461B82570D86C00C643B7 /* SWHomeTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42461B72570D86C00C643B7 /* SWHomeTabBarController.m */; };
+		A42461BE2570D8C100C643B7 /* SWPureOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42461BD2570D8C100C643B7 /* SWPureOCViewController.m */; };
 		A4928F5B255BED6E00D82EF3 /* CustomViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928F5A255BED6E00D82EF3 /* CustomViewViewController.m */; };
 		A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928F62255BEE2500D82EF3 /* CustomView.m */; };
 		A4928FA6255CDF6000D82EF3 /* QLReCord.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928FA5255CDF6000D82EF3 /* QLReCord.m */; };
@@ -103,6 +105,10 @@
 		89010B796ACEDA1DA284A605 /* Pods-GrassIosSamplesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamplesTests.debug.xcconfig"; path = "Target Support Files/Pods-GrassIosSamplesTests/Pods-GrassIosSamplesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		97C2E44BCA1168D48213D753 /* Pods_GrassIosSamples_GrassIosSamplesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrassIosSamples_GrassIosSamplesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B21B986DD9DD4A8FC7F36D7 /* Pods-GrassIosSamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamples.debug.xcconfig"; path = "Target Support Files/Pods-GrassIosSamples/Pods-GrassIosSamples.debug.xcconfig"; sourceTree = "<group>"; };
+		A42461B62570D86C00C643B7 /* SWHomeTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWHomeTabBarController.h; sourceTree = "<group>"; };
+		A42461B72570D86C00C643B7 /* SWHomeTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWHomeTabBarController.m; sourceTree = "<group>"; };
+		A42461BC2570D8C100C643B7 /* SWPureOCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWPureOCViewController.h; sourceTree = "<group>"; };
+		A42461BD2570D8C100C643B7 /* SWPureOCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWPureOCViewController.m; sourceTree = "<group>"; };
 		A4928F59255BED6E00D82EF3 /* CustomViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewViewController.h; sourceTree = "<group>"; };
 		A4928F5A255BED6E00D82EF3 /* CustomViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewViewController.m; sourceTree = "<group>"; };
 		A4928F61255BEE2500D82EF3 /* CustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
@@ -180,6 +186,7 @@
 		0C5A964F255A3C1600C653AF /* GrassIosSamples */ = {
 			isa = PBXGroup;
 			children = (
+				A42461AC2570D7DA00C643B7 /* home */,
 				A4D4F214256BE0640037E1F4 /* mockidfa */,
 				0C6F890F256A5928009D5594 /* mocktv */,
 				A4928FA3255CDF2800D82EF3 /* ut */,
@@ -267,6 +274,17 @@
 				0C6F8914256A59F8009D5594 /* MockTVViewController.m */,
 			);
 			path = mocktv;
+			sourceTree = "<group>";
+		};
+		A42461AC2570D7DA00C643B7 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				A42461B62570D86C00C643B7 /* SWHomeTabBarController.h */,
+				A42461B72570D86C00C643B7 /* SWHomeTabBarController.m */,
+				A42461BC2570D8C100C643B7 /* SWPureOCViewController.h */,
+				A42461BD2570D8C100C643B7 /* SWPureOCViewController.m */,
+			);
+			path = home;
 			sourceTree = "<group>";
 		};
 		A4928F60255BEDD300D82EF3 /* customview */ = {
@@ -563,6 +581,8 @@
 				A4D4F21E256BE1B00037E1F4 /* QADIdfaManager.m in Sources */,
 				0C6F8915256A59F8009D5594 /* MockTVViewController.m in Sources */,
 				0C5A968D255A785B00C653AF /* MainNavViewController.m in Sources */,
+				A42461B82570D86C00C643B7 /* SWHomeTabBarController.m in Sources */,
+				A42461BE2570D8C100C643B7 /* SWPureOCViewController.m in Sources */,
 				A4DEF5E42565151E0076D5D1 /* NSUserDefaultsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
