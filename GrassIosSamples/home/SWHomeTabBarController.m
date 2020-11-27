@@ -10,6 +10,7 @@
 #import "SampleListViewController.h"
 #import <UIKit/UIKit.h>
 #import "SWNavigationController.h"
+#import "SWTVSampleListViewController.h"
 
 @interface SWHomeTabBarController ()
 
@@ -19,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.viewControllers = @[[self createIOSTabController],[self createOCTabController]];
+    self.viewControllers = @[[self createIOSTabController],[self createOCTabController],[self createTvTabController]];
     self.selectedIndex = 0;
 }
 
@@ -36,6 +37,14 @@
     controller.title = @"OC 示例";
     UINavigationController *navController = [[SWNavigationController alloc] initWithRootViewController:controller];
     navController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"OC" image:nil tag:0];
+    return navController;
+}
+
+-(UINavigationController *) createTvTabController{
+    SWTVSampleListViewController *controller = [[SWTVSampleListViewController alloc] init];
+    controller.title = @"视频示例";
+    UINavigationController *navController = [[SWNavigationController alloc] initWithRootViewController:controller];
+    navController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"视频" image:nil tag:0];
     return navController;
 }
 

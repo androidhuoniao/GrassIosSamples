@@ -30,6 +30,7 @@
 		A42461BE2570D8C100C643B7 /* SWPureOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42461BD2570D8C100C643B7 /* SWPureOCViewController.m */; };
 		A42462562570E34A00C643B7 /* SWBaseSampleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42462542570E34A00C643B7 /* SWBaseSampleListViewController.m */; };
 		A42462742570E42600C643B7 /* SWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42462732570E42600C643B7 /* SWNavigationController.m */; };
+		A424627A2570E99D00C643B7 /* SWTVSampleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42462792570E99D00C643B7 /* SWTVSampleListViewController.m */; };
 		A4928F5B255BED6E00D82EF3 /* CustomViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928F5A255BED6E00D82EF3 /* CustomViewViewController.m */; };
 		A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928F62255BEE2500D82EF3 /* CustomView.m */; };
 		A4928FA6255CDF6000D82EF3 /* QLReCord.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928FA5255CDF6000D82EF3 /* QLReCord.m */; };
@@ -112,6 +113,8 @@
 		A42462552570E34A00C643B7 /* SWBaseSampleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWBaseSampleListViewController.h; sourceTree = "<group>"; };
 		A42462722570E42600C643B7 /* SWNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWNavigationController.h; sourceTree = "<group>"; };
 		A42462732570E42600C643B7 /* SWNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWNavigationController.m; sourceTree = "<group>"; };
+		A42462782570E99D00C643B7 /* SWTVSampleListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTVSampleListViewController.h; sourceTree = "<group>"; };
+		A42462792570E99D00C643B7 /* SWTVSampleListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTVSampleListViewController.m; sourceTree = "<group>"; };
 		A4928F59255BED6E00D82EF3 /* CustomViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewViewController.h; sourceTree = "<group>"; };
 		A4928F5A255BED6E00D82EF3 /* CustomViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewViewController.m; sourceTree = "<group>"; };
 		A4928F61255BEE2500D82EF3 /* CustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
@@ -285,6 +288,8 @@
 				A42461B72570D86C00C643B7 /* SWHomeTabBarController.m */,
 				A42461BC2570D8C100C643B7 /* SWPureOCViewController.h */,
 				A42461BD2570D8C100C643B7 /* SWPureOCViewController.m */,
+				A42462782570E99D00C643B7 /* SWTVSampleListViewController.h */,
+				A42462792570E99D00C643B7 /* SWTVSampleListViewController.m */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -572,6 +577,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A424627A2570E99D00C643B7 /* SWTVSampleListViewController.m in Sources */,
 				0C5A96D7255AB42A00C653AF /* SampleViewController.m in Sources */,
 				A4DEF5EA2565154A0076D5D1 /* HelloJsonViewController.m in Sources */,
 				0C5A9693255A78CF00C653AF /* SampleListViewController.m in Sources */,
