@@ -5,13 +5,13 @@
 //  Created by grass on 2020/11/10.
 //
 
-#import "MainNavViewController.h"
+#import "SWNavigationController.h"
 
-@interface MainNavViewController ()
+@interface SWNavigationController ()
 
 @end
 
-@implementation MainNavViewController
+@implementation SWNavigationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

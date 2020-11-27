@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-#import "MainNavViewController.h"
+#import "SWNavigationController.h"
 #import "SampleListViewController.h"
 #import "SWHomeTabBarController.h"
 
@@ -24,12 +24,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     NSLog(@"%s is working",__func__);
-//    SampleListViewController *navRootVC = [SampleListViewController new];
     SWHomeTabBarController *navRootVC = [SWHomeTabBarController new];
     navRootVC.title = @"示例列表";
-    UINavigationController *mainNavVC = [[UINavigationController alloc] initWithRootViewController:navRootVC];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = mainNavVC;
+    self.window.rootViewController = navRootVC;
     [self.window makeKeyAndVisible];
    
     #if DEBUG

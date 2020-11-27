@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MainNavViewController : UINavigationController
+@interface SWNavigationController : UINavigationController
 
 @end
 

@@ -9,6 +9,7 @@
 #import "SWPureOCViewController.h"
 #import "SampleListViewController.h"
 #import <UIKit/UIKit.h>
+#import "SWNavigationController.h"
 
 @interface SWHomeTabBarController ()
 
@@ -25,7 +26,7 @@
 -(UINavigationController *) createIOSTabController{
     SampleListViewController *controller = [[SampleListViewController alloc] init];
     controller.title = @"IOS 示例";
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
+    UINavigationController *navController = [[SWNavigationController alloc] initWithRootViewController:controller];
     navController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"IOS" image:nil tag:0];
     return navController;
 }
@@ -33,7 +34,7 @@
 -(UINavigationController *) createOCTabController{
     SWPureOCViewController *controller = [[SWPureOCViewController alloc] init];
     controller.title = @"OC 示例";
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
+    UINavigationController *navController = [[SWNavigationController alloc] initWithRootViewController:controller];
     navController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"OC" image:nil tag:0];
     return navController;
 }
