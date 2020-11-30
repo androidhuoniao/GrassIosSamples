@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic) NSString *topTitle;
 -(instancetype) initWithTitle:(NSString *) title;
 - (CGFloat) getBottomY:(UIView *) view;
-
+- (UIButton *) makeButton:(NSString *) title andTop:(NSInteger) top;
 @end
 
 NS_ASSUME_NONNULL_END
