@@ -21,6 +21,8 @@
     _sysAlertBtn = [self makeButton:@"系统alert" andTop:100];
     [_sysAlertBtn addTarget:self action:@selector(showAlertController1) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_sysAlertBtn];
+    
+    
 //
 //    CGFloat width = self.view.bounds.size.width;
 //    _saveBtn = [[UIButton alloc]init];

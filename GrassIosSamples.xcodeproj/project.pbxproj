@@ -33,6 +33,7 @@
 		A424627A2570E99D00C643B7 /* SWTVSampleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42462792570E99D00C643B7 /* SWTVSampleListViewController.m */; };
 		A42462812570EC1100C643B7 /* SWGcdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42462802570EC1100C643B7 /* SWGcdViewController.m */; };
 		A424628D2570ED0E00C643B7 /* SWAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A424628C2570ED0E00C643B7 /* SWAlertViewController.m */; };
+		A469927C2579012C00B192BD /* SWSemaphoreDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A469927B2579012C00B192BD /* SWSemaphoreDemo.m */; };
 		A4928F5B255BED6E00D82EF3 /* CustomViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928F5A255BED6E00D82EF3 /* CustomViewViewController.m */; };
 		A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928F62255BEE2500D82EF3 /* CustomView.m */; };
 		A4928FA6255CDF6000D82EF3 /* QLReCord.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928FA5255CDF6000D82EF3 /* QLReCord.m */; };
@@ -121,6 +122,8 @@
 		A42462802570EC1100C643B7 /* SWGcdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWGcdViewController.m; sourceTree = "<group>"; };
 		A424628B2570ED0E00C643B7 /* SWAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWAlertViewController.h; sourceTree = "<group>"; };
 		A424628C2570ED0E00C643B7 /* SWAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWAlertViewController.m; sourceTree = "<group>"; };
+		A469927A2579012C00B192BD /* SWSemaphoreDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWSemaphoreDemo.h; sourceTree = "<group>"; };
+		A469927B2579012C00B192BD /* SWSemaphoreDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWSemaphoreDemo.m; sourceTree = "<group>"; };
 		A4928F59255BED6E00D82EF3 /* CustomViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewViewController.h; sourceTree = "<group>"; };
 		A4928F5A255BED6E00D82EF3 /* CustomViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewViewController.m; sourceTree = "<group>"; };
 		A4928F61255BEE2500D82EF3 /* CustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
@@ -198,6 +201,7 @@
 		0C5A964F255A3C1600C653AF /* GrassIosSamples */ = {
 			isa = PBXGroup;
 			children = (
+				A46992792579010500B192BD /* gcd */,
 				A424627E2570EAF400C643B7 /* samples */,
 				A42462532570E2EF00C643B7 /* base */,
 				A42461AC2570D7DA00C643B7 /* home */,
@@ -321,6 +325,15 @@
 				A424628C2570ED0E00C643B7 /* SWAlertViewController.m */,
 			);
 			path = samples;
+			sourceTree = "<group>";
+		};
+		A46992792579010500B192BD /* gcd */ = {
+			isa = PBXGroup;
+			children = (
+				A469927A2579012C00B192BD /* SWSemaphoreDemo.h */,
+				A469927B2579012C00B192BD /* SWSemaphoreDemo.m */,
+			);
+			path = gcd;
 			sourceTree = "<group>";
 		};
 		A4928F60255BEDD300D82EF3 /* customview */ = {
@@ -606,6 +619,7 @@
 				0C5A9652255A3C1600C653AF /* AppDelegate.m in Sources */,
 				A4D4F217256BE0F30037E1F4 /* QADAdConfigManager.m in Sources */,
 				A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */,
+				A469927C2579012C00B192BD /* SWSemaphoreDemo.m in Sources */,
 				0C6F88FC256A5448009D5594 /* QLAppLaunchTaskList.m in Sources */,
 				0C6F890B256A573F009D5594 /* QLAppLaunchTaskList_Mainsync2.m in Sources */,
 				0C6F8905256A5727009D5594 /* QLAppLaunchTaskList_MainSync1.m in Sources */,

@@ -6,6 +6,7 @@
 //
 
 #import "SWGcdViewController.h"
+#import "SWSemaphoreDemo.h"
 
 @interface SWGcdViewController ()
 
@@ -15,11 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self logThread];
-//    [self execSync];
-//    [self execAsync];
-    [self subThread2MainThread];
-    [self tryDispatchAfater];
+    [SWSemaphoreDemo start];
+////    [self logThread];
+////    [self execSync];
+////    [self execAsync];
+//    [self subThread2MainThread];
+//    [self tryDispatchAfater];
     
 }
 
