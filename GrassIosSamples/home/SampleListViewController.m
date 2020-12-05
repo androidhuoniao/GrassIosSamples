@@ -16,6 +16,7 @@
 #import "MockTVViewController.h"
 #import "SWGcdViewController.h"
 #import "SWAlertViewController.h"
+#import "SWCollectionViewController.h"
 
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
@@ -71,6 +72,9 @@
             }],
             [SampleInfo initWithName:@"Alert" andVCFactory:^UIViewController *{
                 return [[SWAlertViewController alloc] initWithTitle:@"Alert"];
+            }],
+            [SampleInfo initWithName:@"CollectionView" andVCFactory:^UIViewController *{
+                return [[SWCollectionViewController alloc] initWithTitle:@"CollectionView"];
             }]
         ];
     }

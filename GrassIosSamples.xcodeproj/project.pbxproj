@@ -24,7 +24,7 @@
 		0C6F8905256A5727009D5594 /* QLAppLaunchTaskList_MainSync1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6F8904256A5727009D5594 /* QLAppLaunchTaskList_MainSync1.m */; };
 		0C6F890B256A573F009D5594 /* QLAppLaunchTaskList_Mainsync2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6F890A256A573F009D5594 /* QLAppLaunchTaskList_Mainsync2.m */; };
 		0C6F8915256A59F8009D5594 /* MockTVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6F8914256A59F8009D5594 /* MockTVViewController.m */; };
-		13C5F6EABCFE1B697A76C2B4 /* Pods_GrassIosSamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805926C4BFA83B1842DBC5CC /* Pods_GrassIosSamples.framework */; };
+		0CEC0D82257B84DE0075AA5A /* SWCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC0D81257B84DE0075AA5A /* SWCollectionViewController.m */; };
 		5CB386018485DAA39A905B31 /* Pods_GrassIosSamplesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8788A65E29FF1DBA8B7EE070 /* Pods_GrassIosSamplesTests.framework */; };
 		A42461B82570D86C00C643B7 /* SWHomeTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42461B72570D86C00C643B7 /* SWHomeTabBarController.m */; };
 		A42461BE2570D8C100C643B7 /* SWPureOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42461BD2570D8C100C643B7 /* SWPureOCViewController.m */; };
@@ -102,6 +102,8 @@
 		0C6F890A256A573F009D5594 /* QLAppLaunchTaskList_Mainsync2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLAppLaunchTaskList_Mainsync2.m; sourceTree = "<group>"; };
 		0C6F8913256A59F8009D5594 /* MockTVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockTVViewController.h; sourceTree = "<group>"; };
 		0C6F8914256A59F8009D5594 /* MockTVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockTVViewController.m; sourceTree = "<group>"; };
+		0CEC0D80257B84DE0075AA5A /* SWCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWCollectionViewController.h; sourceTree = "<group>"; };
+		0CEC0D81257B84DE0075AA5A /* SWCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWCollectionViewController.m; sourceTree = "<group>"; };
 		28DE0D4B0A32C3C369385EBC /* Pods-GrassIosSamples-GrassIosSamplesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamples-GrassIosSamplesUITests.debug.xcconfig"; path = "Target Support Files/Pods-GrassIosSamples-GrassIosSamplesUITests/Pods-GrassIosSamples-GrassIosSamplesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		805926C4BFA83B1842DBC5CC /* Pods_GrassIosSamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrassIosSamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8788A65E29FF1DBA8B7EE070 /* Pods_GrassIosSamplesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrassIosSamplesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,7 +155,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13C5F6EABCFE1B697A76C2B4 /* Pods_GrassIosSamples.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +324,8 @@
 				A42462802570EC1100C643B7 /* SWGcdViewController.m */,
 				A424628B2570ED0E00C643B7 /* SWAlertViewController.h */,
 				A424628C2570ED0E00C643B7 /* SWAlertViewController.m */,
+				0CEC0D80257B84DE0075AA5A /* SWCollectionViewController.h */,
+				0CEC0D81257B84DE0075AA5A /* SWCollectionViewController.m */,
 			);
 			path = samples;
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 				A4DEF4D525627BE10076D5D1 /* GetIDFAViewController.m in Sources */,
 				0C5A9655255A3C1600C653AF /* SceneDelegate.m in Sources */,
 				A4D4F21E256BE1B00037E1F4 /* QADIdfaManager.m in Sources */,
+				0CEC0D82257B84DE0075AA5A /* SWCollectionViewController.m in Sources */,
 				A42462562570E34A00C643B7 /* SWBaseSampleListViewController.m in Sources */,
 				0C6F8915256A59F8009D5594 /* MockTVViewController.m in Sources */,
 				A42461B82570D86C00C643B7 /* SWHomeTabBarController.m in Sources */,
