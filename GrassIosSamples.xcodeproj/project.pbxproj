@@ -46,6 +46,7 @@
 		A4DEF5EA2565154A0076D5D1 /* HelloJsonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5E92565154A0076D5D1 /* HelloJsonViewController.m */; };
 		A4DEF5F0256517A30076D5D1 /* HelloNSNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5EF256517A30076D5D1 /* HelloNSNotificationViewController.m */; };
 		B7524F0125A1DB61008EB751 /* SWNSAttributeStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7524F0025A1DB61008EB751 /* SWNSAttributeStringViewController.m */; };
+		B7524F0625A1FD03008EB751 /* HelloTestDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = B7524F0525A1FD03008EB751 /* HelloTestDemo.m */; };
 		E99621DBCA5E5CEA4E036EE7 /* Pods_GrassIosSamples_GrassIosSamplesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C2E44BCA1168D48213D753 /* Pods_GrassIosSamples_GrassIosSamplesUITests.framework */; };
 		F265E290EEF32741BE8E722E /* Pods_GrassIosSamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805926C4BFA83B1842DBC5CC /* Pods_GrassIosSamples.framework */; };
 /* End PBXBuildFile section */
@@ -150,6 +151,7 @@
 		A4DEF5EF256517A30076D5D1 /* HelloNSNotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloNSNotificationViewController.m; sourceTree = "<group>"; };
 		B7524EFF25A1DB61008EB751 /* SWNSAttributeStringViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWNSAttributeStringViewController.h; sourceTree = "<group>"; };
 		B7524F0025A1DB61008EB751 /* SWNSAttributeStringViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWNSAttributeStringViewController.m; sourceTree = "<group>"; };
+		B7524F0525A1FD03008EB751 /* HelloTestDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloTestDemo.m; sourceTree = "<group>"; };
 		BCAE541ADF8C48398ADEB95D /* Pods-GrassIosSamples-GrassIosSamplesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamples-GrassIosSamplesUITests.release.xcconfig"; path = "Target Support Files/Pods-GrassIosSamples-GrassIosSamplesUITests/Pods-GrassIosSamples-GrassIosSamplesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C7F7ADF5F5EFC89F1D351307 /* Pods-GrassIosSamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamples.release.xcconfig"; path = "Target Support Files/Pods-GrassIosSamples/Pods-GrassIosSamples.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -242,6 +244,7 @@
 				0C5A966E255A3C1600C653AF /* Info.plist */,
 				A4928FB5255CE1C900D82EF3 /* QLRecordTest.m */,
 				A4D4F231256BE3050037E1F4 /* QADIdfaManagerTest.m */,
+				B7524F0525A1FD03008EB751 /* HelloTestDemo.m */,
 			);
 			path = GrassIosSamplesTests;
 			sourceTree = "<group>";
@@ -660,6 +663,7 @@
 				0C5A966D255A3C1600C653AF /* GrassIosSamplesTests.m in Sources */,
 				A4D4F232256BE3050037E1F4 /* QADIdfaManagerTest.m in Sources */,
 				A4928FB6255CE1C900D82EF3 /* QLRecordTest.m in Sources */,
+				B7524F0625A1FD03008EB751 /* HelloTestDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

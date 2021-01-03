@@ -49,7 +49,7 @@
     UIImage *vipImage = [UIImage imageNamed:@"vscode_icon"];
     NSTextAttachment *vipImageAttachment = [[NSTextAttachment alloc]init];
     vipImageAttachment.image = vipImage;
-    vipImageAttachment.bounds = CGRectMake(0, 0, 20, 20);
+    vipImageAttachment.bounds = CGRectMake(0, 0, 60, 60);
     
     NSAttributedString *vipImageAttrStr = [NSAttributedString attributedStringWithAttachment:vipImageAttachment];
     [vipStr insertAttributedString:vipImageAttrStr atIndex:0];
