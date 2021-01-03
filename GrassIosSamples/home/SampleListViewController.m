@@ -17,6 +17,7 @@
 #import "SWGcdViewController.h"
 #import "SWAlertViewController.h"
 #import "SWCollectionViewController.h"
+#import "SWNSAttributeStringViewController.h"
 
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
@@ -75,7 +76,10 @@
             }],
             [SampleInfo initWithName:@"CollectionView" andVCFactory:^UIViewController *{
                 return [[SWCollectionViewController alloc] initWithTitle:@"CollectionView"];
-            }]
+            }],
+            [SampleInfo initWithName:@"NSAttributeString" andVCFactory:^UIViewController *{
+                return [[SWNSAttributeStringViewController alloc] initWithTitle:@"NSAttributeString"];
+            } ]
         ];
     }
     return _sampleList;

@@ -45,7 +45,9 @@
 		A4DEF5E42565151E0076D5D1 /* NSUserDefaultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5E32565151D0076D5D1 /* NSUserDefaultsViewController.m */; };
 		A4DEF5EA2565154A0076D5D1 /* HelloJsonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5E92565154A0076D5D1 /* HelloJsonViewController.m */; };
 		A4DEF5F0256517A30076D5D1 /* HelloNSNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5EF256517A30076D5D1 /* HelloNSNotificationViewController.m */; };
+		B7524F0125A1DB61008EB751 /* SWNSAttributeStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7524F0025A1DB61008EB751 /* SWNSAttributeStringViewController.m */; };
 		E99621DBCA5E5CEA4E036EE7 /* Pods_GrassIosSamples_GrassIosSamplesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C2E44BCA1168D48213D753 /* Pods_GrassIosSamples_GrassIosSamplesUITests.framework */; };
+		F265E290EEF32741BE8E722E /* Pods_GrassIosSamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805926C4BFA83B1842DBC5CC /* Pods_GrassIosSamples.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +148,8 @@
 		A4DEF5E92565154A0076D5D1 /* HelloJsonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloJsonViewController.m; sourceTree = "<group>"; };
 		A4DEF5EE256517A30076D5D1 /* HelloNSNotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloNSNotificationViewController.h; sourceTree = "<group>"; };
 		A4DEF5EF256517A30076D5D1 /* HelloNSNotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloNSNotificationViewController.m; sourceTree = "<group>"; };
+		B7524EFF25A1DB61008EB751 /* SWNSAttributeStringViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWNSAttributeStringViewController.h; sourceTree = "<group>"; };
+		B7524F0025A1DB61008EB751 /* SWNSAttributeStringViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWNSAttributeStringViewController.m; sourceTree = "<group>"; };
 		BCAE541ADF8C48398ADEB95D /* Pods-GrassIosSamples-GrassIosSamplesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamples-GrassIosSamplesUITests.release.xcconfig"; path = "Target Support Files/Pods-GrassIosSamples-GrassIosSamplesUITests/Pods-GrassIosSamples-GrassIosSamplesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C7F7ADF5F5EFC89F1D351307 /* Pods-GrassIosSamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamples.release.xcconfig"; path = "Target Support Files/Pods-GrassIosSamples/Pods-GrassIosSamples.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F265E290EEF32741BE8E722E /* Pods_GrassIosSamples.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +331,8 @@
 				A424628C2570ED0E00C643B7 /* SWAlertViewController.m */,
 				0CEC0D80257B84DE0075AA5A /* SWCollectionViewController.h */,
 				0CEC0D81257B84DE0075AA5A /* SWCollectionViewController.m */,
+				B7524EFF25A1DB61008EB751 /* SWNSAttributeStringViewController.h */,
+				B7524F0025A1DB61008EB751 /* SWNSAttributeStringViewController.m */,
 			);
 			path = samples;
 			sourceTree = "<group>";
@@ -622,6 +629,7 @@
 				0C5A9652255A3C1600C653AF /* AppDelegate.m in Sources */,
 				A4D4F217256BE0F30037E1F4 /* QADAdConfigManager.m in Sources */,
 				A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */,
+				B7524F0125A1DB61008EB751 /* SWNSAttributeStringViewController.m in Sources */,
 				A469927C2579012C00B192BD /* SWSemaphoreDemo.m in Sources */,
 				0C6F88FC256A5448009D5594 /* QLAppLaunchTaskList.m in Sources */,
 				0C6F890B256A573F009D5594 /* QLAppLaunchTaskList_Mainsync2.m in Sources */,
