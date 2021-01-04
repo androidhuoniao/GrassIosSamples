@@ -19,9 +19,11 @@
     self.uilabel.attributedText = [self getAttributeString];
     [self testsizeThatFits];
     [self testBoundingRectSize];
+    [self logAttributedStringMethods];
+    
 }
 
-- (void) testsizeThatFits{
+- (void)testsizeThatFits{
     UILabel *label = [[UILabel alloc] init];
     label.numberOfLines = 2;
     label.font = [UIFont systemFontOfSize:20];
@@ -40,19 +42,22 @@
     CGRect rect = [attributeStr boundingRectWithSize:CGSizeMake(self.view.bounds.size.width, 100)
                                              options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
                                              context:nil];
-//    self.uilabel.frame = CGRectMake(0, 100, self.view.bounds.size.width,rect.size.height);
     NSLog(@"testsizeThatFits rect:%@",NSStringFromCGSize(rect.size));
 }
 
 - (NSAttributedString *) getAttributeString{
-    NSMutableAttributedString *vipStr = [[NSMutableAttributedString alloc]initWithString:@"点击解锁【超级方法点击解锁【超级方法点击解锁【超级方法点击解锁【超级方法点击解锁【超级方法点击解锁【超级方法点击解锁【超级方法点击解锁【超级方法点击解锁【超级方法点击解锁【超级方法点击解锁【超级方法点击解锁【超级方法"];
+    
+    NSString *text =@"点击解锁超级方法点击解锁";
+    NSLog(@"text.length:%li",text.length);
+    NSMutableAttributedString *vipStr = [[NSMutableAttributedString alloc]initWithString:text];
     UIImage *vipImage = [UIImage imageNamed:@"vscode_icon"];
     NSTextAttachment *vipImageAttachment = [[NSTextAttachment alloc]init];
     vipImageAttachment.image = vipImage;
-    vipImageAttachment.bounds = CGRectMake(0, 0, 60, 60);
-    
+    vipImageAttachment.bounds = CGRectMake(0, 0, 20, 20);
+    // NSTextAttachment组成的NSAttributedString占据一个字符
     NSAttributedString *vipImageAttrStr = [NSAttributedString attributedStringWithAttachment:vipImageAttachment];
     [vipStr insertAttributedString:vipImageAttrStr atIndex:0];
+    NSLog(@"vipImageAttrStr.length:%li",vipImageAttrStr.length);
     
     //设置空格文本
     [vipStr insertAttributedString:[[NSAttributedString alloc] initWithString:@" "] atIndex:1];
@@ -61,6 +66,20 @@
     //设置字体和设置字体的范围
     [vipStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:20.0f] range:NSMakeRange(0, vipStr.length)];
     return vipStr;
+}
+
+- (void)logAttributedStringMethods{
+    NSAttributedString *attrString = [self getAttributeString];
+    NSLog(@"attrString:%@ length:%li",attrString,attrString.length);
+    NSLog(@"attrString.string:%@",attrString.string);
+    
+    BOOL containsAttachments = [attrString containsAttachmentsInRange:NSMakeRange(0, attrString.length)];
+    NSLog(@"containsAttachments:%d",containsAttachments);
+    NSAttributedString *subAttrString = [attrString attributedSubstringFromRange:NSMakeRange(0, attrString.length)];
+    NSLog(@"subAttrString:%@ length:%li",subAttrString,subAttrString.length);
+    NSAttributedString *copyAttrString = attrString.copy;
+    NSLog(@"copyAttrString:%@ length:%li",copyAttrString,copyAttrString.length);
+    
 }
 
 - (UILabel *)uilabel{
