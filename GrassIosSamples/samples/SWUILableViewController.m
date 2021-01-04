@@ -91,8 +91,6 @@
     [imageString addAttribute:NSLinkAttributeName
                         value:@"checkbox://"
                         range:NSMakeRange(0, imageString.length)];
-    NSAttributedString *subAttributeString =  [htmlString attributedSubstringFromRange:NSMakeRange(0, 6)];
-    NSLog(@"subAttributeString: %@",subAttributeString);
     
     [attributedString insertAttributedString:imageString atIndex:0];
     [attributedString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:font] range:NSMakeRange(0, attributedString.length)];
