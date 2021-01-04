@@ -26,6 +26,7 @@
 		0C6F8915256A59F8009D5594 /* MockTVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6F8914256A59F8009D5594 /* MockTVViewController.m */; };
 		0CEC0D82257B84DE0075AA5A /* SWCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC0D81257B84DE0075AA5A /* SWCollectionViewController.m */; };
 		5CB386018485DAA39A905B31 /* Pods_GrassIosSamplesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8788A65E29FF1DBA8B7EE070 /* Pods_GrassIosSamplesTests.framework */; };
+		A405A1B7259989040019A853 /* SWUILableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A405A1B6259989040019A853 /* SWUILableViewController.m */; };
 		A42461B82570D86C00C643B7 /* SWHomeTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42461B72570D86C00C643B7 /* SWHomeTabBarController.m */; };
 		A42461BE2570D8C100C643B7 /* SWPureOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42461BD2570D8C100C643B7 /* SWPureOCViewController.m */; };
 		A42462562570E34A00C643B7 /* SWBaseSampleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42462542570E34A00C643B7 /* SWBaseSampleListViewController.m */; };
@@ -113,6 +114,8 @@
 		89010B796ACEDA1DA284A605 /* Pods-GrassIosSamplesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamplesTests.debug.xcconfig"; path = "Target Support Files/Pods-GrassIosSamplesTests/Pods-GrassIosSamplesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		97C2E44BCA1168D48213D753 /* Pods_GrassIosSamples_GrassIosSamplesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrassIosSamples_GrassIosSamplesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B21B986DD9DD4A8FC7F36D7 /* Pods-GrassIosSamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamples.debug.xcconfig"; path = "Target Support Files/Pods-GrassIosSamples/Pods-GrassIosSamples.debug.xcconfig"; sourceTree = "<group>"; };
+		A405A1B5259989040019A853 /* SWUILableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUILableViewController.h; sourceTree = "<group>"; };
+		A405A1B6259989040019A853 /* SWUILableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWUILableViewController.m; sourceTree = "<group>"; };
 		A42461B62570D86C00C643B7 /* SWHomeTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWHomeTabBarController.h; sourceTree = "<group>"; };
 		A42461B72570D86C00C643B7 /* SWHomeTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWHomeTabBarController.m; sourceTree = "<group>"; };
 		A42461BC2570D8C100C643B7 /* SWPureOCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWPureOCViewController.h; sourceTree = "<group>"; };
@@ -336,6 +339,8 @@
 				0CEC0D81257B84DE0075AA5A /* SWCollectionViewController.m */,
 				B7524EFF25A1DB61008EB751 /* SWNSAttributeStringViewController.h */,
 				B7524F0025A1DB61008EB751 /* SWNSAttributeStringViewController.m */,
+				A405A1B5259989040019A853 /* SWUILableViewController.h */,
+				A405A1B6259989040019A853 /* SWUILableViewController.m */,
 			);
 			path = samples;
 			sourceTree = "<group>";
@@ -642,6 +647,7 @@
 				A42462812570EC1100C643B7 /* SWGcdViewController.m in Sources */,
 				A4928F5B255BED6E00D82EF3 /* CustomViewViewController.m in Sources */,
 				A42462742570E42600C643B7 /* SWNavigationController.m in Sources */,
+				A405A1B7259989040019A853 /* SWUILableViewController.m in Sources */,
 				0C5A9663255A3C1600C653AF /* main.m in Sources */,
 				0C5A96BA255AA27D00C653AF /* BaseSampleInfo.m in Sources */,
 				A4DEF4D525627BE10076D5D1 /* GetIDFAViewController.m in Sources */,

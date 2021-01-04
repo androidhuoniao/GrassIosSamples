@@ -18,6 +18,7 @@
 #import "SWAlertViewController.h"
 #import "SWCollectionViewController.h"
 #import "SWNSAttributeStringViewController.h"
+#import "SWUILableViewController.h"
 
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
@@ -39,7 +40,7 @@
     if(_sampleList == nil){
         _sampleList = @[
             [SampleInfo initWithName:@"UILable" andVCFactory:^UIViewController *{
-                return [ButtonViewController new];
+                return [[SWUILableViewController alloc] initWithTitle:@"UILableDemo"];
             } ],
             [SampleInfo initWithName:@"UIImageView" andVCFactory:^UIViewController *{
                 return [[ImageUIViewController alloc] initWithTitle:@"UIImageViewDemo"];

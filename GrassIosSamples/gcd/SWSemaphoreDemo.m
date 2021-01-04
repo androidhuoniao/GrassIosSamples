@@ -9,10 +9,14 @@
 
 @implementation SWSemaphoreDemo
 + (void)start{
+    CFTimeInterval timeInterval = CFAbsoluteTimeGetCurrent();
+    NSLog(@"SWSemaphoreDemo timeInterval:%f",timeInterval);
 //    [[self class] testWithSerialQueue];
 //    [[self class] test1];
 //    [[self class] test2];
-    [[self class] batchRequestConfig];
+//    [[self class] batchRequestConfig];
+//    [[self class] testDispatchGroup2];
+    [[self class] testDispatchGroup3];
 }
 
 +(void) testWithSerialQueue{
@@ -99,4 +103,43 @@
     });
 }
 
++(void) testDispatchGroup2{
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+       dispatch_group_t group = dispatch_group_create();
+       dispatch_group_async(group, queue, ^{
+           NSLog(@"1");
+       });
+       dispatch_group_async(group, queue, ^{
+           NSLog(@"2");
+       });
+       dispatch_group_async(group, queue, ^{
+           NSLog(@"3");
+       });
+       
+       dispatch_group_notify(group, queue, ^{
+           NSLog(@"done");
+       });
+    
+}
+
++(void) testDispatchGroup3{
+    dispatch_group_t grp = dispatch_group_create();
+        dispatch_queue_t queue = dispatch_queue_create("concurrent.queue", DISPATCH_QUEUE_CONCURRENT);
+        
+        dispatch_group_async(grp, queue, ^{
+            NSLog(@"task1 begin : %@",[NSThread currentThread]);
+            dispatch_async(queue, ^{
+                NSLog(@"task1 finish : %@",[NSThread currentThread]);
+            });
+        });
+        dispatch_group_async(grp, queue, ^{
+            NSLog(@"task2 begin : %@",[NSThread currentThread]);
+            dispatch_async(queue, ^{
+                NSLog(@"task2 finish : %@",[NSThread currentThread]);
+            });
+        });
+        dispatch_group_notify(grp, dispatch_get_main_queue(), ^{
+            NSLog(@"refresh UI");
+        });
+}
 @end
