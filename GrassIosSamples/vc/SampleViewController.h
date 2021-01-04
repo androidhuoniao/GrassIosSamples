@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SampleViewController : UIViewController
 @property(nonatomic) NSString *topTitle;
--(instancetype) initWithTitle:(NSString *) title;
+- (instancetype) initWithTitle:(NSString *) title;
 - (CGFloat) getBottomY:(UIView *) view;
 - (UIButton *) makeButton:(NSString *) title andTop:(NSInteger) top;
 @end

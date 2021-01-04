@@ -35,6 +35,8 @@
 		A42462812570EC1100C643B7 /* SWGcdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42462802570EC1100C643B7 /* SWGcdViewController.m */; };
 		A424628D2570ED0E00C643B7 /* SWAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A424628C2570ED0E00C643B7 /* SWAlertViewController.m */; };
 		A469927C2579012C00B192BD /* SWSemaphoreDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A469927B2579012C00B192BD /* SWSemaphoreDemo.m */; };
+		A483F8BF25A3333300561CE9 /* UICustomTouchLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A483F8BE25A3333300561CE9 /* UICustomTouchLabel.m */; };
+		A483F8C525A3348000561CE9 /* SWHelloTouchEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A483F8C425A3348000561CE9 /* SWHelloTouchEventViewController.m */; };
 		A4928F5B255BED6E00D82EF3 /* CustomViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928F5A255BED6E00D82EF3 /* CustomViewViewController.m */; };
 		A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928F62255BEE2500D82EF3 /* CustomView.m */; };
 		A4928FA6255CDF6000D82EF3 /* QLReCord.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928FA5255CDF6000D82EF3 /* QLReCord.m */; };
@@ -132,6 +134,10 @@
 		A424628C2570ED0E00C643B7 /* SWAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWAlertViewController.m; sourceTree = "<group>"; };
 		A469927A2579012C00B192BD /* SWSemaphoreDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWSemaphoreDemo.h; sourceTree = "<group>"; };
 		A469927B2579012C00B192BD /* SWSemaphoreDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWSemaphoreDemo.m; sourceTree = "<group>"; };
+		A483F8BD25A3333300561CE9 /* UICustomTouchLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICustomTouchLabel.h; sourceTree = "<group>"; };
+		A483F8BE25A3333300561CE9 /* UICustomTouchLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICustomTouchLabel.m; sourceTree = "<group>"; };
+		A483F8C325A3348000561CE9 /* SWHelloTouchEventViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWHelloTouchEventViewController.h; sourceTree = "<group>"; };
+		A483F8C425A3348000561CE9 /* SWHelloTouchEventViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWHelloTouchEventViewController.m; sourceTree = "<group>"; };
 		A4928F59255BED6E00D82EF3 /* CustomViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewViewController.h; sourceTree = "<group>"; };
 		A4928F5A255BED6E00D82EF3 /* CustomViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewViewController.m; sourceTree = "<group>"; };
 		A4928F61255BEE2500D82EF3 /* CustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
@@ -212,6 +218,7 @@
 		0C5A964F255A3C1600C653AF /* GrassIosSamples */ = {
 			isa = PBXGroup;
 			children = (
+				A483F8BC25A3330700561CE9 /* views */,
 				A46992792579010500B192BD /* gcd */,
 				A424627E2570EAF400C643B7 /* samples */,
 				A42462532570E2EF00C643B7 /* base */,
@@ -341,6 +348,8 @@
 				B7524F0025A1DB61008EB751 /* SWNSAttributeStringViewController.m */,
 				A405A1B5259989040019A853 /* SWUILableViewController.h */,
 				A405A1B6259989040019A853 /* SWUILableViewController.m */,
+				A483F8C325A3348000561CE9 /* SWHelloTouchEventViewController.h */,
+				A483F8C425A3348000561CE9 /* SWHelloTouchEventViewController.m */,
 			);
 			path = samples;
 			sourceTree = "<group>";
@@ -352,6 +361,15 @@
 				A469927B2579012C00B192BD /* SWSemaphoreDemo.m */,
 			);
 			path = gcd;
+			sourceTree = "<group>";
+		};
+		A483F8BC25A3330700561CE9 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				A483F8BD25A3333300561CE9 /* UICustomTouchLabel.h */,
+				A483F8BE25A3333300561CE9 /* UICustomTouchLabel.m */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 		A4928F60255BEDD300D82EF3 /* customview */ = {
@@ -647,7 +665,9 @@
 				A42462812570EC1100C643B7 /* SWGcdViewController.m in Sources */,
 				A4928F5B255BED6E00D82EF3 /* CustomViewViewController.m in Sources */,
 				A42462742570E42600C643B7 /* SWNavigationController.m in Sources */,
+				A483F8BF25A3333300561CE9 /* UICustomTouchLabel.m in Sources */,
 				A405A1B7259989040019A853 /* SWUILableViewController.m in Sources */,
+				A483F8C525A3348000561CE9 /* SWHelloTouchEventViewController.m in Sources */,
 				0C5A9663255A3C1600C653AF /* main.m in Sources */,
 				0C5A96BA255AA27D00C653AF /* BaseSampleInfo.m in Sources */,
 				A4DEF4D525627BE10076D5D1 /* GetIDFAViewController.m in Sources */,

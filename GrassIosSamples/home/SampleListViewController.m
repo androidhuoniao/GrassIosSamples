@@ -19,6 +19,7 @@
 #import "SWCollectionViewController.h"
 #import "SWNSAttributeStringViewController.h"
 #import "SWUILableViewController.h"
+#import "SWHelloTouchEventViewController.h"
 
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
@@ -30,12 +31,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    NSLog(@"SampleListViewController.viewDidLoad is working");
-    // Do any additional setup after loading the view.
-//    [self.view addSubview:[self myTableView]];
     [self.view addSubview:self.myTableView];
 }
+
 - (NSArray *)sampleList{
     if(_sampleList == nil){
         _sampleList = @[
@@ -80,7 +78,10 @@
             }],
             [SampleInfo initWithName:@"NSAttributeString" andVCFactory:^UIViewController *{
                 return [[SWNSAttributeStringViewController alloc] initWithTitle:@"NSAttributeString"];
-            } ]
+            }],
+            [SampleInfo initWithName:@"学习touch事件" andVCFactory:^UIViewController *{
+                return [[SWHelloTouchEventViewController alloc] initWithTitle:@"学习touch事件"];
+            }]
         ];
     }
     return _sampleList;
