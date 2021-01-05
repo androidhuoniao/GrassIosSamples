@@ -20,6 +20,7 @@
 #import "SWNSAttributeStringViewController.h"
 #import "SWUILableViewController.h"
 #import "SWHelloTouchEventViewController.h"
+#import "SWUITextViewViewController.h"
 
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
@@ -81,6 +82,9 @@
             }],
             [SampleInfo initWithName:@"学习touch事件" andVCFactory:^UIViewController *{
                 return [[SWHelloTouchEventViewController alloc] initWithTitle:@"学习touch事件"];
+            }],
+            [SampleInfo initWithName:@"UITextView" andVCFactory:^UIViewController *{
+                return [[SWUITextViewViewController alloc] initWithTitle:@"UITextView"];
             }]
         ];
     }

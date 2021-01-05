@@ -36,6 +36,7 @@
 		A424628D2570ED0E00C643B7 /* SWAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A424628C2570ED0E00C643B7 /* SWAlertViewController.m */; };
 		A469927C2579012C00B192BD /* SWSemaphoreDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A469927B2579012C00B192BD /* SWSemaphoreDemo.m */; };
 		A48300F525A46C3D00561CE9 /* UICustomTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A48300F425A46C3C00561CE9 /* UICustomTextView.m */; };
+		A483034025A499D400561CE9 /* SWUITextViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A483033F25A499D400561CE9 /* SWUITextViewViewController.m */; };
 		A483F8BF25A3333300561CE9 /* UICustomTouchLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A483F8BE25A3333300561CE9 /* UICustomTouchLabel.m */; };
 		A483F8C525A3348000561CE9 /* SWHelloTouchEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A483F8C425A3348000561CE9 /* SWHelloTouchEventViewController.m */; };
 		A4928F5B255BED6E00D82EF3 /* CustomViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928F5A255BED6E00D82EF3 /* CustomViewViewController.m */; };
@@ -137,6 +138,8 @@
 		A469927B2579012C00B192BD /* SWSemaphoreDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWSemaphoreDemo.m; sourceTree = "<group>"; };
 		A48300F325A46C3C00561CE9 /* UICustomTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICustomTextView.h; sourceTree = "<group>"; };
 		A48300F425A46C3C00561CE9 /* UICustomTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICustomTextView.m; sourceTree = "<group>"; };
+		A483033E25A499D400561CE9 /* SWUITextViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUITextViewViewController.h; sourceTree = "<group>"; };
+		A483033F25A499D400561CE9 /* SWUITextViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWUITextViewViewController.m; sourceTree = "<group>"; };
 		A483F8BD25A3333300561CE9 /* UICustomTouchLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICustomTouchLabel.h; sourceTree = "<group>"; };
 		A483F8BE25A3333300561CE9 /* UICustomTouchLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICustomTouchLabel.m; sourceTree = "<group>"; };
 		A483F8C325A3348000561CE9 /* SWHelloTouchEventViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWHelloTouchEventViewController.h; sourceTree = "<group>"; };
@@ -353,6 +356,8 @@
 				A405A1B6259989040019A853 /* SWUILableViewController.m */,
 				A483F8C325A3348000561CE9 /* SWHelloTouchEventViewController.h */,
 				A483F8C425A3348000561CE9 /* SWHelloTouchEventViewController.m */,
+				A483033E25A499D400561CE9 /* SWUITextViewViewController.h */,
+				A483033F25A499D400561CE9 /* SWUITextViewViewController.m */,
 			);
 			path = samples;
 			sourceTree = "<group>";
@@ -684,6 +689,7 @@
 				0C6F8915256A59F8009D5594 /* MockTVViewController.m in Sources */,
 				A42461B82570D86C00C643B7 /* SWHomeTabBarController.m in Sources */,
 				A42461BE2570D8C100C643B7 /* SWPureOCViewController.m in Sources */,
+				A483034025A499D400561CE9 /* SWUITextViewViewController.m in Sources */,
 				A4DEF5E42565151E0076D5D1 /* NSUserDefaultsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
