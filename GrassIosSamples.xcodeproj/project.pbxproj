@@ -35,6 +35,7 @@
 		A42462812570EC1100C643B7 /* SWGcdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42462802570EC1100C643B7 /* SWGcdViewController.m */; };
 		A424628D2570ED0E00C643B7 /* SWAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A424628C2570ED0E00C643B7 /* SWAlertViewController.m */; };
 		A469927C2579012C00B192BD /* SWSemaphoreDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A469927B2579012C00B192BD /* SWSemaphoreDemo.m */; };
+		A48300F525A46C3D00561CE9 /* UICustomTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A48300F425A46C3C00561CE9 /* UICustomTextView.m */; };
 		A483F8BF25A3333300561CE9 /* UICustomTouchLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A483F8BE25A3333300561CE9 /* UICustomTouchLabel.m */; };
 		A483F8C525A3348000561CE9 /* SWHelloTouchEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A483F8C425A3348000561CE9 /* SWHelloTouchEventViewController.m */; };
 		A4928F5B255BED6E00D82EF3 /* CustomViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928F5A255BED6E00D82EF3 /* CustomViewViewController.m */; };
@@ -134,6 +135,8 @@
 		A424628C2570ED0E00C643B7 /* SWAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWAlertViewController.m; sourceTree = "<group>"; };
 		A469927A2579012C00B192BD /* SWSemaphoreDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWSemaphoreDemo.h; sourceTree = "<group>"; };
 		A469927B2579012C00B192BD /* SWSemaphoreDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWSemaphoreDemo.m; sourceTree = "<group>"; };
+		A48300F325A46C3C00561CE9 /* UICustomTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICustomTextView.h; sourceTree = "<group>"; };
+		A48300F425A46C3C00561CE9 /* UICustomTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICustomTextView.m; sourceTree = "<group>"; };
 		A483F8BD25A3333300561CE9 /* UICustomTouchLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICustomTouchLabel.h; sourceTree = "<group>"; };
 		A483F8BE25A3333300561CE9 /* UICustomTouchLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICustomTouchLabel.m; sourceTree = "<group>"; };
 		A483F8C325A3348000561CE9 /* SWHelloTouchEventViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWHelloTouchEventViewController.h; sourceTree = "<group>"; };
@@ -368,6 +371,8 @@
 			children = (
 				A483F8BD25A3333300561CE9 /* UICustomTouchLabel.h */,
 				A483F8BE25A3333300561CE9 /* UICustomTouchLabel.m */,
+				A48300F325A46C3C00561CE9 /* UICustomTextView.h */,
+				A48300F425A46C3C00561CE9 /* UICustomTextView.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -670,6 +675,7 @@
 				A483F8C525A3348000561CE9 /* SWHelloTouchEventViewController.m in Sources */,
 				0C5A9663255A3C1600C653AF /* main.m in Sources */,
 				0C5A96BA255AA27D00C653AF /* BaseSampleInfo.m in Sources */,
+				A48300F525A46C3D00561CE9 /* UICustomTextView.m in Sources */,
 				A4DEF4D525627BE10076D5D1 /* GetIDFAViewController.m in Sources */,
 				0C5A9655255A3C1600C653AF /* SceneDelegate.m in Sources */,
 				A4D4F21E256BE1B00037E1F4 /* QADIdfaManager.m in Sources */,

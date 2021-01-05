@@ -7,6 +7,7 @@
 
 #import "SWUILableViewController.h"
 #import <UIKit/UIKit.h>
+#import "UICustomTextView.h"
 
 @interface SWUILableViewController ()<UITextViewDelegate>
 @property(nonatomic,strong)UITextView *textview;
@@ -96,8 +97,12 @@
     [attributedString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:font] range:NSMakeRange(0, attributedString.length)];
     self.textview.attributedText = attributedString;
     self.textview.linkTextAttributes = @{NSForegroundColorAttributeName: [UIColor blueColor],
-                                         NSUnderlineColorAttributeName: [UIColor lightGrayColor],
-                                         NSUnderlineStyleAttributeName: @(NSUnderlinePatternSolid)};
+                                         NSUnderlineColorAttributeName: [UIColor clearColor],
+                                         NSBackgroundColorAttributeName: [UIColor whiteColor],
+                                         NSUnderlineStyleAttributeName: @(NSUnderlinePatternSolid)
+                                         
+    };
+//    self.textview.selectedRange = NSMakeRange(0, 0);
     [self.view addSubview:self.textview];
 }
 
@@ -125,12 +130,13 @@
 
 - (UITextView *)textview{
     if (!_textview) {
-        _textview = [[UITextView alloc] init];
+        _textview = [[UICustomTextView alloc] init];
         _textview.delegate = self;
         _textview.editable = NO;        //必须禁止输入，否则点击将弹出输入键盘
         _textview.frame = CGRectMake(0,400, self.view.bounds.size.width,400);
         _textview.scrollEnabled = NO;
         _textview.backgroundColor = UIColor.whiteColor;
+//        _textview.selectable = NO;
     }
     return _textview;
 }
