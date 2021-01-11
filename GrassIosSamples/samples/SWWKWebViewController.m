@@ -15,7 +15,9 @@
 #define kScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
-@interface SWWKWebViewController ()<UISearchBarDelegate, WKNavigationDelegate>
+const static NSString *LOGTAG = @"wkwebview";
+
+@interface SWWKWebViewController ()<UISearchBarDelegate, WKNavigationDelegate, UIWebViewDelegate>
 @property (nonatomic, strong) UISearchBar *searchBar;
 /// 网页控制导航栏
 @property (weak, nonatomic) UIView *bottomView;
@@ -28,6 +30,7 @@
 @end
 
 @implementation SWWKWebViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     //    [self simpleExampleTest];
@@ -137,6 +140,43 @@
     }
     decisionHandler(WKNavigationActionPolicyAllow);
 }
+
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
+    NSLog(@"%@_%s",LOGTAG,__func__);
+    
+}
+
+- (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation{
+    NSLog(@"%@_%s",LOGTAG,__func__);
+}
+
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
+    
+    NSLog(@"%@_%s",LOGTAG,__func__);
+}
+
+- (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(nonnull NSError *)error{
+    NSLog(@"%@_%s",LOGTAG,__func__);
+}
+
+#pragma mark - UIWebviewDelegate代理方法
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+    NSLog(@"%@_%s",LOGTAG,__func__);
+    return YES;
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView{
+    NSLog(@"%@_%s",LOGTAG,__func__);
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    NSLog(@"%@_%s",LOGTAG,__func__);
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+    NSLog(@"%@_%s",LOGTAG,__func__);
+}
+
 
 #pragma mark - searchBar代理方法
 /// 点击搜索按钮
