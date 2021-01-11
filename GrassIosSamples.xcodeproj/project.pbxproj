@@ -34,6 +34,7 @@
 		A424627A2570E99D00C643B7 /* SWTVSampleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42462792570E99D00C643B7 /* SWTVSampleListViewController.m */; };
 		A42462812570EC1100C643B7 /* SWGcdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42462802570EC1100C643B7 /* SWGcdViewController.m */; };
 		A424628D2570ED0E00C643B7 /* SWAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A424628C2570ED0E00C643B7 /* SWAlertViewController.m */; };
+		A455D97C25AC714F0053CE85 /* SWWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A455D97B25AC714F0053CE85 /* SWWKWebViewController.m */; };
 		A469927C2579012C00B192BD /* SWSemaphoreDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A469927B2579012C00B192BD /* SWSemaphoreDemo.m */; };
 		A48300F525A46C3D00561CE9 /* UICustomTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A48300F425A46C3C00561CE9 /* UICustomTextView.m */; };
 		A483034025A499D400561CE9 /* SWUITextViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A483033F25A499D400561CE9 /* SWUITextViewViewController.m */; };
@@ -134,6 +135,8 @@
 		A42462802570EC1100C643B7 /* SWGcdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWGcdViewController.m; sourceTree = "<group>"; };
 		A424628B2570ED0E00C643B7 /* SWAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWAlertViewController.h; sourceTree = "<group>"; };
 		A424628C2570ED0E00C643B7 /* SWAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWAlertViewController.m; sourceTree = "<group>"; };
+		A455D97A25AC714F0053CE85 /* SWWKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWWKWebViewController.h; sourceTree = "<group>"; };
+		A455D97B25AC714F0053CE85 /* SWWKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWWKWebViewController.m; sourceTree = "<group>"; };
 		A469927A2579012C00B192BD /* SWSemaphoreDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWSemaphoreDemo.h; sourceTree = "<group>"; };
 		A469927B2579012C00B192BD /* SWSemaphoreDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWSemaphoreDemo.m; sourceTree = "<group>"; };
 		A48300F325A46C3C00561CE9 /* UICustomTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICustomTextView.h; sourceTree = "<group>"; };
@@ -358,6 +361,8 @@
 				A483F8C425A3348000561CE9 /* SWHelloTouchEventViewController.m */,
 				A483033E25A499D400561CE9 /* SWUITextViewViewController.h */,
 				A483033F25A499D400561CE9 /* SWUITextViewViewController.m */,
+				A455D97A25AC714F0053CE85 /* SWWKWebViewController.h */,
+				A455D97B25AC714F0053CE85 /* SWWKWebViewController.m */,
 			);
 			path = samples;
 			sourceTree = "<group>";
@@ -685,6 +690,7 @@
 				0C5A9655255A3C1600C653AF /* SceneDelegate.m in Sources */,
 				A4D4F21E256BE1B00037E1F4 /* QADIdfaManager.m in Sources */,
 				0CEC0D82257B84DE0075AA5A /* SWCollectionViewController.m in Sources */,
+				A455D97C25AC714F0053CE85 /* SWWKWebViewController.m in Sources */,
 				A42462562570E34A00C643B7 /* SWBaseSampleListViewController.m in Sources */,
 				0C6F8915256A59F8009D5594 /* MockTVViewController.m in Sources */,
 				A42461B82570D86C00C643B7 /* SWHomeTabBarController.m in Sources */,

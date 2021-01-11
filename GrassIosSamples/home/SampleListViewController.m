@@ -21,6 +21,7 @@
 #import "SWUILableViewController.h"
 #import "SWHelloTouchEventViewController.h"
 #import "SWUITextViewViewController.h"
+#import "SWWKWebViewController.h"
 
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
@@ -85,6 +86,9 @@
             }],
             [SampleInfo initWithName:@"UITextView" andVCFactory:^UIViewController *{
                 return [[SWUITextViewViewController alloc] initWithTitle:@"UITextView"];
+            }],
+            [SampleInfo initWithName:@"WKWebView" andVCFactory:^UIViewController *{
+                return [[SWWKWebViewController alloc] initWithTitle:@"WKWebView"];
             }]
         ];
     }
