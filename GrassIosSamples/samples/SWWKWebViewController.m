@@ -30,90 +30,44 @@
 @implementation SWWKWebViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self simpleExampleTest];
-//    [self addSubViews];
-//    [self refreshBottomButtonState];
-//    [self.wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.cnblogs.com/mddblog/"]]];
-}
-
-- (void)simpleExampleTest {
-    // 1.创建webview，并设置大小，"20"为状态栏高度
-    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height - 20)];
-    // 2.创建请求
-    NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com/"]];
-    //    // 3.加载网页
-    [webView loadRequest:request];
-    //    [webView loadFileURL:[NSURL fileURLWithPath:@"/Users/userName/Desktop/bigIcon.png"] allowingReadAccessToURL:[NSURL fileURLWithPath:@"/Users/userName/Desktop/bigIcon.png"]];
-    // 最后将webView添加到界面
-    [self.view addSubview:webView];
-}
-
-/// 模拟器加载mac本地文件
-- (void)loadLocalFile {
-    // 1.创建webview，并设置大小，"20"为状态栏高度
-    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height - 20)];
-    // 2.创建url  userName：电脑用户名
-    NSURL *url = [NSURL fileURLWithPath:@"/Users/userName/Desktop/bigIcon.png"];
-    // 3.加载文件
-    [webView loadFileURL:url allowingReadAccessToURL:url];
-    // 最后将webView添加到界面
-    [self.view addSubview:webView];
+    //    [self simpleExampleTest];
+    [self addSubViews];
+    [self refreshBottomButtonState];
+    [self.wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com/"]]];
 }
 
 - (void)addSubViews {
-    [self addBottomViewButtons];
     [self.view addSubview:self.searchBar];
     [self.view addSubview:self.wkWebView];
+    [self addBottomViewButtons];
 }
+
 - (void)addBottomViewButtons {
     // 记录按钮个数
     int count = 0;
-    // 添加按钮
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setTitle:@"后退" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor colorWithRed:249 / 255.0 green:102 / 255.0 blue:129 / 255.0 alpha:1.0] forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
-    [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
-    [button.titleLabel setFont:[UIFont systemFontOfSize:15]];
-    button.tag = ++count;    // 标记按钮
-    [button addTarget:self action:@selector(onBottomButtonsClicled:) forControlEvents:UIControlEventTouchUpInside];
+
+    UIButton *button = [self buildButton:@"back" clickListener:@selector(onBottomButtonsClicled:) tag:++count];
     [self.bottomView addSubview:button];
     self.backBtn = button;
-    button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setTitle:@"前进" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor colorWithRed:249 / 255.0 green:102 / 255.0 blue:129 / 255.0 alpha:1.0] forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
-    [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
-    [button.titleLabel setFont:[UIFont systemFontOfSize:15]];
-    button.tag = ++count;
-    [button addTarget:self action:@selector(onBottomButtonsClicled:) forControlEvents:UIControlEventTouchUpInside];
+    
+    button = [self buildButton:@"forward" clickListener:@selector(onBottomButtonsClicled:) tag:++count];
     [self.bottomView addSubview:button];
     self.forwardBtn = button;
-    button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setTitle:@"重新加载" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor colorWithRed:249 / 255.0 green:102 / 255.0 blue:129 / 255.0 alpha:1.0] forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
-    [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
-    [button.titleLabel setFont:[UIFont systemFontOfSize:15]];
-    button.tag = ++count;
-    [button addTarget:self action:@selector(onBottomButtonsClicled:) forControlEvents:UIControlEventTouchUpInside];
+    
+    button = [self buildButton:@"reload" clickListener:@selector(onBottomButtonsClicled:) tag:++count];
     [self.bottomView addSubview:button];
     self.reloadBtn = button;
-    button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setTitle:@"Safari" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor colorWithRed:249 / 255.0 green:102 / 255.0 blue:129 / 255.0 alpha:1.0] forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
-    [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
-    [button.titleLabel setFont:[UIFont systemFontOfSize:15]];
-    button.tag = ++count;
-    [button addTarget:self action:@selector(onBottomButtonsClicled:) forControlEvents:UIControlEventTouchUpInside];
+    
+    button = [self buildButton:@"Safari" clickListener:@selector(onBottomButtonsClicled:) tag:++count];
     [self.bottomView addSubview:button];
     self.browserBtn = button;
+    
     // 统一设置frame
     [self setupBottomViewLayout];
 }
-- (void)setupBottomViewLayout
-{
+
+
+- (void)setupBottomViewLayout{
     int count = 4;
     CGFloat btnW = 80;
     CGFloat btnH = 30;
@@ -129,6 +83,7 @@
     btnX = self.reloadBtn.frame.origin.x + btnW + margin;
     self.browserBtn.frame = CGRectMake(btnX, btnY, btnW, btnH);
 }
+
 /// 刷新按钮是否允许点击
 - (void)refreshBottomButtonState {
     if ([self.wkWebView canGoBack]) {
@@ -142,17 +97,16 @@
         self.forwardBtn.enabled = NO;
     }
 }
+
 /// 按钮点击事件
 - (void)onBottomButtonsClicled:(UIButton *)sender {
     switch (sender.tag) {
-        case 1:
-        {
+        case 1:{
             [self.wkWebView goBack];
             [self refreshBottomButtonState];
         }
             break;
-        case 2:
-        {
+        case 2:{
             [self.wkWebView goForward];
             [self refreshBottomButtonState];
         }
@@ -210,10 +164,12 @@
     // 加载请求页面
     [self.wkWebView loadRequest:request];
 }
+
+
 #pragma mark - 懒加载
 - (UIView *)bottomView {
     if (_bottomView == nil) {
-        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenHeight - kBottomViewH, kScreenWidth, kBottomViewH)];
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenHeight - 240, kScreenWidth, kBottomViewH)];
         view.backgroundColor = [UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1];
         [self.view addSubview:view];
         _bottomView = view;
@@ -229,6 +185,7 @@
     }
     return _searchBar;
 }
+
 - (WKWebView *)wkWebView {
     if (_wkWebView == nil) {
         WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 20 + kSearchBarH, kScreenWidth, kScreenHeight - 20 - kSearchBarH - kBottomViewH)];
@@ -240,6 +197,44 @@
         _wkWebView = webView;
     }
     return _wkWebView;
+}
+
+
+- (UIButton *)buildButton:(NSString *)title clickListener:(SEL)clickListener tag:(NSInteger) tag{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:title forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor colorWithRed:249 / 255.0 green:102 / 255.0 blue:129 / 255.0 alpha:1.0] forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
+    [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
+    [button.titleLabel setFont:[UIFont systemFontOfSize:15]];
+    button.tag = tag;
+    [button addTarget:self action:clickListener forControlEvents:UIControlEventTouchUpInside];
+    return button;
+}
+
+#pragma mark - 测试例子
+- (void)simpleExampleTest {
+    // 1.创建webview，并设置大小，"20"为状态栏高度
+    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height - 20)];
+    // 2.创建请求
+    NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com/"]];
+    //    // 3.加载网页
+    [webView loadRequest:request];
+    //    [webView loadFileURL:[NSURL fileURLWithPath:@"/Users/userName/Desktop/bigIcon.png"] allowingReadAccessToURL:[NSURL fileURLWithPath:@"/Users/userName/Desktop/bigIcon.png"]];
+    // 最后将webView添加到界面
+    [self.view addSubview:webView];
+}
+
+/// 模拟器加载mac本地文件
+- (void)loadLocalFile {
+    // 1.创建webview，并设置大小，"20"为状态栏高度
+    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height - 20)];
+    // 2.创建url  userName：电脑用户名
+    NSURL *url = [NSURL fileURLWithPath:@"/Users/userName/Desktop/bigIcon.png"];
+    // 3.加载文件
+    [webView loadFileURL:url allowingReadAccessToURL:url];
+    // 最后将webView添加到界面
+    [self.view addSubview:webView];
 }
 
 @end
