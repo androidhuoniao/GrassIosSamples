@@ -30,16 +30,17 @@
 @implementation SWWKWebViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //    [self simpleExampleTest];
-    [self addSubViews];
-    [self refreshBottomButtonState];
-    [self.wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.cnblogs.com/mddblog/"]]];
+    [self simpleExampleTest];
+//    [self addSubViews];
+//    [self refreshBottomButtonState];
+//    [self.wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.cnblogs.com/mddblog/"]]];
 }
+
 - (void)simpleExampleTest {
     // 1.创建webview，并设置大小，"20"为状态栏高度
     WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height - 20)];
     // 2.创建请求
-    NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://www.cnblogs.com/mddblog/"]];
+    NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com/"]];
     //    // 3.加载网页
     [webView loadRequest:request];
     //    [webView loadFileURL:[NSURL fileURLWithPath:@"/Users/userName/Desktop/bigIcon.png"] allowingReadAccessToURL:[NSURL fileURLWithPath:@"/Users/userName/Desktop/bigIcon.png"]];
