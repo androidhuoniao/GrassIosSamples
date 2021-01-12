@@ -8,7 +8,6 @@
 #import "SWWKWebViewController.h"
 #import <WebKit/WebKit.h>
 
-
 /// 控件高度
 #define kSearchBarH  44
 #define kBottomViewH 44
@@ -162,6 +161,7 @@ const static NSString *LOGTAG = @"wkwebview";
     
 }
 
+// 当内容开始返回时调用
 - (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation{
     NSLog(@"%@_%s",LOGTAG,__func__);
 }
@@ -172,17 +172,18 @@ const static NSString *LOGTAG = @"wkwebview";
 }
 
 - (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(nonnull NSError *)error{
-    NSLog(@"%@_%s",LOGTAG,__func__);
+    NSLog(@"%@_%s error: %@",LOGTAG,__func__,error);
 }
 
 // 接收到服务器跳转请求即服务重定向时之后调用
 - (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(WKNavigation *)navigation{
-    
+    NSLog(@"%@_%s",LOGTAG,__func__);
     
 }
 
 //需要响应身份验证时调用 同样在block中需要传入用户身份凭证
 - (void)webView:(WKWebView *)webView didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler{
+//    NSLog(@"%@_%s",LOGTAG,__func__);
     //用户身份信息
     NSURLCredential * newCred = [[NSURLCredential alloc] initWithUser:@"user123" password:@"123" persistence:NSURLCredentialPersistenceNone];
     //为 challenge 的发送方提供 credential
@@ -199,6 +200,7 @@ const static NSString *LOGTAG = @"wkwebview";
      *  @param completionHandler 警告框消失调用
      */
 - (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
+    NSLog(@"%@_%s",LOGTAG,__func__);
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"HTML的弹出框" message:message?:@"" preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction:([UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         completionHandler();
@@ -208,6 +210,7 @@ const static NSString *LOGTAG = @"wkwebview";
     // 确认框
     //JavaScript调用confirm方法后回调的方法 confirm是js中的确定框，需要在block中把用户选择的情况传递进去
 - (void)webView:(WKWebView *)webView runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(BOOL))completionHandler{
+    NSLog(@"%@_%s",LOGTAG,__func__);
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:message?:@"" preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction:([UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         completionHandler(NO);
@@ -220,6 +223,7 @@ const static NSString *LOGTAG = @"wkwebview";
     // 输入框
     //JavaScript调用prompt方法后回调的方法 prompt是js中的输入框 需要在block中把用户输入的信息传入
 - (void)webView:(WKWebView *)webView runJavaScriptTextInputPanelWithPrompt:(NSString *)prompt defaultText:(NSString *)defaultText initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(NSString * _Nullable))completionHandler{
+    NSLog(@"%@_%s",LOGTAG,__func__);
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:prompt message:@"" preferredStyle:UIAlertControllerStyleAlert];
     [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.text = defaultText;
@@ -231,6 +235,7 @@ const static NSString *LOGTAG = @"wkwebview";
 }
     // 页面是弹出窗口 _blank 处理
 - (WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures {
+    NSLog(@"%@_%s",LOGTAG,__func__);
     if (!navigationAction.targetFrame.isMainFrame) {
         [webView loadRequest:navigationAction.request];
     }
@@ -246,6 +251,7 @@ const static NSString *LOGTAG = @"wkwebview";
     if ([keyPath isEqualToString:NSStringFromSelector(@selector(estimatedProgress))]
         && object == self.wkWebView) {
         NSLog(@"网页加载进度 = %f",self.wkWebView.estimatedProgress);
+//        NSLog(@"%@_%s 网页加载进度 = %f",LOGTAG,__func__,self.wkWebView.estimatedProgress);
 //        self.progressView.progress = self.wkWebView.estimatedProgress;
         if (self.wkWebView.estimatedProgress >= 1.0f) {
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -254,6 +260,7 @@ const static NSString *LOGTAG = @"wkwebview";
         }
     }else if([keyPath isEqualToString:@"title"]
              && object == self.wkWebView){
+//        NSLog(@"%@_%s title: %@",LOGTAG,__func__,self.wkWebView.title);
         self.navigationItem.title = self.wkWebView.title;
     }else{
         [super observeValueForKeyPath:keyPath
@@ -266,6 +273,7 @@ const static NSString *LOGTAG = @"wkwebview";
 #pragma mark WKScriptMessageHandler
 //通过接收JS传出消息的name进行捕捉的回调方法
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
+    NSLog(@"%@_%s",LOGTAG,__func__);
     NSLog(@"userContentController name:%@\\\\n body:%@\\\\n frameInfo:%@\\\\n",message.name,message.body,message.frameInfo);
     //用message.body获得JS传出的参数体
     NSDictionary * parameter = message.body;
@@ -378,15 +386,13 @@ const static NSString *LOGTAG = @"wkwebview";
     config.allowsPictureInPictureMediaPlayback = YES;
     //设置请求的User-Agent信息中应用程序名称 iOS9后可用
     config.applicationNameForUserAgent = @"ChinaDailyForiPad";
-//    //自定义的WKScriptMessageHandler 是为了解决内存不释放的问题
-//    WeakWebViewScriptMessageDelegate *weakScriptMessageDelegate = [[WeakWebViewScriptMessageDelegate alloc] initWithDelegate:self];
+    
     //这个类主要用来做native与JavaScript的交互管理
     WKUserContentController * wkUController = [[WKUserContentController alloc] init];
     //注册一个name为jsToOcNoPrams的js方法
     [wkUController addScriptMessageHandler:self  name:@"jsToOcNoPrams"];
     [wkUController addScriptMessageHandler:self  name:@"jsToOcWithPrams"];
     config.userContentController = wkUController;
-    
     
     //以下代码适配文本大小，由UIWebView换为WKWebView后，会发现字体小了很多，这应该是WKWebView与html的兼容问题，解决办法是修改原网页，要么我们手动注入JS
     NSString *jSString = @"var meta = document.createElement('meta'); meta.setAttribute('name', 'viewport'); meta.setAttribute('content', 'width=device-width'); document.getElementsByTagName('head')[0].appendChild(meta);";
