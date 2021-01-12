@@ -17,7 +17,7 @@
 
 const static NSString *LOGTAG = @"wkwebview";
 
-@interface SWWKWebViewController ()<UISearchBarDelegate, WKNavigationDelegate, UIWebViewDelegate>
+@interface SWWKWebViewController ()<UISearchBarDelegate, WKNavigationDelegate>
 @property (nonatomic, strong) UISearchBar *searchBar;
 /// 网页控制导航栏
 @property (weak, nonatomic) UIView *bottomView;
@@ -156,24 +156,6 @@ const static NSString *LOGTAG = @"wkwebview";
 }
 
 - (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(nonnull NSError *)error{
-    NSLog(@"%@_%s",LOGTAG,__func__);
-}
-
-#pragma mark - UIWebviewDelegate代理方法
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
-    NSLog(@"%@_%s",LOGTAG,__func__);
-    return YES;
-}
-
-- (void)webViewDidStartLoad:(UIWebView *)webView{
-    NSLog(@"%@_%s",LOGTAG,__func__);
-}
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView{
-    NSLog(@"%@_%s",LOGTAG,__func__);
-}
-
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     NSLog(@"%@_%s",LOGTAG,__func__);
 }
 
