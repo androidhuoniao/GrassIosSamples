@@ -7,6 +7,7 @@
 
 #import "SWWKWebViewController.h"
 #import <WebKit/WebKit.h>
+#import "QADLandingPageVRReporter.h"
 
 /// 控件高度
 #define kSearchBarH  44
@@ -45,6 +46,8 @@ typedef NS_ENUM(NSInteger,VIEWID){
     [self addSubViews];
     [self refreshBottomButtonState];
     [self.wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com/"]]];
+    QADLandingPageVRReporter *reporter = [[QADLandingPageVRReporter alloc] init];
+    [reporter onPageInterrupted];
 }
 
 - (void)addSubViews {

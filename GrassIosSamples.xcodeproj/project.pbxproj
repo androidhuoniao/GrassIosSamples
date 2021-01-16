@@ -54,6 +54,8 @@
 		B7524F0125A1DB61008EB751 /* SWNSAttributeStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7524F0025A1DB61008EB751 /* SWNSAttributeStringViewController.m */; };
 		B7524F0625A1FD03008EB751 /* HelloTestDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = B7524F0525A1FD03008EB751 /* HelloTestDemo.m */; };
 		B7CAE2F925B2E8EB00E15EAC /* HelloOCHamcrest.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CAE2F825B2E8EB00E15EAC /* HelloOCHamcrest.m */; };
+		B7CAE36825B3126400E15EAC /* QADLandingPageVRReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CAE36625B3126400E15EAC /* QADLandingPageVRReporter.m */; };
+		B7CAE36D25B3139500E15EAC /* QADLandingPageVRReporterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CAE36C25B3139500E15EAC /* QADLandingPageVRReporterTest.m */; };
 		E99621DBCA5E5CEA4E036EE7 /* Pods_GrassIosSamples_GrassIosSamplesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C2E44BCA1168D48213D753 /* Pods_GrassIosSamples_GrassIosSamplesUITests.framework */; };
 		F265E290EEF32741BE8E722E /* Pods_GrassIosSamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805926C4BFA83B1842DBC5CC /* Pods_GrassIosSamples.framework */; };
 /* End PBXBuildFile section */
@@ -172,6 +174,9 @@
 		B7524F0025A1DB61008EB751 /* SWNSAttributeStringViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWNSAttributeStringViewController.m; sourceTree = "<group>"; };
 		B7524F0525A1FD03008EB751 /* HelloTestDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloTestDemo.m; sourceTree = "<group>"; };
 		B7CAE2F825B2E8EB00E15EAC /* HelloOCHamcrest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloOCHamcrest.m; sourceTree = "<group>"; };
+		B7CAE36625B3126400E15EAC /* QADLandingPageVRReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QADLandingPageVRReporter.m; sourceTree = "<group>"; };
+		B7CAE36725B3126400E15EAC /* QADLandingPageVRReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QADLandingPageVRReporter.h; sourceTree = "<group>"; };
+		B7CAE36C25B3139500E15EAC /* QADLandingPageVRReporterTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QADLandingPageVRReporterTest.m; sourceTree = "<group>"; };
 		BCAE541ADF8C48398ADEB95D /* Pods-GrassIosSamples-GrassIosSamplesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamples-GrassIosSamplesUITests.release.xcconfig"; path = "Target Support Files/Pods-GrassIosSamples-GrassIosSamplesUITests/Pods-GrassIosSamples-GrassIosSamplesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C7F7ADF5F5EFC89F1D351307 /* Pods-GrassIosSamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamples.release.xcconfig"; path = "Target Support Files/Pods-GrassIosSamples/Pods-GrassIosSamples.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -267,6 +272,7 @@
 				A4D4F231256BE3050037E1F4 /* QADIdfaManagerTest.m */,
 				B7524F0525A1FD03008EB751 /* HelloTestDemo.m */,
 				B7CAE2F825B2E8EB00E15EAC /* HelloOCHamcrest.m */,
+				B7CAE36C25B3139500E15EAC /* QADLandingPageVRReporterTest.m */,
 			);
 			path = GrassIosSamplesTests;
 			sourceTree = "<group>";
@@ -309,6 +315,8 @@
 		0C6F890F256A5928009D5594 /* mocktv */ = {
 			isa = PBXGroup;
 			children = (
+				B7CAE36725B3126400E15EAC /* QADLandingPageVRReporter.h */,
+				B7CAE36625B3126400E15EAC /* QADLandingPageVRReporter.m */,
 				0C6F88FA256A5448009D5594 /* QLAppLaunchTaskList.h */,
 				0C6F88FB256A5448009D5594 /* QLAppLaunchTaskList.m */,
 				0C6F8903256A5727009D5594 /* QLAppLaunchTaskList_MainSync1.h */,
@@ -696,6 +704,7 @@
 				A455D97C25AC714F0053CE85 /* SWWKWebViewController.m in Sources */,
 				A42462562570E34A00C643B7 /* SWBaseSampleListViewController.m in Sources */,
 				0C6F8915256A59F8009D5594 /* MockTVViewController.m in Sources */,
+				B7CAE36825B3126400E15EAC /* QADLandingPageVRReporter.m in Sources */,
 				A42461B82570D86C00C643B7 /* SWHomeTabBarController.m in Sources */,
 				A42461BE2570D8C100C643B7 /* SWPureOCViewController.m in Sources */,
 				A483034025A499D400561CE9 /* SWUITextViewViewController.m in Sources */,
@@ -707,6 +716,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7CAE36D25B3139500E15EAC /* QADLandingPageVRReporterTest.m in Sources */,
 				0C5A966D255A3C1600C653AF /* GrassIosSamplesTests.m in Sources */,
 				A4D4F232256BE3050037E1F4 /* QADIdfaManagerTest.m in Sources */,
 				A4928FB6255CE1C900D82EF3 /* QLRecordTest.m in Sources */,
