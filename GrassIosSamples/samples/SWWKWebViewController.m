@@ -17,6 +17,14 @@
 
 const static NSString *LOGTAG = @"wkwebview";
 
+typedef NS_ENUM(NSInteger,VIEWID){
+    VIEWID_BACK = 0,
+    VIEWID_FORWARD = 1,
+    VIEWID_RELOAD = 2,
+    VIEWID_CALLJS = 3,
+    VIEWID_STOP_LOADING = 4,
+};
+
 @interface SWWKWebViewController ()<UISearchBarDelegate, WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler>
 @property (nonatomic, strong) UISearchBar *searchBar;
 /// 网页控制导航栏
@@ -26,6 +34,7 @@ const static NSString *LOGTAG = @"wkwebview";
 @property (weak, nonatomic) UIButton *forwardBtn;
 @property (weak, nonatomic) UIButton *reloadBtn;
 @property (weak, nonatomic) UIButton *browserBtn;
+@property (nonatomic,strong)UIButton *stoploadingBtn;
 @property (weak, nonatomic) NSString *baseURLString;
 @end
 
@@ -33,7 +42,6 @@ const static NSString *LOGTAG = @"wkwebview";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //    [self simpleExampleTest];
     [self addSubViews];
     [self refreshBottomButtonState];
     [self.wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com/"]]];
@@ -46,24 +54,26 @@ const static NSString *LOGTAG = @"wkwebview";
 }
 
 - (void)addBottomViewButtons {
-    // 记录按钮个数
-    int count = 0;
-
-    UIButton *button = [self buildButton:@"back" clickListener:@selector(onBottomButtonsClicled:) tag:++count];
+    UIButton *button = [self buildButton:@"back" clickListener:@selector(onBottomButtonsClicled:) tag:VIEWID_BACK];
     [self.bottomView addSubview:button];
     self.backBtn = button;
     
-    button = [self buildButton:@"forward" clickListener:@selector(onBottomButtonsClicled:) tag:++count];
+    button = [self buildButton:@"forward" clickListener:@selector(onBottomButtonsClicled:) tag:VIEWID_FORWARD];
     [self.bottomView addSubview:button];
     self.forwardBtn = button;
     
-    button = [self buildButton:@"reload" clickListener:@selector(onBottomButtonsClicled:) tag:++count];
+    button = [self buildButton:@"reload" clickListener:@selector(onBottomButtonsClicled:) tag:VIEWID_RELOAD];
     [self.bottomView addSubview:button];
     self.reloadBtn = button;
     
-    button = [self buildButton:@"calljs" clickListener:@selector(onBottomButtonsClicled:) tag:++count];
+    button = [self buildButton:@"calljs" clickListener:@selector(onBottomButtonsClicled:) tag:VIEWID_CALLJS];
     [self.bottomView addSubview:button];
     self.browserBtn = button;
+    
+    // 停止加载
+    button = [self buildButton:@"stop" clickListener:@selector(onBottomButtonsClicled:) tag:VIEWID_STOP_LOADING];
+    [self.bottomView addSubview:button];
+    self.stoploadingBtn = button;
     
     // 统一设置frame
     [self setupBottomViewLayout];
@@ -71,8 +81,8 @@ const static NSString *LOGTAG = @"wkwebview";
 
 
 - (void)setupBottomViewLayout{
-    int count = 4;
-    CGFloat btnW = 80;
+    int count = 5;
+    CGFloat btnW = 70;
     CGFloat btnH = 30;
     CGFloat btnY = (self.bottomView.bounds.size.height - btnH) / 2;
     // 按钮间间隙
@@ -85,6 +95,8 @@ const static NSString *LOGTAG = @"wkwebview";
     self.reloadBtn.frame = CGRectMake(btnX, btnY, btnW, btnH);
     btnX = self.reloadBtn.frame.origin.x + btnW + margin;
     self.browserBtn.frame = CGRectMake(btnX, btnY, btnW, btnH);
+    btnX = self.browserBtn.frame.origin.x + btnW + margin;
+    self.stoploadingBtn.frame = CGRectMake(btnX, btnY, btnW, btnH);
 }
 
 /// 刷新按钮是否允许点击
@@ -101,25 +113,28 @@ const static NSString *LOGTAG = @"wkwebview";
     }
 }
 
+#pragma click listener
 /// 按钮点击事件
 - (void)onBottomButtonsClicled:(UIButton *)sender {
     switch (sender.tag) {
-        case 1:{
+        case VIEWID_BACK:{
             [self.wkWebView goBack];
             [self refreshBottomButtonState];
         }
             break;
-        case 2:{
+        case VIEWID_FORWARD:{
             [self.wkWebView goForward];
             [self refreshBottomButtonState];
         }
             break;
-        case 3:
+        case VIEWID_RELOAD:
             [self.wkWebView reload];
             break;
-        case 4:
-//            [[UIApplication sharedApplication] openURL:self.wkWebView.URL];
+        case VIEWID_CALLJS:
             [self evaluateJs];
+            break;
+        case VIEWID_STOP_LOADING:
+            [self stopLoading];
             break;
         default:
             break;
@@ -138,6 +153,15 @@ const static NSString *LOGTAG = @"wkwebview";
     NSString *jsFont = [NSString stringWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%d%%'", arc4random()%99 + 100];
     [self.wkWebView evaluateJavaScript:jsFont completionHandler:nil];
 }
+
+
+- (void)stopLoading{
+    NSLog(@"%s isLoading:%i",__func__,self.wkWebView.isLoading);
+    if (self.wkWebView.isLoading) {
+        [self.wkWebView stopLoading];
+    }
+}
+
 
 #pragma mark - WKWebView WKNavigationDelegate 相关
 /// 是否允许加载网页 在发送请求之前，决定是否跳转
@@ -416,30 +440,5 @@ const static NSString *LOGTAG = @"wkwebview";
     return button;
 }
 
-
-#pragma mark - 测试例子
-- (void)simpleExampleTest {
-    // 1.创建webview，并设置大小，"20"为状态栏高度
-    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height - 20)];
-    // 2.创建请求
-    NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com/"]];
-    //    // 3.加载网页
-    [webView loadRequest:request];
-    //    [webView loadFileURL:[NSURL fileURLWithPath:@"/Users/userName/Desktop/bigIcon.png"] allowingReadAccessToURL:[NSURL fileURLWithPath:@"/Users/userName/Desktop/bigIcon.png"]];
-    // 最后将webView添加到界面
-    [self.view addSubview:webView];
-}
-
-/// 模拟器加载mac本地文件
-- (void)loadLocalFile {
-    // 1.创建webview，并设置大小，"20"为状态栏高度
-    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height - 20)];
-    // 2.创建url  userName：电脑用户名
-    NSURL *url = [NSURL fileURLWithPath:@"/Users/userName/Desktop/bigIcon.png"];
-    // 3.加载文件
-    [webView loadFileURL:url allowingReadAccessToURL:url];
-    // 最后将webView添加到界面
-    [self.view addSubview:webView];
-}
 
 @end
