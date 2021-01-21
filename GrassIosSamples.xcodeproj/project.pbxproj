@@ -51,6 +51,7 @@
 		A4DEF5E42565151E0076D5D1 /* NSUserDefaultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5E32565151D0076D5D1 /* NSUserDefaultsViewController.m */; };
 		A4DEF5EA2565154A0076D5D1 /* HelloJsonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5E92565154A0076D5D1 /* HelloJsonViewController.m */; };
 		A4DEF5F0256517A30076D5D1 /* HelloNSNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5EF256517A30076D5D1 /* HelloNSNotificationViewController.m */; };
+		B726291925B9C3650027ECD3 /* SWUIPageControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B726291825B9C3650027ECD3 /* SWUIPageControlViewController.m */; };
 		B7524F0125A1DB61008EB751 /* SWNSAttributeStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7524F0025A1DB61008EB751 /* SWNSAttributeStringViewController.m */; };
 		B7524F0625A1FD03008EB751 /* HelloTestDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = B7524F0525A1FD03008EB751 /* HelloTestDemo.m */; };
 		B7CAE2F925B2E8EB00E15EAC /* HelloOCHamcrest.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CAE2F825B2E8EB00E15EAC /* HelloOCHamcrest.m */; };
@@ -170,6 +171,8 @@
 		A4DEF5E92565154A0076D5D1 /* HelloJsonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloJsonViewController.m; sourceTree = "<group>"; };
 		A4DEF5EE256517A30076D5D1 /* HelloNSNotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloNSNotificationViewController.h; sourceTree = "<group>"; };
 		A4DEF5EF256517A30076D5D1 /* HelloNSNotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloNSNotificationViewController.m; sourceTree = "<group>"; };
+		B726291725B9C3650027ECD3 /* SWUIPageControlViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUIPageControlViewController.h; sourceTree = "<group>"; };
+		B726291825B9C3650027ECD3 /* SWUIPageControlViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWUIPageControlViewController.m; sourceTree = "<group>"; };
 		B7524EFF25A1DB61008EB751 /* SWNSAttributeStringViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWNSAttributeStringViewController.h; sourceTree = "<group>"; };
 		B7524F0025A1DB61008EB751 /* SWNSAttributeStringViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWNSAttributeStringViewController.m; sourceTree = "<group>"; };
 		B7524F0525A1FD03008EB751 /* HelloTestDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloTestDemo.m; sourceTree = "<group>"; };
@@ -374,6 +377,8 @@
 				A483033F25A499D400561CE9 /* SWUITextViewViewController.m */,
 				A455D97A25AC714F0053CE85 /* SWWKWebViewController.h */,
 				A455D97B25AC714F0053CE85 /* SWWKWebViewController.m */,
+				B726291725B9C3650027ECD3 /* SWUIPageControlViewController.h */,
+				B726291825B9C3650027ECD3 /* SWUIPageControlViewController.m */,
 			);
 			path = samples;
 			sourceTree = "<group>";
@@ -677,6 +682,7 @@
 				0C5A9693255A78CF00C653AF /* SampleListViewController.m in Sources */,
 				0C5A96CA255AA45800C653AF /* SampleInfo.m in Sources */,
 				A4DEF5F0256517A30076D5D1 /* HelloNSNotificationViewController.m in Sources */,
+				B726291925B9C3650027ECD3 /* SWUIPageControlViewController.m in Sources */,
 				0C5A96AB255A876000C653AF /* ImageUIViewController.m in Sources */,
 				0C5A9652255A3C1600C653AF /* AppDelegate.m in Sources */,
 				A4D4F217256BE0F30037E1F4 /* QADAdConfigManager.m in Sources */,

@@ -22,6 +22,7 @@
 #import "SWHelloTouchEventViewController.h"
 #import "SWUITextViewViewController.h"
 #import "SWWKWebViewController.h"
+#import "SWUIPageControlViewController.h"
 
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
@@ -89,6 +90,9 @@
             }],
             [SampleInfo initWithName:@"WKWebView" andVCFactory:^UIViewController *{
                 return [[SWWKWebViewController alloc] initWithTitle:@"WKWebView"];
+            }],
+            [SampleInfo initWithName:@"UIPageControl" andVCFactory:^UIViewController *{
+                return [[SWUIPageControlViewController alloc] initWithTitle:@"UIPageControl"];
             }]
         ];
     }
