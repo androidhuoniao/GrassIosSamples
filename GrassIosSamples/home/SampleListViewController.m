@@ -23,6 +23,7 @@
 #import "SWUITextViewViewController.h"
 #import "SWWKWebViewController.h"
 #import "SWUIPageControlViewController.h"
+#import "SWUIScrollViewController.h"
 
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
@@ -93,6 +94,9 @@
             }],
             [SampleInfo initWithName:@"UIPageControl" andVCFactory:^UIViewController *{
                 return [[SWUIPageControlViewController alloc] initWithTitle:@"UIPageControl"];
+            }],
+            [SampleInfo initWithName:@"UIScrollView" andVCFactory:^UIViewController *{
+                return [[SWUIScrollViewController alloc] initWithTitle:@"UIScrollView"];
             }]
         ];
     }

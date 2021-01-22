@@ -52,6 +52,7 @@
 		A4DEF5EA2565154A0076D5D1 /* HelloJsonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5E92565154A0076D5D1 /* HelloJsonViewController.m */; };
 		A4DEF5F0256517A30076D5D1 /* HelloNSNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5EF256517A30076D5D1 /* HelloNSNotificationViewController.m */; };
 		B726291925B9C3650027ECD3 /* SWUIPageControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B726291825B9C3650027ECD3 /* SWUIPageControlViewController.m */; };
+		B726291F25BB0A640027ECD3 /* SWUIScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B726291E25BB0A640027ECD3 /* SWUIScrollViewController.m */; };
 		B7524F0125A1DB61008EB751 /* SWNSAttributeStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7524F0025A1DB61008EB751 /* SWNSAttributeStringViewController.m */; };
 		B7524F0625A1FD03008EB751 /* HelloTestDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = B7524F0525A1FD03008EB751 /* HelloTestDemo.m */; };
 		B7CAE2F925B2E8EB00E15EAC /* HelloOCHamcrest.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CAE2F825B2E8EB00E15EAC /* HelloOCHamcrest.m */; };
@@ -173,6 +174,8 @@
 		A4DEF5EF256517A30076D5D1 /* HelloNSNotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloNSNotificationViewController.m; sourceTree = "<group>"; };
 		B726291725B9C3650027ECD3 /* SWUIPageControlViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUIPageControlViewController.h; sourceTree = "<group>"; };
 		B726291825B9C3650027ECD3 /* SWUIPageControlViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWUIPageControlViewController.m; sourceTree = "<group>"; };
+		B726291D25BB0A640027ECD3 /* SWUIScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUIScrollViewController.h; sourceTree = "<group>"; };
+		B726291E25BB0A640027ECD3 /* SWUIScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWUIScrollViewController.m; sourceTree = "<group>"; };
 		B7524EFF25A1DB61008EB751 /* SWNSAttributeStringViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWNSAttributeStringViewController.h; sourceTree = "<group>"; };
 		B7524F0025A1DB61008EB751 /* SWNSAttributeStringViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWNSAttributeStringViewController.m; sourceTree = "<group>"; };
 		B7524F0525A1FD03008EB751 /* HelloTestDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloTestDemo.m; sourceTree = "<group>"; };
@@ -379,6 +382,8 @@
 				A455D97B25AC714F0053CE85 /* SWWKWebViewController.m */,
 				B726291725B9C3650027ECD3 /* SWUIPageControlViewController.h */,
 				B726291825B9C3650027ECD3 /* SWUIPageControlViewController.m */,
+				B726291D25BB0A640027ECD3 /* SWUIScrollViewController.h */,
+				B726291E25BB0A640027ECD3 /* SWUIScrollViewController.m */,
 			);
 			path = samples;
 			sourceTree = "<group>";
@@ -688,6 +693,7 @@
 				A4D4F217256BE0F30037E1F4 /* QADAdConfigManager.m in Sources */,
 				A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */,
 				B7524F0125A1DB61008EB751 /* SWNSAttributeStringViewController.m in Sources */,
+				B726291F25BB0A640027ECD3 /* SWUIScrollViewController.m in Sources */,
 				A469927C2579012C00B192BD /* SWSemaphoreDemo.m in Sources */,
 				0C6F88FC256A5448009D5594 /* QLAppLaunchTaskList.m in Sources */,
 				0C6F890B256A573F009D5594 /* QLAppLaunchTaskList_Mainsync2.m in Sources */,
