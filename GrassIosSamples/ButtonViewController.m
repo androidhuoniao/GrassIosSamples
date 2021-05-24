@@ -23,15 +23,17 @@
     if (_button == nil) {
         _button = [UIButton buttonWithType:UIButtonTypeCustom];
         _button.frame = CGRectMake(50,300, 250,50);
+//        _button.frame = CGRectMake(10,100, 250,50);
         _button.backgroundColor = UIColor.redColor;
         [_button setTitle:@"1111" forState:UIControlStateNormal];
-        [_button addTarget:self action:@selector(onClickAction) forControlEvents:UIControlEventTouchUpInside];
+        [_button addTarget:self action:@selector(onClickAction:) forControlEvents:UIControlEventTouchUpInside];
         
     }
     return _button;
 }
 
--(void) onClickAction:(UIButton *) button{
+
+-(void)onClickAction:(UIButton *) button{
     NSLog(@"onClickAction is working");
 }
 @end

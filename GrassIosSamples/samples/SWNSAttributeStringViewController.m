@@ -6,9 +6,11 @@
 //
 
 #import "SWNSAttributeStringViewController.h"
+#import "UILabel+attributeTextAction.h"
 
 @interface SWNSAttributeStringViewController ()
 @property(nonatomic,strong) UILabel *uilabel;
+@property(nonatomic,assign) NSRange adRanage;
 @end
 
 @implementation SWNSAttributeStringViewController
@@ -16,7 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.uilabel];
-    self.uilabel.attributedText = [self getAttributeString];
+    NSAttributedString *attributeString = [self getAttributeString];
+    self.uilabel.attributedText = attributeString;
+    [self.uilabel addAttributeActionWithRange:[NSArray arrayWithObjects:[NSValue valueWithRange:self.adRanage], nil] tapTargetAction:^(NSString *string, NSRange range, NSInteger index) {
+            NSLog(@"点击字符串:%@ 范围在%@，第%ld个",string,NSStringFromRange(range),index+1);
+    }];
+    
     [self testsizeThatFits];
     [self testBoundingRectSize];
     [self logAttributedStringMethods];
@@ -45,11 +52,13 @@
     NSLog(@"testsizeThatFits rect:%@",NSStringFromCGSize(rect.size));
 }
 
-- (NSAttributedString *) getAttributeString{
-    
-    NSString *text =@"点击解锁超级方法点击解锁";
+- (NSAttributedString *)getAttributeString{
+    NSString *endAdStr = @"广告";
+    NSString *text =[@"点击解锁超级方法点击解锁" stringByAppendingString:endAdStr];
     NSLog(@"text.length:%li",text.length);
     NSMutableAttributedString *vipStr = [[NSMutableAttributedString alloc]initWithString:text];
+    NSRange adRanage = [vipStr.string rangeOfString:endAdStr];
+    self.adRanage = adRanage;
     UIImage *vipImage = [UIImage imageNamed:@"vscode_icon"];
     NSTextAttachment *vipImageAttachment = [[NSTextAttachment alloc]init];
     vipImageAttachment.image = vipImage;
@@ -59,14 +68,25 @@
     [vipStr insertAttributedString:vipImageAttrStr atIndex:0];
     NSLog(@"vipImageAttrStr.length:%li",vipImageAttrStr.length);
     
+    NSTextAttachment *endImageAttachment = [[NSTextAttachment alloc]init];
+    endImageAttachment.image = vipImage;
+    endImageAttachment.bounds = CGRectMake(0, 0, 20, 20);
+    // NSTextAttachment组成的NSAttributedString占据一个字符
+    NSAttributedString *endImageAttrStr = [NSAttributedString attributedStringWithAttachment:endImageAttachment];
+//    [vipStr insertAttributedString:endImageAttrStr atIndex:adRanage.location];
+    
+    
     //设置空格文本
     [vipStr insertAttributedString:[[NSAttributedString alloc] initWithString:@" "] atIndex:1];
+
     //设置间距
     [vipStr addAttribute:NSKernAttributeName value:@(6) range:NSMakeRange(1,1)];
     //设置字体和设置字体的范围
     [vipStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:20.0f] range:NSMakeRange(0, vipStr.length)];
     return vipStr;
 }
+
+
 
 - (void)logAttributedStringMethods{
     NSAttributedString *attrString = [self getAttributeString];

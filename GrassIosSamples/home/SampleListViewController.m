@@ -24,7 +24,8 @@
 #import "SWWKWebViewController.h"
 #import "SWUIPageControlViewController.h"
 #import "SWUIScrollViewController.h"
-
+#import "HelloFrameAndBoundsViewController.h"
+#import "HelloCenterViewController.h"
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
 @property(nonnull,nonatomic,strong) UITableView *myTableView;
@@ -97,6 +98,12 @@
             }],
             [SampleInfo initWithName:@"UIScrollView" andVCFactory:^UIViewController *{
                 return [[SWUIScrollViewController alloc] initWithTitle:@"UIScrollView"];
+            }],
+            [SampleInfo initWithName:@"HelloFrameAndBoundsViewController" andVCFactory:^UIViewController *{
+                return [[HelloFrameAndBoundsViewController alloc] init];
+            }],
+            [SampleInfo initWithName:@"HelloCenterViewController" andVCFactory:^UIViewController *{
+                return [[HelloCenterViewController alloc] init];
             }]
         ];
     }
@@ -121,8 +128,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellid];
     if(cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
-        cell.textLabel.text = [_sampleList objectAtIndex:indexPath.row].name;
+//        cell.textLabel.text = [_sampleList objectAtIndex:indexPath.row].name;
     }
+    cell.textLabel.text = [_sampleList objectAtIndex:indexPath.row].name;
     return cell;
 }
 
@@ -138,4 +146,10 @@
 
     [self.navigationController pushViewController:vc animated:false];
 }
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    NSLog(@"frame.size= %@ bounds.size=%@",NSStringFromCGRect(self.myTableView.frame), NSStringFromCGRect(self.myTableView.bounds));
+}
+
 @end
