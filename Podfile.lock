@@ -1,20 +1,38 @@
 PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
   - OCHamcrest (7.1.2)
   - OCMock (3.5)
 
 DEPENDENCIES:
+  - AFNetworking (~> 4.0)
   - OCHamcrest (= 7.1.2)
   - OCMock (= 3.5)
 
 SPEC REPOS:
   trunk:
+    - AFNetworking
     - OCHamcrest
     - OCMock
 
 SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   OCHamcrest: b284c9592c28c1e4025a8542e67ea41a635d0d73
   OCMock: 4ab4577fc941af31f4a0398f6e7e230cf21fc72a
 
-PODFILE CHECKSUM: 58889fc78426e506824dab1110fa28606652fbb5
+PODFILE CHECKSUM: 2ba8ec995ae2133c3149ea363c0b194187512672
 
 COCOAPODS: 1.10.0

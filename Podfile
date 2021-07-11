@@ -4,6 +4,7 @@
 target 'GrassIosSamples' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+  pod 'AFNetworking', '~> 4.0'
 
   # Pods for GrassIosSamples
 

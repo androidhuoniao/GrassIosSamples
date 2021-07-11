@@ -26,6 +26,7 @@
 #import "SWUIScrollViewController.h"
 #import "HelloFrameAndBoundsViewController.h"
 #import "HelloCenterViewController.h"
+#import "SWHelloAFNViewController.h"
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
 @property(nonnull,nonatomic,strong) UITableView *myTableView;
@@ -104,7 +105,10 @@
             }],
             [SampleInfo initWithName:@"HelloCenterViewController" andVCFactory:^UIViewController *{
                 return [[HelloCenterViewController alloc] init];
-            }]
+            }],
+            [SampleInfo initWithName:@"SWHelloAFNViewController" andVCFactory:^UIViewController *{
+                return [[SWHelloAFNViewController alloc] init];
+            }],
         ];
     }
     return _sampleList;

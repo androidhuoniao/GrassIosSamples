@@ -1,3 +1,8 @@
 xcschememanagement.plist
 *.xcuserstate
 *.xcscheme
+#CocoaPods
+Pods
+Podfile.lock
+*.xccheckout
+*.xcworkspace
