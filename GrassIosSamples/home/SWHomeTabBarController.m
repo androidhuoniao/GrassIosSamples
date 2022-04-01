@@ -11,6 +11,7 @@
 #import <UIKit/UIKit.h>
 #import "SWNavigationController.h"
 #import "SWTVSampleListViewController.h"
+#import "YZDevGroupTableController.h"
 
 @interface SWHomeTabBarController ()
 
@@ -22,6 +23,7 @@
     [super viewDidLoad];
     self.viewControllers = @[[self createIOSTabController],[self createOCTabController],[self createTvTabController]];
     self.selectedIndex = 0;
+    YZDevGroupTableController *devController = [[YZDevGroupTableController alloc] init];
 }
 
 -(UINavigationController *) createIOSTabController{

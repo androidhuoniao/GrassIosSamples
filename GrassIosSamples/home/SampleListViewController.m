@@ -27,6 +27,7 @@
 #import "HelloFrameAndBoundsViewController.h"
 #import "HelloCenterViewController.h"
 #import "SWHelloAFNViewController.h"
+#import "YZCollectionViewSubViewController.h"
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
 @property(nonnull,nonatomic,strong) UITableView *myTableView;
@@ -108,6 +109,9 @@
             }],
             [SampleInfo initWithName:@"SWHelloAFNViewController" andVCFactory:^UIViewController *{
                 return [[SWHelloAFNViewController alloc] init];
+            }],
+            [SampleInfo initWithName:@"YZCollectionViewSubViewController" andVCFactory:^UIViewController *{
+                return [[YZCollectionViewSubViewController alloc] init];
             }],
         ];
     }
