@@ -14,7 +14,6 @@
 #import "GetIDFAViewController.h"
 #import "NSUserDefaultsViewController.h"
 #import "HelloJsonViewController.h"
-#import "MockTVViewController.h"
 
 @interface SWBaseSampleListViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonnull,nonatomic,strong) UITableView *myTableView;

@@ -13,7 +13,6 @@
 #import "GetIDFAViewController.h"
 #import "NSUserDefaultsViewController.h"
 #import "HelloJsonViewController.h"
-#import "MockTVViewController.h"
 #import "SWGcdViewController.h"
 #import "SWAlertViewController.h"
 #import "SWCollectionViewController.h"
@@ -70,9 +69,6 @@
             }],
             [SampleInfo initWithName:@"NSNotification" andVCFactory:^UIViewController *{
                 return [[HelloJsonViewController alloc] initWithTitle:@"HelloNSNotification"];
-            }],
-            [SampleInfo initWithName:@"MockTV" andVCFactory:^UIViewController *{
-                return [[MockTVViewController alloc] initWithTitle:@"MockTV"];
             }],
             [SampleInfo initWithName:@"GCD" andVCFactory:^UIViewController *{
                 return [[SWGcdViewController alloc] initWithTitle:@"CCD"];

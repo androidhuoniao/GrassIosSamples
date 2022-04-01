@@ -47,11 +47,6 @@
 //    [self showViewController:QADDeveloperVC.new sender:nil];
 }
 
-- (void)showHotAreaDebug {
-//    QADExpListVC *expListVC = QADExpListVC.new;
-//    [self showViewController:expListVC sender:nil];
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     YZDevTitleCellItem *item = [self rowAtIndexPath:indexPath].model;
 #pragma clang diagnostic push

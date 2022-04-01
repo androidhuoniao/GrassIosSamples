@@ -20,10 +20,6 @@
 		0C5A96BA255AA27D00C653AF /* BaseSampleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A96B9255AA27D00C653AF /* BaseSampleInfo.m */; };
 		0C5A96CA255AA45800C653AF /* SampleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A96C9255AA45800C653AF /* SampleInfo.m */; };
 		0C5A96D7255AB42A00C653AF /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A96D6255AB42A00C653AF /* SampleViewController.m */; };
-		0C6F88FC256A5448009D5594 /* QLAppLaunchTaskList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6F88FB256A5448009D5594 /* QLAppLaunchTaskList.m */; };
-		0C6F8905256A5727009D5594 /* QLAppLaunchTaskList_MainSync1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6F8904256A5727009D5594 /* QLAppLaunchTaskList_MainSync1.m */; };
-		0C6F890B256A573F009D5594 /* QLAppLaunchTaskList_Mainsync2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6F890A256A573F009D5594 /* QLAppLaunchTaskList_Mainsync2.m */; };
-		0C6F8915256A59F8009D5594 /* MockTVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6F8914256A59F8009D5594 /* MockTVViewController.m */; };
 		0CEC0D82257B84DE0075AA5A /* SWCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC0D81257B84DE0075AA5A /* SWCollectionViewController.m */; };
 		5CB386018485DAA39A905B31 /* Pods_GrassIosSamplesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8788A65E29FF1DBA8B7EE070 /* Pods_GrassIosSamplesTests.framework */; };
 		A405A1B7259989040019A853 /* SWUILableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A405A1B6259989040019A853 /* SWUILableViewController.m */; };
@@ -53,8 +49,6 @@
 		A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928F62255BEE2500D82EF3 /* CustomView.m */; };
 		A4928FA6255CDF6000D82EF3 /* QLReCord.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928FA5255CDF6000D82EF3 /* QLReCord.m */; };
 		A4928FB6255CE1C900D82EF3 /* QLRecordTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928FB5255CE1C900D82EF3 /* QLRecordTest.m */; };
-		A4D4F217256BE0F30037E1F4 /* QADAdConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D4F216256BE0F30037E1F4 /* QADAdConfigManager.m */; };
-		A4D4F21E256BE1B00037E1F4 /* QADIdfaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D4F21D256BE1B00037E1F4 /* QADIdfaManager.m */; };
 		A4D4F232256BE3050037E1F4 /* QADIdfaManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D4F231256BE3050037E1F4 /* QADIdfaManagerTest.m */; };
 		A4DEF4D525627BE10076D5D1 /* GetIDFAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF4D425627BE10076D5D1 /* GetIDFAViewController.m */; };
 		A4DEF5E42565151E0076D5D1 /* NSUserDefaultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5E32565151D0076D5D1 /* NSUserDefaultsViewController.m */; };
@@ -69,7 +63,6 @@
 		B76A0C3125CC308D00C0B714 /* UILabel+attributeTextAction.m in Sources */ = {isa = PBXBuildFile; fileRef = B76A0C2F25CC308C00C0B714 /* UILabel+attributeTextAction.m */; };
 		B79D3A84269AFE6E00171C3B /* SWHelloAFNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B79D3A83269AFE6E00171C3B /* SWHelloAFNViewController.m */; };
 		B7CAE2F925B2E8EB00E15EAC /* HelloOCHamcrest.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CAE2F825B2E8EB00E15EAC /* HelloOCHamcrest.m */; };
-		B7CAE36825B3126400E15EAC /* QADLandingPageVRReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CAE36625B3126400E15EAC /* QADLandingPageVRReporter.m */; };
 		B7CAE36D25B3139500E15EAC /* QADLandingPageVRReporterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CAE36C25B3139500E15EAC /* QADLandingPageVRReporterTest.m */; };
 		E99621DBCA5E5CEA4E036EE7 /* Pods_GrassIosSamples_GrassIosSamplesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C2E44BCA1168D48213D753 /* Pods_GrassIosSamples_GrassIosSamplesUITests.framework */; };
 		F265E290EEF32741BE8E722E /* Pods_GrassIosSamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805926C4BFA83B1842DBC5CC /* Pods_GrassIosSamples.framework */; };
@@ -121,14 +114,6 @@
 		0C5A96C9255AA45800C653AF /* SampleInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleInfo.m; sourceTree = "<group>"; };
 		0C5A96D5255AB42A00C653AF /* SampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleViewController.h; sourceTree = "<group>"; };
 		0C5A96D6255AB42A00C653AF /* SampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleViewController.m; sourceTree = "<group>"; };
-		0C6F88FA256A5448009D5594 /* QLAppLaunchTaskList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QLAppLaunchTaskList.h; sourceTree = "<group>"; };
-		0C6F88FB256A5448009D5594 /* QLAppLaunchTaskList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLAppLaunchTaskList.m; sourceTree = "<group>"; };
-		0C6F8903256A5727009D5594 /* QLAppLaunchTaskList_MainSync1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QLAppLaunchTaskList_MainSync1.h; sourceTree = "<group>"; };
-		0C6F8904256A5727009D5594 /* QLAppLaunchTaskList_MainSync1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLAppLaunchTaskList_MainSync1.m; sourceTree = "<group>"; };
-		0C6F8909256A573F009D5594 /* QLAppLaunchTaskList_Mainsync2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QLAppLaunchTaskList_Mainsync2.h; sourceTree = "<group>"; };
-		0C6F890A256A573F009D5594 /* QLAppLaunchTaskList_Mainsync2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLAppLaunchTaskList_Mainsync2.m; sourceTree = "<group>"; };
-		0C6F8913256A59F8009D5594 /* MockTVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockTVViewController.h; sourceTree = "<group>"; };
-		0C6F8914256A59F8009D5594 /* MockTVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockTVViewController.m; sourceTree = "<group>"; };
 		0CEC0D80257B84DE0075AA5A /* SWCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWCollectionViewController.h; sourceTree = "<group>"; };
 		0CEC0D81257B84DE0075AA5A /* SWCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWCollectionViewController.m; sourceTree = "<group>"; };
 		28DE0D4B0A32C3C369385EBC /* Pods-GrassIosSamples-GrassIosSamplesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamples-GrassIosSamplesUITests.debug.xcconfig"; path = "Target Support Files/Pods-GrassIosSamples-GrassIosSamplesUITests/Pods-GrassIosSamples-GrassIosSamplesUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -191,10 +176,6 @@
 		A4928FA4255CDF6000D82EF3 /* QLReCord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QLReCord.h; sourceTree = "<group>"; };
 		A4928FA5255CDF6000D82EF3 /* QLReCord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLReCord.m; sourceTree = "<group>"; };
 		A4928FB5255CE1C900D82EF3 /* QLRecordTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLRecordTest.m; sourceTree = "<group>"; };
-		A4D4F215256BE0F30037E1F4 /* QADAdConfigManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QADAdConfigManager.h; sourceTree = "<group>"; };
-		A4D4F216256BE0F30037E1F4 /* QADAdConfigManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QADAdConfigManager.m; sourceTree = "<group>"; };
-		A4D4F21C256BE1B00037E1F4 /* QADIdfaManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QADIdfaManager.h; sourceTree = "<group>"; };
-		A4D4F21D256BE1B00037E1F4 /* QADIdfaManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QADIdfaManager.m; sourceTree = "<group>"; };
 		A4D4F231256BE3050037E1F4 /* QADIdfaManagerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QADIdfaManagerTest.m; sourceTree = "<group>"; };
 		A4DEF4D325627BE10076D5D1 /* GetIDFAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetIDFAViewController.h; sourceTree = "<group>"; };
 		A4DEF4D425627BE10076D5D1 /* GetIDFAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetIDFAViewController.m; sourceTree = "<group>"; };
@@ -220,8 +201,6 @@
 		B79D3A82269AFE6E00171C3B /* SWHelloAFNViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWHelloAFNViewController.h; sourceTree = "<group>"; };
 		B79D3A83269AFE6E00171C3B /* SWHelloAFNViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWHelloAFNViewController.m; sourceTree = "<group>"; };
 		B7CAE2F825B2E8EB00E15EAC /* HelloOCHamcrest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloOCHamcrest.m; sourceTree = "<group>"; };
-		B7CAE36625B3126400E15EAC /* QADLandingPageVRReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QADLandingPageVRReporter.m; sourceTree = "<group>"; };
-		B7CAE36725B3126400E15EAC /* QADLandingPageVRReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QADLandingPageVRReporter.h; sourceTree = "<group>"; };
 		B7CAE36C25B3139500E15EAC /* QADLandingPageVRReporterTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QADLandingPageVRReporterTest.m; sourceTree = "<group>"; };
 		BCAE541ADF8C48398ADEB95D /* Pods-GrassIosSamples-GrassIosSamplesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamples-GrassIosSamplesUITests.release.xcconfig"; path = "Target Support Files/Pods-GrassIosSamples-GrassIosSamplesUITests/Pods-GrassIosSamples-GrassIosSamplesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C7F7ADF5F5EFC89F1D351307 /* Pods-GrassIosSamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamples.release.xcconfig"; path = "Target Support Files/Pods-GrassIosSamples/Pods-GrassIosSamples.release.xcconfig"; sourceTree = "<group>"; };
@@ -286,8 +265,6 @@
 				A424627E2570EAF400C643B7 /* samples */,
 				A42462532570E2EF00C643B7 /* base */,
 				A42461AC2570D7DA00C643B7 /* home */,
-				A4D4F214256BE0640037E1F4 /* mockidfa */,
-				0C6F890F256A5928009D5594 /* mocktv */,
 				A4928FA3255CDF2800D82EF3 /* ut */,
 				A4928F60255BEDD300D82EF3 /* customview */,
 				0C5A96D4255AB3FF00C653AF /* vc */,
@@ -357,23 +334,6 @@
 				A4DEF5EF256517A30076D5D1 /* HelloNSNotificationViewController.m */,
 			);
 			path = vc;
-			sourceTree = "<group>";
-		};
-		0C6F890F256A5928009D5594 /* mocktv */ = {
-			isa = PBXGroup;
-			children = (
-				B7CAE36725B3126400E15EAC /* QADLandingPageVRReporter.h */,
-				B7CAE36625B3126400E15EAC /* QADLandingPageVRReporter.m */,
-				0C6F88FA256A5448009D5594 /* QLAppLaunchTaskList.h */,
-				0C6F88FB256A5448009D5594 /* QLAppLaunchTaskList.m */,
-				0C6F8903256A5727009D5594 /* QLAppLaunchTaskList_MainSync1.h */,
-				0C6F8904256A5727009D5594 /* QLAppLaunchTaskList_MainSync1.m */,
-				0C6F8909256A573F009D5594 /* QLAppLaunchTaskList_Mainsync2.h */,
-				0C6F890A256A573F009D5594 /* QLAppLaunchTaskList_Mainsync2.m */,
-				0C6F8913256A59F8009D5594 /* MockTVViewController.h */,
-				0C6F8914256A59F8009D5594 /* MockTVViewController.m */,
-			);
-			path = mocktv;
 			sourceTree = "<group>";
 		};
 		A42461AC2570D7DA00C643B7 /* home */ = {
@@ -532,17 +492,6 @@
 				A4928FA5255CDF6000D82EF3 /* QLReCord.m */,
 			);
 			path = ut;
-			sourceTree = "<group>";
-		};
-		A4D4F214256BE0640037E1F4 /* mockidfa */ = {
-			isa = PBXGroup;
-			children = (
-				A4D4F215256BE0F30037E1F4 /* QADAdConfigManager.h */,
-				A4D4F216256BE0F30037E1F4 /* QADAdConfigManager.m */,
-				A4D4F21C256BE1B00037E1F4 /* QADIdfaManager.h */,
-				A4D4F21D256BE1B00037E1F4 /* QADIdfaManager.m */,
-			);
-			path = mockidfa;
 			sourceTree = "<group>";
 		};
 		B79D3A81269AFE3900171C3B /* Network */ = {
@@ -843,17 +792,13 @@
 				0C5A96AB255A876000C653AF /* ImageUIViewController.m in Sources */,
 				0C5A9652255A3C1600C653AF /* AppDelegate.m in Sources */,
 				A47723DA27F7069100802D55 /* YZDevButtonCell.m in Sources */,
-				A4D4F217256BE0F30037E1F4 /* QADAdConfigManager.m in Sources */,
 				A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */,
 				B7524F0125A1DB61008EB751 /* SWNSAttributeStringViewController.m in Sources */,
 				B726291F25BB0A640027ECD3 /* SWUIScrollViewController.m in Sources */,
 				A469927C2579012C00B192BD /* SWSemaphoreDemo.m in Sources */,
 				B79D3A84269AFE6E00171C3B /* SWHelloAFNViewController.m in Sources */,
-				0C6F88FC256A5448009D5594 /* QLAppLaunchTaskList.m in Sources */,
 				A47723DF27F7069100802D55 /* YZDevSection.m in Sources */,
-				0C6F890B256A573F009D5594 /* QLAppLaunchTaskList_Mainsync2.m in Sources */,
 				A47723DE27F7069100802D55 /* YZTableDataSource.m in Sources */,
-				0C6F8905256A5727009D5594 /* QLAppLaunchTaskList_MainSync1.m in Sources */,
 				0C5A96B1255A878600C653AF /* ButtonViewController.m in Sources */,
 				A4928FA6255CDF6000D82EF3 /* QLReCord.m in Sources */,
 				A42462812570EC1100C643B7 /* SWGcdViewController.m in Sources */,
@@ -871,14 +816,11 @@
 				A4DEF4D525627BE10076D5D1 /* GetIDFAViewController.m in Sources */,
 				0C5A9655255A3C1600C653AF /* SceneDelegate.m in Sources */,
 				A47723D927F7069100802D55 /* YZDevButtonCellItem.m in Sources */,
-				A4D4F21E256BE1B00037E1F4 /* QADIdfaManager.m in Sources */,
 				B76A0C3125CC308D00C0B714 /* UILabel+attributeTextAction.m in Sources */,
 				0CEC0D82257B84DE0075AA5A /* SWCollectionViewController.m in Sources */,
 				A455D97C25AC714F0053CE85 /* SWWKWebViewController.m in Sources */,
 				A47723D827F7069100802D55 /* YZDevRow.m in Sources */,
 				A42462562570E34A00C643B7 /* SWBaseSampleListViewController.m in Sources */,
-				0C6F8915256A59F8009D5594 /* MockTVViewController.m in Sources */,
-				B7CAE36825B3126400E15EAC /* QADLandingPageVRReporter.m in Sources */,
 				A42461B82570D86C00C643B7 /* SWHomeTabBarController.m in Sources */,
 				B72D2373265939C9006C7AF8 /* HelloFrameAndBoundsViewController.m in Sources */,
 				A42461BE2570D8C100C643B7 /* SWPureOCViewController.m in Sources */,
