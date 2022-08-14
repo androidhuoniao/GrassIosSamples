@@ -27,6 +27,7 @@
 #import "HelloCenterViewController.h"
 #import "SWHelloAFNViewController.h"
 #import "YZCollectionViewSubViewController.h"
+#import "SWCollectionViewController2.h"
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
 @property(nonnull,nonatomic,strong) UITableView *myTableView;
@@ -78,6 +79,9 @@
             }],
             [SampleInfo initWithName:@"CollectionView" andVCFactory:^UIViewController *{
                 return [[SWCollectionViewController alloc] initWithTitle:@"CollectionView"];
+            }],
+            [SampleInfo initWithName:@"CollectionView2" andVCFactory:^UIViewController *{
+                return [[SWCollectionViewController2 alloc] initWithTitle:@"CollectionView"];
             }],
             [SampleInfo initWithName:@"NSAttributeString" andVCFactory:^UIViewController *{
                 return [[SWNSAttributeStringViewController alloc] initWithTitle:@"NSAttributeString"];
