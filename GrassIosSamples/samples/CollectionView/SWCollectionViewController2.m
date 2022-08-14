@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:[self collectionView]];
-//    [self.view addSubview:self.dynamicAdBtn];
+    //    [self.view addSubview:self.dynamicAdBtn];
     [self.view insertSubview:self.dynamicAdBtn aboveSubview:self.collectionView];
     CGSize contentViewSize = self.view.bounds.size;
     CGSize dynamicAdBtnSize = self.dynamicAdBtn.frame.size;
@@ -89,6 +89,22 @@
     [self.collectionView insertItemsAtIndexPaths:@[insertIndexPath]];
 }
 
+- (void)onDynamicAdBtnClick2 {
+    NSString *str = [[NSString alloc] initWithFormat:@"广告_%@", @(CFAbsoluteTimeGetCurrent()).stringValue];
+    NSInteger insertPos = self.currentIndexPath.row - 1;
+    [self.data insertObject:str atIndex:insertPos];
+    NSIndexPath *insertIndexPath = [NSIndexPath indexPathForRow:insertPos inSection:0];
+    CGFloat bottomOffset = self.collectionView.contentSize.height - self.collectionView.contentOffset.y;
+    [CATransaction begin];
+    [CATransaction setDisableActions:YES];
+    [self.collectionView performBatchUpdates:^{
+        [self.collectionView insertItemsAtIndexPaths:@[insertIndexPath]];
+    } completion:^(BOOL finished) {
+        self.collectionView.contentOffset = CGPointMake(0, self.collectionView.contentSize.height - bottomOffset);
+    }];
+    [CATransaction commit];
+}
+
 #pragma mark - lazy
 
 - (UILabel *)dynamicAdBtn {
@@ -97,7 +113,7 @@
         _dynamicAdBtn.text = @"dynamicAdd";
         _dynamicAdBtn.userInteractionEnabled = YES;
         _dynamicAdBtn.backgroundColor = UIColor.blueColor;
-        UITapGestureRecognizer *gr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onDynamicAdBtnClick)];
+        UITapGestureRecognizer *gr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onDynamicAdBtnClick2)];
         [_dynamicAdBtn addGestureRecognizer:gr];
     }
     return _dynamicAdBtn;
