@@ -5,8 +5,8 @@
 //  Created by grassswwang(王圣伟) on 2021/1/11.
 //
 
-#import "SWWKWebViewController.h"
 #import <WebKit/WebKit.h>
+#import "SWWKWebViewController.h"
 
 /// 控件高度
 #define kSearchBarH  44
@@ -26,6 +26,7 @@ typedef NS_ENUM(NSInteger,VIEWID){
 };
 
 @interface SWWKWebViewController ()<UISearchBarDelegate, WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler>
+
 @property (nonatomic, strong) UISearchBar *searchBar;
 /// 网页控制导航栏
 @property (weak, nonatomic) UIView *bottomView;
@@ -34,8 +35,9 @@ typedef NS_ENUM(NSInteger,VIEWID){
 @property (weak, nonatomic) UIButton *forwardBtn;
 @property (weak, nonatomic) UIButton *reloadBtn;
 @property (weak, nonatomic) UIButton *browserBtn;
-@property (nonatomic,strong)UIButton *stoploadingBtn;
+@property (nonatomic,strong) UIButton *stoploadingBtn;
 @property (weak, nonatomic) NSString *baseURLString;
+
 @end
 
 @implementation SWWKWebViewController
@@ -79,7 +81,6 @@ typedef NS_ENUM(NSInteger,VIEWID){
     [self setupBottomViewLayout];
 }
 
-
 - (void)setupBottomViewLayout{
     int count = 5;
     CGFloat btnW = 70;
@@ -113,7 +114,8 @@ typedef NS_ENUM(NSInteger,VIEWID){
     }
 }
 
-#pragma click listener
+#pragma mark - click listener
+
 /// 按钮点击事件
 - (void)onBottomButtonsClicled:(UIButton *)sender {
     switch (sender.tag) {
@@ -141,7 +143,6 @@ typedef NS_ENUM(NSInteger,VIEWID){
     }
 }
 
-
 - (void)evaluateJs{
     //OC调用JS  changeColor()是JS方法名，completionHandler是异步回调block
     NSString *jsString = [NSString stringWithFormat:@"changeColor('%@')", @"Js参数"];
@@ -162,10 +163,10 @@ typedef NS_ENUM(NSInteger,VIEWID){
     }
 }
 
-
 #pragma mark - WKWebView WKNavigationDelegate 相关
-/// 是否允许加载网页 在发送请求之前，决定是否跳转
-// 根据WebView对于即将跳转的HTTP请求头信息和相关信息来决定是否跳转
+
+/// 是否允许加载网页在发送请求之前，决定是否跳转
+/// 根据WebView对于即将跳转的HTTP请求头信息和相关信息来决定是否跳转
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     NSString *urlString = [[navigationAction.request URL] absoluteString];
     urlString = [urlString stringByRemovingPercentEncoding];
@@ -182,7 +183,6 @@ typedef NS_ENUM(NSInteger,VIEWID){
 
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
     NSLog(@"%@_%s",LOGTAG,__func__);
-    
 }
 
 // 当内容开始返回时调用
@@ -191,7 +191,6 @@ typedef NS_ENUM(NSInteger,VIEWID){
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
-    
     NSLog(@"%@_%s",LOGTAG,__func__);
 }
 
@@ -202,7 +201,6 @@ typedef NS_ENUM(NSInteger,VIEWID){
 // 接收到服务器跳转请求即服务重定向时之后调用
 - (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(WKNavigation *)navigation{
     NSLog(@"%@_%s",LOGTAG,__func__);
-    
 }
 
 //需要响应身份验证时调用 同样在block中需要传入用户身份凭证
@@ -216,13 +214,12 @@ typedef NS_ENUM(NSInteger,VIEWID){
 }
 
 #pragma mark - WKWebView WKUIDelegate 相关
-/**
-     *  web界面中有弹出警告框时调用
-     *
-     *  @param webView           实现该代理的webview
-     *  @param message           警告框中的内容
-     *  @param completionHandler 警告框消失调用
-     */
+
+/// web界面中有弹出警告框时调用
+/// @param webView  实现该代理的webview
+/// @param message 警告框中的内容
+/// @param frame 还不知道？
+/// @param completionHandler 警告框消失调用
 - (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
     NSLog(@"%@_%s",LOGTAG,__func__);
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"HTML的弹出框" message:message?:@"" preferredStyle:UIAlertControllerStyleAlert];
@@ -231,8 +228,8 @@ typedef NS_ENUM(NSInteger,VIEWID){
     }])];
     [self presentViewController:alertController animated:YES completion:nil];
 }
-    // 确认框
-    //JavaScript调用confirm方法后回调的方法 confirm是js中的确定框，需要在block中把用户选择的情况传递进去
+
+/// 确认框 JavaScript调用confirm方法后回调的方法 confirm是js中的确定框，需要在block中把用户选择的情况传递进去
 - (void)webView:(WKWebView *)webView runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(BOOL))completionHandler{
     NSLog(@"%@_%s",LOGTAG,__func__);
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:message?:@"" preferredStyle:UIAlertControllerStyleAlert];
@@ -244,8 +241,8 @@ typedef NS_ENUM(NSInteger,VIEWID){
     }])];
     [self presentViewController:alertController animated:YES completion:nil];
 }
-    // 输入框
-    //JavaScript调用prompt方法后回调的方法 prompt是js中的输入框 需要在block中把用户输入的信息传入
+
+/// 输入框 JavaScript调用prompt方法后回调的方法 prompt是js中的输入框 需要在block中把用户输入的信息传入
 - (void)webView:(WKWebView *)webView runJavaScriptTextInputPanelWithPrompt:(NSString *)prompt defaultText:(NSString *)defaultText initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(NSString * _Nullable))completionHandler{
     NSLog(@"%@_%s",LOGTAG,__func__);
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:prompt message:@"" preferredStyle:UIAlertControllerStyleAlert];
@@ -257,7 +254,8 @@ typedef NS_ENUM(NSInteger,VIEWID){
     }])];
     [self presentViewController:alertController animated:YES completion:nil];
 }
-    // 页面是弹出窗口 _blank 处理
+
+/// 页面是弹出窗口 _blank 处理
 - (WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures {
     NSLog(@"%@_%s",LOGTAG,__func__);
     if (!navigationAction.targetFrame.isMainFrame) {
@@ -267,7 +265,8 @@ typedef NS_ENUM(NSInteger,VIEWID){
 }
 
 #pragma mark - 监听进度
-//kvo 监听进度 必须实现此方法
+
+/// kvo 监听进度 必须实现此方法
 -(void)observeValueForKeyPath:(NSString *)keyPath
                      ofObject:(id)object
                        change:(NSDictionary<NSKeyValueChangeKey,id> *)change
@@ -295,7 +294,8 @@ typedef NS_ENUM(NSInteger,VIEWID){
 }
 
 #pragma mark WKScriptMessageHandler
-//通过接收JS传出消息的name进行捕捉的回调方法
+
+/// 通过接收JS传出消息的name进行捕捉的回调方法
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
     NSLog(@"%@_%s",LOGTAG,__func__);
     NSLog(@"userContentController name:%@\\\\n body:%@\\\\n frameInfo:%@\\\\n",message.name,message.body,message.frameInfo);
@@ -317,6 +317,7 @@ typedef NS_ENUM(NSInteger,VIEWID){
 }
 
 #pragma mark - searchBar代理方法
+
 /// 点击搜索按钮
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     // 创建url
@@ -345,6 +346,7 @@ typedef NS_ENUM(NSInteger,VIEWID){
 
 
 #pragma mark - 懒加载
+
 - (UIView *)bottomView {
     if (_bottomView == nil) {
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenHeight - 240, kScreenWidth, kBottomViewH)];
@@ -354,6 +356,7 @@ typedef NS_ENUM(NSInteger,VIEWID){
     }
     return _bottomView;
 }
+
 - (UISearchBar *)searchBar {
     if (_searchBar == nil) {
         UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 20, kScreenWidth, kSearchBarH)];
@@ -427,7 +430,6 @@ typedef NS_ENUM(NSInteger,VIEWID){
     return config;
 }
 
-
 - (UIButton *)buildButton:(NSString *)title clickListener:(SEL)clickListener tag:(NSInteger) tag{
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setTitle:title forState:UIControlStateNormal];
@@ -439,6 +441,5 @@ typedef NS_ENUM(NSInteger,VIEWID){
     [button addTarget:self action:clickListener forControlEvents:UIControlEventTouchUpInside];
     return button;
 }
-
 
 @end
