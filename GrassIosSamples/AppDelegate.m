@@ -37,15 +37,15 @@
     NSLog(@"release is working");
     #endif
     [NSURLProtocol registerClass:[MYURLProtocol class]];
-    //实现拦截功能
-    Class cls = NSClassFromString(@"WKBrowsingContextController");
-    SEL sel = NSSelectorFromString(@"registerSchemeForCustomProtocol:");
-    if ([(id)cls respondsToSelector:sel]) {
-    #pragma clang diagnostic push
-    #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-        [(id)cls performSelector:sel withObject:@"myapp"];
-    #pragma clang diagnostic pop
-    }
+//    //实现拦截功能
+//    Class cls = NSClassFromString(@"WKBrowsingContextController");
+//    SEL sel = NSSelectorFromString(@"registerSchemeForCustomProtocol:");
+//    if ([(id)cls respondsToSelector:sel]) {
+//    #pragma clang diagnostic push
+//    #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+//        [(id)cls performSelector:sel withObject:@"myapp"];
+//    #pragma clang diagnostic pop
+//    }
     return YES;
 }
     

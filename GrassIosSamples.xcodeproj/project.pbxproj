@@ -48,6 +48,8 @@
 		A48AC66528A8A5A0000140DC /* SWCollectionViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = A48AC66428A8A5A0000140DC /* SWCollectionViewController2.m */; };
 		A48AC66A28A91AF8000140DC /* UILabelCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A48AC66928A91AF8000140DC /* UILabelCollectionViewCell.m */; };
 		A48C211B28BB51C200F261C0 /* MYURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = A48C211A28BB51C200F261C0 /* MYURLProtocol.m */; };
+		A48C212B28BB599000F261C0 /* HFURLSchemeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A48C212A28BB599000F261C0 /* HFURLSchemeHandler.m */; };
+		A48C213428BB5A4A00F261C0 /* WKWebView+SchemeHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = A48C213328BB5A4A00F261C0 /* WKWebView+SchemeHandle.m */; };
 		A4928F5B255BED6E00D82EF3 /* CustomViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928F5A255BED6E00D82EF3 /* CustomViewViewController.m */; };
 		A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928F62255BEE2500D82EF3 /* CustomView.m */; };
 		A4928FA6255CDF6000D82EF3 /* QLReCord.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928FA5255CDF6000D82EF3 /* QLReCord.m */; };
@@ -178,6 +180,10 @@
 		A48AC66928A91AF8000140DC /* UILabelCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILabelCollectionViewCell.m; sourceTree = "<group>"; };
 		A48C211928BB51C200F261C0 /* MYURLProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYURLProtocol.h; sourceTree = "<group>"; };
 		A48C211A28BB51C200F261C0 /* MYURLProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYURLProtocol.m; sourceTree = "<group>"; };
+		A48C212928BB599000F261C0 /* HFURLSchemeHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFURLSchemeHandler.h; sourceTree = "<group>"; };
+		A48C212A28BB599000F261C0 /* HFURLSchemeHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFURLSchemeHandler.m; sourceTree = "<group>"; };
+		A48C213228BB5A4A00F261C0 /* WKWebView+SchemeHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WKWebView+SchemeHandle.h"; sourceTree = "<group>"; };
+		A48C213328BB5A4A00F261C0 /* WKWebView+SchemeHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+SchemeHandle.m"; sourceTree = "<group>"; };
 		A4928F59255BED6E00D82EF3 /* CustomViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewViewController.h; sourceTree = "<group>"; };
 		A4928F5A255BED6E00D82EF3 /* CustomViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewViewController.m; sourceTree = "<group>"; };
 		A4928F61255BEE2500D82EF3 /* CustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
@@ -376,6 +382,7 @@
 		A424627E2570EAF400C643B7 /* samples */ = {
 			isa = PBXGroup;
 			children = (
+				A48C212828BB597600F261C0 /* WebView */,
 				A48AC66728A91AD4000140DC /* Cell */,
 				A48AC66228A8A574000140DC /* CollectionView */,
 				A47723E027F7097E00802D55 /* Collection */,
@@ -503,6 +510,17 @@
 				A48AC66928A91AF8000140DC /* UILabelCollectionViewCell.m */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		A48C212828BB597600F261C0 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				A48C212928BB599000F261C0 /* HFURLSchemeHandler.h */,
+				A48C212A28BB599000F261C0 /* HFURLSchemeHandler.m */,
+				A48C213228BB5A4A00F261C0 /* WKWebView+SchemeHandle.h */,
+				A48C213328BB5A4A00F261C0 /* WKWebView+SchemeHandle.m */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		A4928F60255BEDD300D82EF3 /* customview */ = {
@@ -825,6 +843,7 @@
 				0C5A9652255A3C1600C653AF /* AppDelegate.m in Sources */,
 				A47723DA27F7069100802D55 /* YZDevButtonCell.m in Sources */,
 				A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */,
+				A48C213428BB5A4A00F261C0 /* WKWebView+SchemeHandle.m in Sources */,
 				B7524F0125A1DB61008EB751 /* SWNSAttributeStringViewController.m in Sources */,
 				B726291F25BB0A640027ECD3 /* SWUIScrollViewController.m in Sources */,
 				A48AC66528A8A5A0000140DC /* SWCollectionViewController2.m in Sources */,
@@ -833,6 +852,7 @@
 				A47723DF27F7069100802D55 /* YZDevSection.m in Sources */,
 				A47723DE27F7069100802D55 /* YZTableDataSource.m in Sources */,
 				0C5A96B1255A878600C653AF /* ButtonViewController.m in Sources */,
+				A48C212B28BB599000F261C0 /* HFURLSchemeHandler.m in Sources */,
 				A4928FA6255CDF6000D82EF3 /* QLReCord.m in Sources */,
 				A42462812570EC1100C643B7 /* SWGcdViewController.m in Sources */,
 				A4928F5B255BED6E00D82EF3 /* CustomViewViewController.m in Sources */,

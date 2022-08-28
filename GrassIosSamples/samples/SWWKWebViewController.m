@@ -7,6 +7,7 @@
 
 #import <WebKit/WebKit.h>
 #import "SWWKWebViewController.h"
+#import "HFURLSchemeHandler.h"
 
 /// 控件高度
 #define kSearchBarH  44
@@ -433,6 +434,10 @@ typedef NS_ENUM(NSInteger,VIEWID){
     if (@available(iOS 10.0, *)) {
         [config setValue:@YES forKey:@"allowUniversalAccessFromFileURLs"];
     }
+    
+    HFURLSchemeHandler *schemeHandler = [[HFURLSchemeHandler alloc] init];
+    [config setURLSchemeHandler:schemeHandler forURLScheme:@"https"];
+    [config setURLSchemeHandler:schemeHandler forURLScheme:@"http"];
     return config;
 }
 
