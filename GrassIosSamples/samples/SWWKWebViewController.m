@@ -46,7 +46,8 @@ typedef NS_ENUM(NSInteger,VIEWID){
     [super viewDidLoad];
     [self addSubViews];
     [self refreshBottomButtonState];
-    [self.wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com/"]]];
+    NSString *urlStr = @"https://active.v.qq.com/_test/video-h5-pages/reward/task-center.html?page_id=3&data=3841176469&mid=100000%3A15&order_id=69&pid=130073&point_items=0&reward_type=16";
+    [self.wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]]];
 }
 
 - (void)addSubViews {
@@ -149,7 +150,7 @@ typedef NS_ENUM(NSInteger,VIEWID){
     [self.wkWebView evaluateJavaScript:jsString completionHandler:^(id _Nullable data, NSError * _Nullable error) {
         NSLog(@"改变HTML的背景色");
     }];
-
+    
     //改变字体大小 调用原生JS方法
     NSString *jsFont = [NSString stringWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%d%%'", arc4random()%99 + 100];
     [self.wkWebView evaluateJavaScript:jsFont completionHandler:nil];
@@ -170,7 +171,7 @@ typedef NS_ENUM(NSInteger,VIEWID){
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     NSString *urlString = [[navigationAction.request URL] absoluteString];
     urlString = [urlString stringByRemovingPercentEncoding];
-    //    NSLog(@"urlString=%@",urlString);
+    NSLog(@"%@_%s urlString=%@",LOGTAG,__func__, urlString);
     // 用://截取字符串
     NSArray *urlComps = [urlString componentsSeparatedByString:@"://"];
     if ([urlComps count]) {
@@ -205,7 +206,7 @@ typedef NS_ENUM(NSInteger,VIEWID){
 
 //需要响应身份验证时调用 同样在block中需要传入用户身份凭证
 - (void)webView:(WKWebView *)webView didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler{
-//    NSLog(@"%@_%s",LOGTAG,__func__);
+    //    NSLog(@"%@_%s",LOGTAG,__func__);
     //用户身份信息
     NSURLCredential * newCred = [[NSURLCredential alloc] initWithUser:@"user123" password:@"123" persistence:NSURLCredentialPersistenceNone];
     //为 challenge 的发送方提供 credential
@@ -274,16 +275,16 @@ typedef NS_ENUM(NSInteger,VIEWID){
     if ([keyPath isEqualToString:NSStringFromSelector(@selector(estimatedProgress))]
         && object == self.wkWebView) {
         NSLog(@"网页加载进度 = %f",self.wkWebView.estimatedProgress);
-//        NSLog(@"%@_%s 网页加载进度 = %f",LOGTAG,__func__,self.wkWebView.estimatedProgress);
-//        self.progressView.progress = self.wkWebView.estimatedProgress;
+        //        NSLog(@"%@_%s 网页加载进度 = %f",LOGTAG,__func__,self.wkWebView.estimatedProgress);
+        //        self.progressView.progress = self.wkWebView.estimatedProgress;
         if (self.wkWebView.estimatedProgress >= 1.0f) {
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                self.progressView.progress = 0;
+                //                self.progressView.progress = 0;
             });
         }
     }else if([keyPath isEqualToString:@"title"]
              && object == self.wkWebView){
-//        NSLog(@"%@_%s title: %@",LOGTAG,__func__,self.wkWebView.title);
+        //        NSLog(@"%@_%s title: %@",LOGTAG,__func__,self.wkWebView.title);
         self.navigationItem.title = self.wkWebView.title;
     }else{
         [super observeValueForKeyPath:keyPath
@@ -371,7 +372,7 @@ typedef NS_ENUM(NSInteger,VIEWID){
     if (_wkWebView == nil) {
         CGRect frame = CGRectMake(0, 20 + kSearchBarH, kScreenWidth, kScreenHeight - 20 - kSearchBarH - kBottomViewH);
         WKWebView *webView = [[WKWebView alloc] initWithFrame:frame configuration:[self buildConfigration]];
-       
+        
         webView.navigationDelegate = self;
         // webView.scrollView.scrollEnabled = NO;
         // webView.backgroundColor = [UIColor colorWithPatternImage:self.image];
@@ -380,27 +381,27 @@ typedef NS_ENUM(NSInteger,VIEWID){
         webView.UIDelegate = self;
         //添加监测网页加载进度的观察者
         [webView addObserver:self
-                           forKeyPath:@"estimatedProgress"
-                              options:0
-                              context:nil];
+                  forKeyPath:@"estimatedProgress"
+                     options:0
+                     context:nil];
         //添加监测网页标题title的观察者
         [webView addObserver:self
-                           forKeyPath:@"title"
-                              options:NSKeyValueObservingOptionNew
-                              context:nil];
+                  forKeyPath:@"title"
+                     options:NSKeyValueObservingOptionNew
+                     context:nil];
         _wkWebView = webView;
     }
     return _wkWebView;
 }
 
 - (WKWebViewConfiguration *)buildConfigration{
-    //创建网页配置对象
+    // 创建网页配置对象
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     // 创建设置对象
     WKPreferences *preference = [[WKPreferences alloc]init];
-    //最小字体大小 当将javaScriptEnabled属性设置为NO时，可以看到明显的效果
+    // 最小字体大小 当将javaScriptEnabled属性设置为NO时，可以看到明显的效果
     preference.minimumFontSize = 0;
-    //设置是否支持javaScript 默认是支持的
+    // 设置是否支持javaScript 默认是支持的
     preference.javaScriptEnabled = YES;
     // 在iOS上默认为NO，表示是否允许不经过用户交互由javaScript自动打开窗口
     preference.javaScriptCanOpenWindowsAutomatically = YES;
@@ -409,12 +410,12 @@ typedef NS_ENUM(NSInteger,VIEWID){
     // 是使用h5的视频播放器在线播放, 还是使用原生播放器全屏播放
     config.allowsInlineMediaPlayback = YES;
     
-    //设置是否允许画中画技术 在特定设备上有效
+    // 设置是否允许画中画技术 在特定设备上有效
     config.allowsPictureInPictureMediaPlayback = YES;
-    //设置请求的User-Agent信息中应用程序名称 iOS9后可用
+    // 设置请求的User-Agent信息中应用程序名称 iOS9后可用
     config.applicationNameForUserAgent = @"ChinaDailyForiPad";
     
-    //这个类主要用来做native与JavaScript的交互管理
+    // 这个类主要用来做native与JavaScript的交互管理
     WKUserContentController * wkUController = [[WKUserContentController alloc] init];
     //注册一个name为jsToOcNoPrams的js方法
     [wkUController addScriptMessageHandler:self  name:@"jsToOcNoPrams"];
@@ -423,10 +424,15 @@ typedef NS_ENUM(NSInteger,VIEWID){
     
     //以下代码适配文本大小，由UIWebView换为WKWebView后，会发现字体小了很多，这应该是WKWebView与html的兼容问题，解决办法是修改原网页，要么我们手动注入JS
     NSString *jSString = @"var meta = document.createElement('meta'); meta.setAttribute('name', 'viewport'); meta.setAttribute('content', 'width=device-width'); document.getElementsByTagName('head')[0].appendChild(meta);";
-    //用于进行JavaScript注入
+    // 用于进行JavaScript注入
     WKUserScript *wkUScript = [[WKUserScript alloc] initWithSource:jSString injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
     [config.userContentController addUserScript:wkUScript];
     
+    // 设置wkwebview支持跨域操作,但是好像并没有什么用
+    [config.preferences setValue:@YES forKey:@"allowFileAccessFromFileURLs"];
+    if (@available(iOS 10.0, *)) {
+        [config setValue:@YES forKey:@"allowUniversalAccessFromFileURLs"];
+    }
     return config;
 }
 

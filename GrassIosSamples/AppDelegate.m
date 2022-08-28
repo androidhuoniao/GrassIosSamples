@@ -9,6 +9,7 @@
 #import "SWNavigationController.h"
 #import "SampleListViewController.h"
 #import "SWHomeTabBarController.h"
+#import "MYURLProtocol.h"
 
 @interface AppDelegate ()
 
@@ -35,9 +36,19 @@
     # else
     NSLog(@"release is working");
     #endif
-    
+    [NSURLProtocol registerClass:[MYURLProtocol class]];
+    //实现拦截功能
+    Class cls = NSClassFromString(@"WKBrowsingContextController");
+    SEL sel = NSSelectorFromString(@"registerSchemeForCustomProtocol:");
+    if ([(id)cls respondsToSelector:sel]) {
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        [(id)cls performSelector:sel withObject:@"myapp"];
+    #pragma clang diagnostic pop
+    }
     return YES;
 }
+    
 - (void)applicationDidBecomeActive:(UIApplication *)application{
     NSLog(@"%s is working",__func__);
 }
