@@ -30,6 +30,7 @@
 		A424627A2570E99D00C643B7 /* SWTVSampleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42462792570E99D00C643B7 /* SWTVSampleListViewController.m */; };
 		A42462812570EC1100C643B7 /* SWGcdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42462802570EC1100C643B7 /* SWGcdViewController.m */; };
 		A424628D2570ED0E00C643B7 /* SWAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A424628C2570ED0E00C643B7 /* SWAlertViewController.m */; };
+		A44733242920A43E007E2F14 /* SWUIStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44733232920A43E007E2F14 /* SWUIStackViewController.m */; };
 		A455D97C25AC714F0053CE85 /* SWWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A455D97B25AC714F0053CE85 /* SWWKWebViewController.m */; };
 		A469927C2579012C00B192BD /* SWSemaphoreDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A469927B2579012C00B192BD /* SWSemaphoreDemo.m */; };
 		A47723D727F7069100802D55 /* YZDevGroupTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47723C127F7069100802D55 /* YZDevGroupTableController.m */; };
@@ -143,6 +144,8 @@
 		A42462802570EC1100C643B7 /* SWGcdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWGcdViewController.m; sourceTree = "<group>"; };
 		A424628B2570ED0E00C643B7 /* SWAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWAlertViewController.h; sourceTree = "<group>"; };
 		A424628C2570ED0E00C643B7 /* SWAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWAlertViewController.m; sourceTree = "<group>"; };
+		A44733222920A43E007E2F14 /* SWUIStackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUIStackViewController.h; sourceTree = "<group>"; };
+		A44733232920A43E007E2F14 /* SWUIStackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWUIStackViewController.m; sourceTree = "<group>"; };
 		A455D97A25AC714F0053CE85 /* SWWKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWWKWebViewController.h; sourceTree = "<group>"; };
 		A455D97B25AC714F0053CE85 /* SWWKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWWKWebViewController.m; sourceTree = "<group>"; };
 		A469927A2579012C00B192BD /* SWSemaphoreDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWSemaphoreDemo.h; sourceTree = "<group>"; };
@@ -411,6 +414,8 @@
 				B72D2372265939C9006C7AF8 /* HelloFrameAndBoundsViewController.m */,
 				B72D2377265A4503006C7AF8 /* HelloCenterViewController.h */,
 				B72D2378265A4503006C7AF8 /* HelloCenterViewController.m */,
+				A44733222920A43E007E2F14 /* SWUIStackViewController.h */,
+				A44733232920A43E007E2F14 /* SWUIStackViewController.m */,
 			);
 			path = samples;
 			sourceTree = "<group>";
@@ -866,6 +871,7 @@
 				0C5A96BA255AA27D00C653AF /* BaseSampleInfo.m in Sources */,
 				A48300F525A46C3D00561CE9 /* UICustomTextView.m in Sources */,
 				A47723DD27F7069100802D55 /* YZDevTitleCellItem.m in Sources */,
+				A44733242920A43E007E2F14 /* SWUIStackViewController.m in Sources */,
 				A4DEF4D525627BE10076D5D1 /* GetIDFAViewController.m in Sources */,
 				0C5A9655255A3C1600C653AF /* SceneDelegate.m in Sources */,
 				A47723D927F7069100802D55 /* YZDevButtonCellItem.m in Sources */,
