@@ -52,6 +52,8 @@
 		A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928F62255BEE2500D82EF3 /* CustomView.m */; };
 		A4928FA6255CDF6000D82EF3 /* QLReCord.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928FA5255CDF6000D82EF3 /* QLReCord.m */; };
 		A4928FB6255CE1C900D82EF3 /* QLRecordTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928FB5255CE1C900D82EF3 /* QLRecordTest.m */; };
+		A4A1FDF528BCEB6D009C3AF7 /* SWRuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A1FDF428BCEB6D009C3AF7 /* SWRuntimeViewController.m */; };
+		A4A1FDFB28BCEC06009C3AF7 /* UIImage+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A1FDFA28BCEC06009C3AF7 /* UIImage+Swizzle.m */; };
 		A4D4F232256BE3050037E1F4 /* QADIdfaManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D4F231256BE3050037E1F4 /* QADIdfaManagerTest.m */; };
 		A4DEF4D525627BE10076D5D1 /* GetIDFAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF4D425627BE10076D5D1 /* GetIDFAViewController.m */; };
 		A4DEF5E42565151E0076D5D1 /* NSUserDefaultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5E32565151D0076D5D1 /* NSUserDefaultsViewController.m */; };
@@ -185,6 +187,10 @@
 		A4928FA4255CDF6000D82EF3 /* QLReCord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QLReCord.h; sourceTree = "<group>"; };
 		A4928FA5255CDF6000D82EF3 /* QLReCord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLReCord.m; sourceTree = "<group>"; };
 		A4928FB5255CE1C900D82EF3 /* QLRecordTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLRecordTest.m; sourceTree = "<group>"; };
+		A4A1FDF328BCEB6D009C3AF7 /* SWRuntimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRuntimeViewController.h; sourceTree = "<group>"; };
+		A4A1FDF428BCEB6D009C3AF7 /* SWRuntimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRuntimeViewController.m; sourceTree = "<group>"; };
+		A4A1FDF928BCEC06009C3AF7 /* UIImage+Swizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Swizzle.h"; sourceTree = "<group>"; };
+		A4A1FDFA28BCEC06009C3AF7 /* UIImage+Swizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Swizzle.m"; sourceTree = "<group>"; };
 		A4D4F231256BE3050037E1F4 /* QADIdfaManagerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QADIdfaManagerTest.m; sourceTree = "<group>"; };
 		A4DEF4D325627BE10076D5D1 /* GetIDFAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetIDFAViewController.h; sourceTree = "<group>"; };
 		A4DEF4D425627BE10076D5D1 /* GetIDFAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetIDFAViewController.m; sourceTree = "<group>"; };
@@ -376,6 +382,7 @@
 		A424627E2570EAF400C643B7 /* samples */ = {
 			isa = PBXGroup;
 			children = (
+				A4A1FDF228BCEB14009C3AF7 /* Runtime */,
 				A48AC66728A91AD4000140DC /* Cell */,
 				A48AC66228A8A574000140DC /* CollectionView */,
 				A47723E027F7097E00802D55 /* Collection */,
@@ -523,6 +530,17 @@
 				A4928FA5255CDF6000D82EF3 /* QLReCord.m */,
 			);
 			path = ut;
+			sourceTree = "<group>";
+		};
+		A4A1FDF228BCEB14009C3AF7 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				A4A1FDF328BCEB6D009C3AF7 /* SWRuntimeViewController.h */,
+				A4A1FDF428BCEB6D009C3AF7 /* SWRuntimeViewController.m */,
+				A4A1FDF928BCEC06009C3AF7 /* UIImage+Swizzle.h */,
+				A4A1FDFA28BCEC06009C3AF7 /* UIImage+Swizzle.m */,
+			);
+			path = Runtime;
 			sourceTree = "<group>";
 		};
 		B79D3A81269AFE3900171C3B /* Network */ = {
@@ -833,6 +851,7 @@
 				A47723DF27F7069100802D55 /* YZDevSection.m in Sources */,
 				A47723DE27F7069100802D55 /* YZTableDataSource.m in Sources */,
 				0C5A96B1255A878600C653AF /* ButtonViewController.m in Sources */,
+				A4A1FDF528BCEB6D009C3AF7 /* SWRuntimeViewController.m in Sources */,
 				A4928FA6255CDF6000D82EF3 /* QLReCord.m in Sources */,
 				A42462812570EC1100C643B7 /* SWGcdViewController.m in Sources */,
 				A4928F5B255BED6E00D82EF3 /* CustomViewViewController.m in Sources */,
@@ -842,6 +861,7 @@
 				A405A1B7259989040019A853 /* SWUILableViewController.m in Sources */,
 				A483F8C525A3348000561CE9 /* SWHelloTouchEventViewController.m in Sources */,
 				0C5A9663255A3C1600C653AF /* main.m in Sources */,
+				A4A1FDFB28BCEC06009C3AF7 /* UIImage+Swizzle.m in Sources */,
 				A47723E327F709EB00802D55 /* YZCollectionViewSubViewController.m in Sources */,
 				0C5A96BA255AA27D00C653AF /* BaseSampleInfo.m in Sources */,
 				A48300F525A46C3D00561CE9 /* UICustomTextView.m in Sources */,

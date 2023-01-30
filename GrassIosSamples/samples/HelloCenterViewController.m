@@ -48,5 +48,4 @@
     NSLog(@"blueView bounds = %@",NSStringFromCGRect(blueView.bounds));
 }
 
-
 @end
