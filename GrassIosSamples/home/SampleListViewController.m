@@ -29,6 +29,7 @@
 #import "YZCollectionViewSubViewController.h"
 #import "SWCollectionViewController2.h"
 #import "SWRuntimeViewController.h"
+#import "SWUIStackViewController.h"
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
 @property(nonnull,nonatomic,strong) UITableView *myTableView;
@@ -116,6 +117,8 @@
             }],
             [SampleInfo initWithName:@"SWRuntimeViewController" andVCFactory:^UIViewController *{
                 return [[SWRuntimeViewController alloc] init];
+            [SampleInfo initWithName:@"SWUIStackViewController" andVCFactory:^UIViewController *{
+                return [[SWUIStackViewController alloc] init];
             }],
         ];
     }

@@ -30,6 +30,7 @@
 		A424627A2570E99D00C643B7 /* SWTVSampleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42462792570E99D00C643B7 /* SWTVSampleListViewController.m */; };
 		A42462812570EC1100C643B7 /* SWGcdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42462802570EC1100C643B7 /* SWGcdViewController.m */; };
 		A424628D2570ED0E00C643B7 /* SWAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A424628C2570ED0E00C643B7 /* SWAlertViewController.m */; };
+		A44733242920A43E007E2F14 /* SWUIStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44733232920A43E007E2F14 /* SWUIStackViewController.m */; };
 		A455D97C25AC714F0053CE85 /* SWWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A455D97B25AC714F0053CE85 /* SWWKWebViewController.m */; };
 		A469927C2579012C00B192BD /* SWSemaphoreDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A469927B2579012C00B192BD /* SWSemaphoreDemo.m */; };
 		A47723D727F7069100802D55 /* YZDevGroupTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47723C127F7069100802D55 /* YZDevGroupTableController.m */; };
@@ -48,12 +49,12 @@
 		A48AC66528A8A5A0000140DC /* SWCollectionViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = A48AC66428A8A5A0000140DC /* SWCollectionViewController2.m */; };
 		A48AC66A28A91AF8000140DC /* UILabelCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A48AC66928A91AF8000140DC /* UILabelCollectionViewCell.m */; };
 		A48C211B28BB51C200F261C0 /* MYURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = A48C211A28BB51C200F261C0 /* MYURLProtocol.m */; };
+		A48C212B28BB599000F261C0 /* HFURLSchemeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A48C212A28BB599000F261C0 /* HFURLSchemeHandler.m */; };
+		A48C213428BB5A4A00F261C0 /* WKWebView+SchemeHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = A48C213328BB5A4A00F261C0 /* WKWebView+SchemeHandle.m */; };
 		A4928F5B255BED6E00D82EF3 /* CustomViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928F5A255BED6E00D82EF3 /* CustomViewViewController.m */; };
 		A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928F62255BEE2500D82EF3 /* CustomView.m */; };
 		A4928FA6255CDF6000D82EF3 /* QLReCord.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928FA5255CDF6000D82EF3 /* QLReCord.m */; };
 		A4928FB6255CE1C900D82EF3 /* QLRecordTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928FB5255CE1C900D82EF3 /* QLRecordTest.m */; };
-		A4A1FDF528BCEB6D009C3AF7 /* SWRuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A1FDF428BCEB6D009C3AF7 /* SWRuntimeViewController.m */; };
-		A4A1FDFB28BCEC06009C3AF7 /* UIImage+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A1FDFA28BCEC06009C3AF7 /* UIImage+Swizzle.m */; };
 		A4D4F232256BE3050037E1F4 /* QADIdfaManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D4F231256BE3050037E1F4 /* QADIdfaManagerTest.m */; };
 		A4DEF4D525627BE10076D5D1 /* GetIDFAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF4D425627BE10076D5D1 /* GetIDFAViewController.m */; };
 		A4DEF5E42565151E0076D5D1 /* NSUserDefaultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5E32565151D0076D5D1 /* NSUserDefaultsViewController.m */; };
@@ -143,6 +144,8 @@
 		A42462802570EC1100C643B7 /* SWGcdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWGcdViewController.m; sourceTree = "<group>"; };
 		A424628B2570ED0E00C643B7 /* SWAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWAlertViewController.h; sourceTree = "<group>"; };
 		A424628C2570ED0E00C643B7 /* SWAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWAlertViewController.m; sourceTree = "<group>"; };
+		A44733222920A43E007E2F14 /* SWUIStackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUIStackViewController.h; sourceTree = "<group>"; };
+		A44733232920A43E007E2F14 /* SWUIStackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWUIStackViewController.m; sourceTree = "<group>"; };
 		A455D97A25AC714F0053CE85 /* SWWKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWWKWebViewController.h; sourceTree = "<group>"; };
 		A455D97B25AC714F0053CE85 /* SWWKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWWKWebViewController.m; sourceTree = "<group>"; };
 		A469927A2579012C00B192BD /* SWSemaphoreDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWSemaphoreDemo.h; sourceTree = "<group>"; };
@@ -180,6 +183,10 @@
 		A48AC66928A91AF8000140DC /* UILabelCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILabelCollectionViewCell.m; sourceTree = "<group>"; };
 		A48C211928BB51C200F261C0 /* MYURLProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYURLProtocol.h; sourceTree = "<group>"; };
 		A48C211A28BB51C200F261C0 /* MYURLProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYURLProtocol.m; sourceTree = "<group>"; };
+		A48C212928BB599000F261C0 /* HFURLSchemeHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFURLSchemeHandler.h; sourceTree = "<group>"; };
+		A48C212A28BB599000F261C0 /* HFURLSchemeHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFURLSchemeHandler.m; sourceTree = "<group>"; };
+		A48C213228BB5A4A00F261C0 /* WKWebView+SchemeHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WKWebView+SchemeHandle.h"; sourceTree = "<group>"; };
+		A48C213328BB5A4A00F261C0 /* WKWebView+SchemeHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+SchemeHandle.m"; sourceTree = "<group>"; };
 		A4928F59255BED6E00D82EF3 /* CustomViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewViewController.h; sourceTree = "<group>"; };
 		A4928F5A255BED6E00D82EF3 /* CustomViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewViewController.m; sourceTree = "<group>"; };
 		A4928F61255BEE2500D82EF3 /* CustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
@@ -187,10 +194,6 @@
 		A4928FA4255CDF6000D82EF3 /* QLReCord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QLReCord.h; sourceTree = "<group>"; };
 		A4928FA5255CDF6000D82EF3 /* QLReCord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLReCord.m; sourceTree = "<group>"; };
 		A4928FB5255CE1C900D82EF3 /* QLRecordTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLRecordTest.m; sourceTree = "<group>"; };
-		A4A1FDF328BCEB6D009C3AF7 /* SWRuntimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRuntimeViewController.h; sourceTree = "<group>"; };
-		A4A1FDF428BCEB6D009C3AF7 /* SWRuntimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRuntimeViewController.m; sourceTree = "<group>"; };
-		A4A1FDF928BCEC06009C3AF7 /* UIImage+Swizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Swizzle.h"; sourceTree = "<group>"; };
-		A4A1FDFA28BCEC06009C3AF7 /* UIImage+Swizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Swizzle.m"; sourceTree = "<group>"; };
 		A4D4F231256BE3050037E1F4 /* QADIdfaManagerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QADIdfaManagerTest.m; sourceTree = "<group>"; };
 		A4DEF4D325627BE10076D5D1 /* GetIDFAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetIDFAViewController.h; sourceTree = "<group>"; };
 		A4DEF4D425627BE10076D5D1 /* GetIDFAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetIDFAViewController.m; sourceTree = "<group>"; };
@@ -382,7 +385,7 @@
 		A424627E2570EAF400C643B7 /* samples */ = {
 			isa = PBXGroup;
 			children = (
-				A4A1FDF228BCEB14009C3AF7 /* Runtime */,
+				A48C212828BB597600F261C0 /* WebView */,
 				A48AC66728A91AD4000140DC /* Cell */,
 				A48AC66228A8A574000140DC /* CollectionView */,
 				A47723E027F7097E00802D55 /* Collection */,
@@ -411,6 +414,8 @@
 				B72D2372265939C9006C7AF8 /* HelloFrameAndBoundsViewController.m */,
 				B72D2377265A4503006C7AF8 /* HelloCenterViewController.h */,
 				B72D2378265A4503006C7AF8 /* HelloCenterViewController.m */,
+				A44733222920A43E007E2F14 /* SWUIStackViewController.h */,
+				A44733232920A43E007E2F14 /* SWUIStackViewController.m */,
 			);
 			path = samples;
 			sourceTree = "<group>";
@@ -512,6 +517,17 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		A48C212828BB597600F261C0 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				A48C212928BB599000F261C0 /* HFURLSchemeHandler.h */,
+				A48C212A28BB599000F261C0 /* HFURLSchemeHandler.m */,
+				A48C213228BB5A4A00F261C0 /* WKWebView+SchemeHandle.h */,
+				A48C213328BB5A4A00F261C0 /* WKWebView+SchemeHandle.m */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		A4928F60255BEDD300D82EF3 /* customview */ = {
 			isa = PBXGroup;
 			children = (
@@ -530,17 +546,6 @@
 				A4928FA5255CDF6000D82EF3 /* QLReCord.m */,
 			);
 			path = ut;
-			sourceTree = "<group>";
-		};
-		A4A1FDF228BCEB14009C3AF7 /* Runtime */ = {
-			isa = PBXGroup;
-			children = (
-				A4A1FDF328BCEB6D009C3AF7 /* SWRuntimeViewController.h */,
-				A4A1FDF428BCEB6D009C3AF7 /* SWRuntimeViewController.m */,
-				A4A1FDF928BCEC06009C3AF7 /* UIImage+Swizzle.h */,
-				A4A1FDFA28BCEC06009C3AF7 /* UIImage+Swizzle.m */,
-			);
-			path = Runtime;
 			sourceTree = "<group>";
 		};
 		B79D3A81269AFE3900171C3B /* Network */ = {
@@ -843,6 +848,7 @@
 				0C5A9652255A3C1600C653AF /* AppDelegate.m in Sources */,
 				A47723DA27F7069100802D55 /* YZDevButtonCell.m in Sources */,
 				A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */,
+				A48C213428BB5A4A00F261C0 /* WKWebView+SchemeHandle.m in Sources */,
 				B7524F0125A1DB61008EB751 /* SWNSAttributeStringViewController.m in Sources */,
 				B726291F25BB0A640027ECD3 /* SWUIScrollViewController.m in Sources */,
 				A48AC66528A8A5A0000140DC /* SWCollectionViewController2.m in Sources */,
@@ -851,7 +857,7 @@
 				A47723DF27F7069100802D55 /* YZDevSection.m in Sources */,
 				A47723DE27F7069100802D55 /* YZTableDataSource.m in Sources */,
 				0C5A96B1255A878600C653AF /* ButtonViewController.m in Sources */,
-				A4A1FDF528BCEB6D009C3AF7 /* SWRuntimeViewController.m in Sources */,
+				A48C212B28BB599000F261C0 /* HFURLSchemeHandler.m in Sources */,
 				A4928FA6255CDF6000D82EF3 /* QLReCord.m in Sources */,
 				A42462812570EC1100C643B7 /* SWGcdViewController.m in Sources */,
 				A4928F5B255BED6E00D82EF3 /* CustomViewViewController.m in Sources */,
@@ -861,11 +867,11 @@
 				A405A1B7259989040019A853 /* SWUILableViewController.m in Sources */,
 				A483F8C525A3348000561CE9 /* SWHelloTouchEventViewController.m in Sources */,
 				0C5A9663255A3C1600C653AF /* main.m in Sources */,
-				A4A1FDFB28BCEC06009C3AF7 /* UIImage+Swizzle.m in Sources */,
 				A47723E327F709EB00802D55 /* YZCollectionViewSubViewController.m in Sources */,
 				0C5A96BA255AA27D00C653AF /* BaseSampleInfo.m in Sources */,
 				A48300F525A46C3D00561CE9 /* UICustomTextView.m in Sources */,
 				A47723DD27F7069100802D55 /* YZDevTitleCellItem.m in Sources */,
+				A44733242920A43E007E2F14 /* SWUIStackViewController.m in Sources */,
 				A4DEF4D525627BE10076D5D1 /* GetIDFAViewController.m in Sources */,
 				0C5A9655255A3C1600C653AF /* SceneDelegate.m in Sources */,
 				A47723D927F7069100802D55 /* YZDevButtonCellItem.m in Sources */,
