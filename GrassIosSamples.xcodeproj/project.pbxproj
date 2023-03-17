@@ -23,6 +23,7 @@
 		0CEC0D82257B84DE0075AA5A /* SWCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC0D81257B84DE0075AA5A /* SWCollectionViewController.m */; };
 		5CB386018485DAA39A905B31 /* Pods_GrassIosSamplesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8788A65E29FF1DBA8B7EE070 /* Pods_GrassIosSamplesTests.framework */; };
 		A405A1B7259989040019A853 /* SWUILableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A405A1B6259989040019A853 /* SWUILableViewController.m */; };
+		A40EEB61298945C90044A645 /* SWTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40EEB60298945C90044A645 /* SWTimeViewController.m */; };
 		A42461B82570D86C00C643B7 /* SWHomeTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42461B72570D86C00C643B7 /* SWHomeTabBarController.m */; };
 		A42461BE2570D8C100C643B7 /* SWPureOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42461BD2570D8C100C643B7 /* SWPureOCViewController.m */; };
 		A42462562570E34A00C643B7 /* SWBaseSampleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42462542570E34A00C643B7 /* SWBaseSampleListViewController.m */; };
@@ -60,6 +61,7 @@
 		A4DEF5E42565151E0076D5D1 /* NSUserDefaultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5E32565151D0076D5D1 /* NSUserDefaultsViewController.m */; };
 		A4DEF5EA2565154A0076D5D1 /* HelloJsonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5E92565154A0076D5D1 /* HelloJsonViewController.m */; };
 		A4DEF5F0256517A30076D5D1 /* HelloNSNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5EF256517A30076D5D1 /* HelloNSNotificationViewController.m */; };
+		A4E3B18529C494C900BA8562 /* SWConvertRectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E3B18429C494C900BA8562 /* SWConvertRectViewController.m */; };
 		B726291925B9C3650027ECD3 /* SWUIPageControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B726291825B9C3650027ECD3 /* SWUIPageControlViewController.m */; };
 		B726291F25BB0A640027ECD3 /* SWUIScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B726291E25BB0A640027ECD3 /* SWUIScrollViewController.m */; };
 		B72D2373265939C9006C7AF8 /* HelloFrameAndBoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B72D2372265939C9006C7AF8 /* HelloFrameAndBoundsViewController.m */; };
@@ -130,6 +132,8 @@
 		9B21B986DD9DD4A8FC7F36D7 /* Pods-GrassIosSamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamples.debug.xcconfig"; path = "Target Support Files/Pods-GrassIosSamples/Pods-GrassIosSamples.debug.xcconfig"; sourceTree = "<group>"; };
 		A405A1B5259989040019A853 /* SWUILableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUILableViewController.h; sourceTree = "<group>"; };
 		A405A1B6259989040019A853 /* SWUILableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWUILableViewController.m; sourceTree = "<group>"; };
+		A40EEB5F298945C90044A645 /* SWTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTimeViewController.h; sourceTree = "<group>"; };
+		A40EEB60298945C90044A645 /* SWTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTimeViewController.m; sourceTree = "<group>"; };
 		A42461B62570D86C00C643B7 /* SWHomeTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWHomeTabBarController.h; sourceTree = "<group>"; };
 		A42461B72570D86C00C643B7 /* SWHomeTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWHomeTabBarController.m; sourceTree = "<group>"; };
 		A42461BC2570D8C100C643B7 /* SWPureOCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWPureOCViewController.h; sourceTree = "<group>"; };
@@ -203,6 +207,8 @@
 		A4DEF5E92565154A0076D5D1 /* HelloJsonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloJsonViewController.m; sourceTree = "<group>"; };
 		A4DEF5EE256517A30076D5D1 /* HelloNSNotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloNSNotificationViewController.h; sourceTree = "<group>"; };
 		A4DEF5EF256517A30076D5D1 /* HelloNSNotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloNSNotificationViewController.m; sourceTree = "<group>"; };
+		A4E3B18329C494C900BA8562 /* SWConvertRectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWConvertRectViewController.h; sourceTree = "<group>"; };
+		A4E3B18429C494C900BA8562 /* SWConvertRectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWConvertRectViewController.m; sourceTree = "<group>"; };
 		B726291725B9C3650027ECD3 /* SWUIPageControlViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUIPageControlViewController.h; sourceTree = "<group>"; };
 		B726291825B9C3650027ECD3 /* SWUIPageControlViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWUIPageControlViewController.m; sourceTree = "<group>"; };
 		B726291D25BB0A640027ECD3 /* SWUIScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUIScrollViewController.h; sourceTree = "<group>"; };
@@ -416,6 +422,10 @@
 				B72D2378265A4503006C7AF8 /* HelloCenterViewController.m */,
 				A44733222920A43E007E2F14 /* SWUIStackViewController.h */,
 				A44733232920A43E007E2F14 /* SWUIStackViewController.m */,
+				A40EEB5F298945C90044A645 /* SWTimeViewController.h */,
+				A40EEB60298945C90044A645 /* SWTimeViewController.m */,
+				A4E3B18329C494C900BA8562 /* SWConvertRectViewController.h */,
+				A4E3B18429C494C900BA8562 /* SWConvertRectViewController.m */,
 			);
 			path = samples;
 			sourceTree = "<group>";
@@ -873,6 +883,7 @@
 				A47723DD27F7069100802D55 /* YZDevTitleCellItem.m in Sources */,
 				A44733242920A43E007E2F14 /* SWUIStackViewController.m in Sources */,
 				A4DEF4D525627BE10076D5D1 /* GetIDFAViewController.m in Sources */,
+				A40EEB61298945C90044A645 /* SWTimeViewController.m in Sources */,
 				0C5A9655255A3C1600C653AF /* SceneDelegate.m in Sources */,
 				A47723D927F7069100802D55 /* YZDevButtonCellItem.m in Sources */,
 				B76A0C3125CC308D00C0B714 /* UILabel+attributeTextAction.m in Sources */,
@@ -884,6 +895,7 @@
 				A42461B82570D86C00C643B7 /* SWHomeTabBarController.m in Sources */,
 				B72D2373265939C9006C7AF8 /* HelloFrameAndBoundsViewController.m in Sources */,
 				A42461BE2570D8C100C643B7 /* SWPureOCViewController.m in Sources */,
+				A4E3B18529C494C900BA8562 /* SWConvertRectViewController.m in Sources */,
 				A47723D727F7069100802D55 /* YZDevGroupTableController.m in Sources */,
 				A483034025A499D400561CE9 /* SWUITextViewViewController.m in Sources */,
 				A4DEF5E42565151E0076D5D1 /* NSUserDefaultsViewController.m in Sources */,
