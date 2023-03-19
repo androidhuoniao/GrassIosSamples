@@ -28,7 +28,9 @@
 #import "SWHelloAFNViewController.h"
 #import "YZCollectionViewSubViewController.h"
 #import "SWCollectionViewController2.h"
+#import "SWTimeViewController.h"
 #import "SWUIStackViewController.h"
+#import "SWConvertRectViewController.h"
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
 @property(nonnull,nonatomic,strong) UITableView *myTableView;
@@ -118,8 +120,18 @@
             [SampleInfo initWithName:@"YZCollectionViewSubViewController" andVCFactory:^UIViewController *{
                 return [[YZCollectionViewSubViewController alloc] init];
             }],
+            [SampleInfo initWithName:@"SWRuntimeViewController" andVCFactory:^UIViewController *{
+//                return [[SWRuntimeViewController alloc] init];
+                return nil;
+            }],
             [SampleInfo initWithName:@"SWUIStackViewController" andVCFactory:^UIViewController *{
                 return [[SWUIStackViewController alloc] init];
+            }],
+            [SampleInfo initWithName:@"学习时间相关知识" andVCFactory:^UIViewController *{
+                return [[SWTimeViewController alloc] init];
+            }],
+            [SampleInfo initWithName:@"学习converReact" andVCFactory:^UIViewController *{
+                return [[SWConvertRectViewController alloc] init];
             }],
         ];
     }
@@ -127,7 +139,6 @@
 }
 
 - (UITableView *)myTableView {
-//    NSLog(@"myTabView create is working1: %@",_myTableView);
     if (_myTableView == nil) {
         _myTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _myTableView.backgroundColor = UIColor.blueColor;
