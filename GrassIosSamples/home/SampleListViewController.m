@@ -40,6 +40,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.myTableView];
+    NSString *str = @"xxxx";
+    NSLog(@"integreValue is :%ld", str.integerValue);
+    CGFloat x = 1.f / 60.f;
+    NSLog(@"x is :%f", x);
 }
 
 - (NSArray *)sampleList{
