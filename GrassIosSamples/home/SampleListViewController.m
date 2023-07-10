@@ -31,6 +31,7 @@
 #import "SWTimeViewController.h"
 #import "SWUIStackViewController.h"
 #import "SWConvertRectViewController.h"
+#import "SWTableViewAnimationViewController.h"
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
 @property(nonnull,nonatomic,strong) UITableView *myTableView;
@@ -128,6 +129,9 @@
             }],
             [SampleInfo initWithName:@"学习converReact" andVCFactory:^UIViewController *{
                 return [[SWConvertRectViewController alloc] init];
+            }],
+            [SampleInfo initWithName:@"UITableview添加动画" andVCFactory:^UIViewController *{
+                return [[SWTableViewAnimationViewController alloc] init];
             }],
         ];
     }

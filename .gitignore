@@ -26,3 +26,4 @@ Pods/Target Support Files/Pods-GrassIosSamples/Pods-GrassIosSamples.debug.xcconf
 Pods/Target Support Files/Pods-GrassIosSamples/Pods-GrassIosSamples.release.xcconfig
 Pods/Target Support Files/Pods-GrassIosSamplesTests/Pods-GrassIosSamplesTests.debug.xcconfig
 Pods/Target Support Files/Pods-GrassIosSamplesTests/Pods-GrassIosSamplesTests.release.xcconfig
+*.xcuserstate

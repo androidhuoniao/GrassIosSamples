@@ -56,6 +56,7 @@
 		A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928F62255BEE2500D82EF3 /* CustomView.m */; };
 		A4928FA6255CDF6000D82EF3 /* QLReCord.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928FA5255CDF6000D82EF3 /* QLReCord.m */; };
 		A4928FB6255CE1C900D82EF3 /* QLRecordTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928FB5255CE1C900D82EF3 /* QLRecordTest.m */; };
+		A4D178C32A5BF0090040CD16 /* SWTableViewAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D178C22A5BF0090040CD16 /* SWTableViewAnimationViewController.m */; };
 		A4D4F232256BE3050037E1F4 /* QADIdfaManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D4F231256BE3050037E1F4 /* QADIdfaManagerTest.m */; };
 		A4DEF4D525627BE10076D5D1 /* GetIDFAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF4D425627BE10076D5D1 /* GetIDFAViewController.m */; };
 		A4DEF5E42565151E0076D5D1 /* NSUserDefaultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF5E32565151D0076D5D1 /* NSUserDefaultsViewController.m */; };
@@ -198,6 +199,8 @@
 		A4928FA4255CDF6000D82EF3 /* QLReCord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QLReCord.h; sourceTree = "<group>"; };
 		A4928FA5255CDF6000D82EF3 /* QLReCord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLReCord.m; sourceTree = "<group>"; };
 		A4928FB5255CE1C900D82EF3 /* QLRecordTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLRecordTest.m; sourceTree = "<group>"; };
+		A4D178C12A5BF0090040CD16 /* SWTableViewAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTableViewAnimationViewController.h; sourceTree = "<group>"; };
+		A4D178C22A5BF0090040CD16 /* SWTableViewAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTableViewAnimationViewController.m; sourceTree = "<group>"; };
 		A4D4F231256BE3050037E1F4 /* QADIdfaManagerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QADIdfaManagerTest.m; sourceTree = "<group>"; };
 		A4DEF4D325627BE10076D5D1 /* GetIDFAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetIDFAViewController.h; sourceTree = "<group>"; };
 		A4DEF4D425627BE10076D5D1 /* GetIDFAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetIDFAViewController.m; sourceTree = "<group>"; };
@@ -391,6 +394,7 @@
 		A424627E2570EAF400C643B7 /* samples */ = {
 			isa = PBXGroup;
 			children = (
+				A4D178C02A5BEFE30040CD16 /* TableView */,
 				A48C212828BB597600F261C0 /* WebView */,
 				A48AC66728A91AD4000140DC /* Cell */,
 				A48AC66228A8A574000140DC /* CollectionView */,
@@ -556,6 +560,15 @@
 				A4928FA5255CDF6000D82EF3 /* QLReCord.m */,
 			);
 			path = ut;
+			sourceTree = "<group>";
+		};
+		A4D178C02A5BEFE30040CD16 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				A4D178C12A5BF0090040CD16 /* SWTableViewAnimationViewController.h */,
+				A4D178C22A5BF0090040CD16 /* SWTableViewAnimationViewController.m */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		B79D3A81269AFE3900171C3B /* Network */ = {
@@ -855,6 +868,7 @@
 				B726291925B9C3650027ECD3 /* SWUIPageControlViewController.m in Sources */,
 				A48AC66A28A91AF8000140DC /* UILabelCollectionViewCell.m in Sources */,
 				0C5A96AB255A876000C653AF /* ImageUIViewController.m in Sources */,
+				A4D178C32A5BF0090040CD16 /* SWTableViewAnimationViewController.m in Sources */,
 				0C5A9652255A3C1600C653AF /* AppDelegate.m in Sources */,
 				A47723DA27F7069100802D55 /* YZDevButtonCell.m in Sources */,
 				A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */,
