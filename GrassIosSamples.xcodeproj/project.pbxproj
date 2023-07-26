@@ -31,6 +31,7 @@
 		A424627A2570E99D00C643B7 /* SWTVSampleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42462792570E99D00C643B7 /* SWTVSampleListViewController.m */; };
 		A42462812570EC1100C643B7 /* SWGcdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42462802570EC1100C643B7 /* SWGcdViewController.m */; };
 		A424628D2570ED0E00C643B7 /* SWAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A424628C2570ED0E00C643B7 /* SWAlertViewController.m */; };
+		A4419A7C2A6FBBE900F5D1D9 /* SWNSAttributeStringFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A4419A7B2A6FBBE900F5D1D9 /* SWNSAttributeStringFactory.m */; };
 		A44733242920A43E007E2F14 /* SWUIStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44733232920A43E007E2F14 /* SWUIStackViewController.m */; };
 		A455D97C25AC714F0053CE85 /* SWWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A455D97B25AC714F0053CE85 /* SWWKWebViewController.m */; };
 		A469927C2579012C00B192BD /* SWSemaphoreDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A469927B2579012C00B192BD /* SWSemaphoreDemo.m */; };
@@ -149,6 +150,8 @@
 		A42462802570EC1100C643B7 /* SWGcdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWGcdViewController.m; sourceTree = "<group>"; };
 		A424628B2570ED0E00C643B7 /* SWAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWAlertViewController.h; sourceTree = "<group>"; };
 		A424628C2570ED0E00C643B7 /* SWAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWAlertViewController.m; sourceTree = "<group>"; };
+		A4419A7A2A6FBBE900F5D1D9 /* SWNSAttributeStringFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWNSAttributeStringFactory.h; sourceTree = "<group>"; };
+		A4419A7B2A6FBBE900F5D1D9 /* SWNSAttributeStringFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWNSAttributeStringFactory.m; sourceTree = "<group>"; };
 		A44733222920A43E007E2F14 /* SWUIStackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUIStackViewController.h; sourceTree = "<group>"; };
 		A44733232920A43E007E2F14 /* SWUIStackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWUIStackViewController.m; sourceTree = "<group>"; };
 		A455D97A25AC714F0053CE85 /* SWWKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWWKWebViewController.h; sourceTree = "<group>"; };
@@ -394,6 +397,7 @@
 		A424627E2570EAF400C643B7 /* samples */ = {
 			isa = PBXGroup;
 			children = (
+				A4419A792A6FBB9200F5D1D9 /* AttributeString */,
 				A4D178C02A5BEFE30040CD16 /* TableView */,
 				A48C212828BB597600F261C0 /* WebView */,
 				A48AC66728A91AD4000140DC /* Cell */,
@@ -432,6 +436,15 @@
 				A4E3B18429C494C900BA8562 /* SWConvertRectViewController.m */,
 			);
 			path = samples;
+			sourceTree = "<group>";
+		};
+		A4419A792A6FBB9200F5D1D9 /* AttributeString */ = {
+			isa = PBXGroup;
+			children = (
+				A4419A7A2A6FBBE900F5D1D9 /* SWNSAttributeStringFactory.h */,
+				A4419A7B2A6FBBE900F5D1D9 /* SWNSAttributeStringFactory.m */,
+			);
+			path = AttributeString;
 			sourceTree = "<group>";
 		};
 		A46992792579010500B192BD /* gcd */ = {
@@ -857,6 +870,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4419A7C2A6FBBE900F5D1D9 /* SWNSAttributeStringFactory.m in Sources */,
 				A424627A2570E99D00C643B7 /* SWTVSampleListViewController.m in Sources */,
 				A424628D2570ED0E00C643B7 /* SWAlertViewController.m in Sources */,
 				0C5A96D7255AB42A00C653AF /* SampleViewController.m in Sources */,
