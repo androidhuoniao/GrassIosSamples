@@ -28,3 +28,10 @@ Pods/Target Support Files/Pods-GrassIosSamplesTests/Pods-GrassIosSamplesTests.de
 Pods/Target Support Files/Pods-GrassIosSamplesTests/Pods-GrassIosSamplesTests.release.xcconfig
 *.xcuserstate
 *.xcuserstate
+GrassIosSamples.xcworkspace/xcuserdata/grassswwang.xcuserdatad/UserInterfaceState.xcuserstate
+Pods/Pods.xcodeproj/xcuserdata/grassswwang.xcuserdatad/xcschemes/OCHamcrest.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/grassswwang.xcuserdatad/xcschemes/OCMock.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/grassswwang.xcuserdatad/xcschemes/Pods-GrassIosSamples-GrassIosSamplesUITests.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/grassswwang.xcuserdatad/xcschemes/Pods-GrassIosSamples.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/grassswwang.xcuserdatad/xcschemes/Pods-GrassIosSamplesTests.xcscheme
+Pods/Pods.xcodeproj/project.pbxproj
