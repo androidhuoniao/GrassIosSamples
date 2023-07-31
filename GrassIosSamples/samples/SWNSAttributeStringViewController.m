@@ -8,10 +8,12 @@
 #import "SWNSAttributeStringViewController.h"
 #import "UILabel+attributeTextAction.h"
 #import "SWNSAttributeStringFactory.h"
+#import "QADTailWithIconTextView.h"
 
 @interface SWNSAttributeStringViewController ()
 @property(nonatomic,strong) UILabel *uiLabel;
 @property(nonatomic,strong) UILabel *testLabel;
+@property (nonatomic, strong) QADTailWithIconTextView *subTitleTextView;
 @property(nonatomic,assign) NSRange adRange;
 @end
 
@@ -30,6 +32,9 @@
     [self testBoundingRectSize];
     [self logAttributedStringMethods];
     [self loadTestLabel];
+    self.subTitleTextView.text = @"我是中国人\r\n打打架看见了打算金坷垃就开了江科大龙卷风卡拉胶看了";
+    self.subTitleTextView.longText = @"我是中国人\r\n打打架看见了打算金坷垃就开了江科大龙卷风卡拉胶看了";
+    [self.view addSubview:self.subTitleTextView];
 }
 
 - (void)testsizeThatFits{
@@ -160,6 +165,29 @@
         _testLabel = label;
     }
     return _testLabel;
+}
+
+- (UITextView *)subTitleTextView {
+    if (!_subTitleTextView) {
+        _subTitleTextView = [[QADTailWithIconTextView alloc] initWithFrame:CGRectZero];
+        _subTitleTextView.backgroundColor = UIColor.clearColor;
+        _subTitleTextView.userInteractionEnabled = YES;
+        _subTitleTextView.textAlignment = NSTextAlignmentCenter;
+        _subTitleTextView.editable = NO;
+        _subTitleTextView.showsVerticalScrollIndicator = NO;
+        _subTitleTextView.showsHorizontalScrollIndicator = NO;
+        _subTitleTextView.scrollEnabled = NO;
+        _subTitleTextView.linkTextAttributes = @{};
+//        _subTitleTextView.delegate = self;
+        _subTitleTextView.textContainer.maximumNumberOfLines = 2.0;
+        _subTitleTextView.textContainer.lineBreakMode = NSLineBreakByTruncatingTail;
+        _subTitleTextView.textContainer.lineFragmentPadding = 0;
+        _subTitleTextView.textContainerInset = UIEdgeInsetsZero;
+        _subTitleTextView.textAlignment = NSTextAlignmentCenter;
+        _subTitleTextView.frame = CGRectMake(0, 370, self.view.bounds.size.width, 100);
+        _subTitleTextView.backgroundColor = [UIColor orangeColor];
+    }
+    return _subTitleTextView;
 }
 
 @end
