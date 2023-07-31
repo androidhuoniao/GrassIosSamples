@@ -184,7 +184,7 @@
         _subTitleTextView.textContainer.lineFragmentPadding = 0;
         _subTitleTextView.textContainerInset = UIEdgeInsetsZero;
         _subTitleTextView.textAlignment = NSTextAlignmentCenter;
-        _subTitleTextView.frame = CGRectMake(0, 370, self.view.bounds.size.width, 100);
+        _subTitleTextView.frame = CGRectMake(0, 370, self.view.bounds.size.width / 2, 50);
         _subTitleTextView.backgroundColor = [UIColor orangeColor];
     }
     return _subTitleTextView;
