@@ -32,6 +32,7 @@
 #import "SWUIStackViewController.h"
 #import "SWConvertRectViewController.h"
 #import "SWTableViewAnimationViewController.h"
+#import "SWHCollectionViewController.h"
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
 @property(nonnull,nonatomic,strong) UITableView *myTableView;
@@ -90,6 +91,9 @@
             }],
             [SampleInfo initWithName:@"CollectionView2" andVCFactory:^UIViewController *{
                 return [[SWCollectionViewController2 alloc] initWithTitle:@"CollectionView"];
+            }],
+            [SampleInfo initWithName:@"横向滚动的UICollectionView" andVCFactory:^UIViewController *{
+                return [[SWHCollectionViewController alloc] initWithTitle:@"CollectionView"];
             }],
             [SampleInfo initWithName:@"NSAttributeString" andVCFactory:^UIViewController *{
                 return [[SWNSAttributeStringViewController alloc] initWithTitle:@"NSAttributeString"];

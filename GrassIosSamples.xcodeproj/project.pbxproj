@@ -58,6 +58,7 @@
 		A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928F62255BEE2500D82EF3 /* CustomView.m */; };
 		A4928FA6255CDF6000D82EF3 /* QLReCord.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928FA5255CDF6000D82EF3 /* QLReCord.m */; };
 		A4928FB6255CE1C900D82EF3 /* QLRecordTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A4928FB5255CE1C900D82EF3 /* QLRecordTest.m */; };
+		A49C53AC2A80D8F00079A32C /* SWHCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A49C53AB2A80D8F00079A32C /* SWHCollectionViewController.m */; };
 		A4D178C32A5BF0090040CD16 /* SWTableViewAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D178C22A5BF0090040CD16 /* SWTableViewAnimationViewController.m */; };
 		A4D4F232256BE3050037E1F4 /* QADIdfaManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D4F231256BE3050037E1F4 /* QADIdfaManagerTest.m */; };
 		A4DEF4D525627BE10076D5D1 /* GetIDFAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEF4D425627BE10076D5D1 /* GetIDFAViewController.m */; };
@@ -205,6 +206,8 @@
 		A4928FA4255CDF6000D82EF3 /* QLReCord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QLReCord.h; sourceTree = "<group>"; };
 		A4928FA5255CDF6000D82EF3 /* QLReCord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLReCord.m; sourceTree = "<group>"; };
 		A4928FB5255CE1C900D82EF3 /* QLRecordTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLRecordTest.m; sourceTree = "<group>"; };
+		A49C53AA2A80D8F00079A32C /* SWHCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWHCollectionViewController.h; sourceTree = "<group>"; };
+		A49C53AB2A80D8F00079A32C /* SWHCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWHCollectionViewController.m; sourceTree = "<group>"; };
 		A4D178C12A5BF0090040CD16 /* SWTableViewAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTableViewAnimationViewController.h; sourceTree = "<group>"; };
 		A4D178C22A5BF0090040CD16 /* SWTableViewAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWTableViewAnimationViewController.m; sourceTree = "<group>"; };
 		A4D4F231256BE3050037E1F4 /* QADIdfaManagerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QADIdfaManagerTest.m; sourceTree = "<group>"; };
@@ -544,6 +547,8 @@
 			children = (
 				A48AC66328A8A5A0000140DC /* SWCollectionViewController2.h */,
 				A48AC66428A8A5A0000140DC /* SWCollectionViewController2.m */,
+				A49C53AA2A80D8F00079A32C /* SWHCollectionViewController.h */,
+				A49C53AB2A80D8F00079A32C /* SWHCollectionViewController.m */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -929,6 +934,7 @@
 				A47723D927F7069100802D55 /* YZDevButtonCellItem.m in Sources */,
 				B76A0C3125CC308D00C0B714 /* UILabel+attributeTextAction.m in Sources */,
 				A48C211B28BB51C200F261C0 /* MYURLProtocol.m in Sources */,
+				A49C53AC2A80D8F00079A32C /* SWHCollectionViewController.m in Sources */,
 				0CEC0D82257B84DE0075AA5A /* SWCollectionViewController.m in Sources */,
 				A455D97C25AC714F0053CE85 /* SWWKWebViewController.m in Sources */,
 				A47723D827F7069100802D55 /* YZDevRow.m in Sources */,
