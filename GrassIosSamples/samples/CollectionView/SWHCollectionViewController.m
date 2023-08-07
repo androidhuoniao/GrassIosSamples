@@ -8,6 +8,9 @@
 
 #import "UILabelCollectionViewCell.h"
 #import "SWHCollectionViewController.h"
+#import "CollectionViewFlowTopLayout.h"
+
+//static NSInteger CARD_HEIGHT = 150;
 
 @interface SWHCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate>
 
@@ -15,6 +18,8 @@
 @property (nonatomic, strong) UILabel *dynamicAdButton;
 @property (nonatomic, strong) NSMutableArray<NSString *> *data;
 @property (nonatomic, assign) NSIndexPath *currentIndexPath;
+@property (nonatomic, assign) NSInteger card_height;
+@property (nonatomic, assign) NSInteger card_width;
 
 @end
 
@@ -22,6 +27,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _card_height = 150;
+    _card_width = self.view.bounds.size.width - 16;
     [self.view addSubview:[self collectionView]];
     [self insertButton];
 }
@@ -38,9 +45,16 @@
 
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
-        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        UICollectionViewFlowLayout *layout = [[CollectionViewFlowTopLayout alloc] init];
+        [layout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+        layout.minimumLineSpacing = 8;
+        layout.minimumInteritemSpacing = 8;
+        layout.sectionInset = UIEdgeInsetsMake(0, 16, 0, 0);
         _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+        _collectionView.showsHorizontalScrollIndicator = NO;
         [_collectionView registerClass:[UILabelCollectionViewCell class] forCellWithReuseIdentifier:@"UILabelCollectionViewCell"];
+        CGSize contentViewSize = self.view.bounds.size;
+        _collectionView.frame = CGRectMake(0, 30, contentViewSize.width, self.card_height);
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
         _collectionView.pagingEnabled = YES;
@@ -83,7 +97,7 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(self.view.frame.size.width, self.view.frame.size.height);
+    return CGSizeMake(self.card_width, self.card_height);
 }
 
 - (void)onDynamicAdBtnClick {
@@ -111,32 +125,6 @@
 }
 
 #pragma mark - UICollectionViewDelegate
-
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView;                                               // any offset changes
-//- (void)scrollViewDidZoom:(UIScrollView *)scrollView API_AVAILABLE(ios(3.2)); // any zoom scale changes
-//
-//// called on start of dragging (may require some time and or distance to move)
-//- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView;
-//// called on finger up if the user dragged. velocity is in points/millisecond. targetContentOffset may be changed to adjust where the scroll view comes to rest
-//- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset API_AVAILABLE(ios(5.0));
-//// called on finger up if the user dragged. decelerate is true if it will continue moving afterwards
-//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate;
-//
-//- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView;   // called on finger up as we are moving
-//- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;      // called when scroll view grinds to a halt
-//
-//- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView; // called when setContentOffset/scrollRectVisible:animated: finishes. not called if not animating
-//
-//- (nullable UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView;     // return a view that will be scaled. if delegate returns nil, nothing happens
-//- (void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(nullable UIView *)view API_AVAILABLE(ios(3.2)); // called before the scroll view begins zooming its content
-//- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(nullable UIView *)view atScale:(CGFloat)scale; // scale between minimum and maximum. called after any 'bounce' animations
-//
-//- (BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView;   // return a yes if you want to scroll to the top. if not defined, assumes YES
-//- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView;      // called when scrolling animation finished. may be called immediately if already at top
-//
-///* Also see -[UIScrollView adjustedContentInsetDidChange]
-// */
-//- (void)scrollViewDidChangeAdjustedContentInset:(UIScrollView *)scrollView API_AVAILABLE(ios(11.0), tvos(11.0));
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGPoint scrollVelocity = [scrollView.panGestureRecognizer velocityInView:scrollView.superview];
