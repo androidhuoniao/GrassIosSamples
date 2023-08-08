@@ -9,8 +9,8 @@
 #import "UILabelCollectionViewCell.h"
 #import "SWHCollectionViewController.h"
 #import "CollectionViewFlowTopLayout.h"
-
-//static NSInteger CARD_HEIGHT = 150;
+#import "CollectionViewSwipeCenterFlowLayout.h"
+#import "CollectionViewPagingAndCenterFlowLayout.h"
 
 @interface SWHCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate>
 
@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _card_height = 150;
-    _card_width = self.view.bounds.size.width - 16;
+    _card_width = self.view.bounds.size.width - 2 * 16;
     [self.view addSubview:[self collectionView]];
     [self insertButton];
 }
@@ -45,7 +45,7 @@
 
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
-        UICollectionViewFlowLayout *layout = [[CollectionViewFlowTopLayout alloc] init];
+        UICollectionViewFlowLayout *layout = [[CollectionViewPagingAndCenterFlowLayout alloc] init];
         [layout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
         layout.minimumLineSpacing = 8;
         layout.minimumInteritemSpacing = 8;
@@ -57,7 +57,7 @@
         _collectionView.frame = CGRectMake(0, 30, contentViewSize.width, self.card_height);
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
-        _collectionView.pagingEnabled = YES;
+//        _collectionView.pagingEnabled = YES;
         _collectionView.delegate = self;
     }
     return _collectionView;
@@ -133,33 +133,28 @@
     //    } else if (scrollVelocity.y < 0.0f) {
     //        NSLog(@"going up");
     //    }
-    NSLog(@"scrollViewDidScroll isDragging:%d, isDecelerating:%d, isTracking:%d decelerationRate:%f scrollVelocity:%@",scrollView.isDragging, scrollView.isDecelerating, scrollView.isTracking, scrollView.decelerationRate, NSStringFromCGPoint(scrollVelocity));
+//    NSLog(@"scrollViewDidScroll isDragging:%d, isDecelerating:%d, isTracking:%d decelerationRate:%f scrollVelocity:%@",scrollView.isDragging, scrollView.isDecelerating, scrollView.isTracking, scrollView.decelerationRate, NSStringFromCGPoint(scrollVelocity));
     
 }
 
 //called on start of dragging (may require some time and or distance to move)
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    NSLog(@"scrollViewWillBeginDragging");
-}
-
-// called on finger up if the user dragged. velocity is in points/millisecond. targetContentOffset may be changed to adjust where the scroll view comes to rest
-- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
-    NSLog(@"scrollViewWillEndDragging velocity:%@ y:%f", NSStringFromCGPoint(velocity), targetContentOffset ->y);
+//    NSLog(@"scrollViewWillBeginDragging");
 }
 
 // called on finger up if the user dragged. decelerate is true if it will continue moving afterwards
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-    NSLog(@"scrollViewDidEndDragging");
+//    NSLog(@"scrollViewDidEndDragging");
 }
 
 // called on finger up as we are moving
 - (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
-    NSLog(@"scrollViewWillBeginDecelerating");
+//    NSLog(@"scrollViewWillBeginDecelerating");
 }
 
 // called when scroll view grinds to a halt
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    NSLog(@"scrollViewDidEndDecelerating");
+//    NSLog(@"scrollViewDidEndDecelerating");
 }
 
 

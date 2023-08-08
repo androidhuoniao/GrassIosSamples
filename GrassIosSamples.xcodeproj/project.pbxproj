@@ -22,6 +22,9 @@
 		0C5A96D7255AB42A00C653AF /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A96D6255AB42A00C653AF /* SampleViewController.m */; };
 		0CEC0D82257B84DE0075AA5A /* SWCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC0D81257B84DE0075AA5A /* SWCollectionViewController.m */; };
 		5CB386018485DAA39A905B31 /* Pods_GrassIosSamplesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8788A65E29FF1DBA8B7EE070 /* Pods_GrassIosSamplesTests.framework */; };
+		A4020BC82A8236BB0026BB32 /* SWHCollectionViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = A4020BC72A8236BB0026BB32 /* SWHCollectionViewController2.m */; };
+		A4020BCB2A82635A0026BB32 /* CollectionViewPagingAndCenterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A4020BCA2A82635A0026BB32 /* CollectionViewPagingAndCenterFlowLayout.m */; };
+		A4020BCE2A82646B0026BB32 /* CollectionViewSwipeCenterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A4020BCD2A82646B0026BB32 /* CollectionViewSwipeCenterFlowLayout.m */; };
 		A405A1B7259989040019A853 /* SWUILableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A405A1B6259989040019A853 /* SWUILableViewController.m */; };
 		A40EEB61298945C90044A645 /* SWTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40EEB60298945C90044A645 /* SWTimeViewController.m */; };
 		A42461B82570D86C00C643B7 /* SWHomeTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42461B72570D86C00C643B7 /* SWHomeTabBarController.m */; };
@@ -135,6 +138,12 @@
 		89010B796ACEDA1DA284A605 /* Pods-GrassIosSamplesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamplesTests.debug.xcconfig"; path = "Target Support Files/Pods-GrassIosSamplesTests/Pods-GrassIosSamplesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		97C2E44BCA1168D48213D753 /* Pods_GrassIosSamples_GrassIosSamplesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrassIosSamples_GrassIosSamplesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B21B986DD9DD4A8FC7F36D7 /* Pods-GrassIosSamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrassIosSamples.debug.xcconfig"; path = "Target Support Files/Pods-GrassIosSamples/Pods-GrassIosSamples.debug.xcconfig"; sourceTree = "<group>"; };
+		A4020BC62A8236BB0026BB32 /* SWHCollectionViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWHCollectionViewController2.h; sourceTree = "<group>"; };
+		A4020BC72A8236BB0026BB32 /* SWHCollectionViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWHCollectionViewController2.m; sourceTree = "<group>"; };
+		A4020BC92A82635A0026BB32 /* CollectionViewPagingAndCenterFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewPagingAndCenterFlowLayout.h; sourceTree = "<group>"; };
+		A4020BCA2A82635A0026BB32 /* CollectionViewPagingAndCenterFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewPagingAndCenterFlowLayout.m; sourceTree = "<group>"; };
+		A4020BCC2A82646B0026BB32 /* CollectionViewSwipeCenterFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewSwipeCenterFlowLayout.h; sourceTree = "<group>"; };
+		A4020BCD2A82646B0026BB32 /* CollectionViewSwipeCenterFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewSwipeCenterFlowLayout.m; sourceTree = "<group>"; };
 		A405A1B5259989040019A853 /* SWUILableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUILableViewController.h; sourceTree = "<group>"; };
 		A405A1B6259989040019A853 /* SWUILableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWUILableViewController.m; sourceTree = "<group>"; };
 		A40EEB5F298945C90044A645 /* SWTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWTimeViewController.h; sourceTree = "<group>"; };
@@ -554,6 +563,12 @@
 				A49C53AB2A80D8F00079A32C /* SWHCollectionViewController.m */,
 				A49C53AD2A80DB640079A32C /* CollectionViewFlowTopLayout.h */,
 				A49C53AE2A80DB640079A32C /* CollectionViewFlowTopLayout.m */,
+				A4020BC62A8236BB0026BB32 /* SWHCollectionViewController2.h */,
+				A4020BC72A8236BB0026BB32 /* SWHCollectionViewController2.m */,
+				A4020BC92A82635A0026BB32 /* CollectionViewPagingAndCenterFlowLayout.h */,
+				A4020BCA2A82635A0026BB32 /* CollectionViewPagingAndCenterFlowLayout.m */,
+				A4020BCC2A82646B0026BB32 /* CollectionViewSwipeCenterFlowLayout.h */,
+				A4020BCD2A82646B0026BB32 /* CollectionViewSwipeCenterFlowLayout.m */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -912,6 +927,7 @@
 				A48C213428BB5A4A00F261C0 /* WKWebView+SchemeHandle.m in Sources */,
 				B7524F0125A1DB61008EB751 /* SWNSAttributeStringViewController.m in Sources */,
 				B726291F25BB0A640027ECD3 /* SWUIScrollViewController.m in Sources */,
+				A4020BC82A8236BB0026BB32 /* SWHCollectionViewController2.m in Sources */,
 				A48AC66528A8A5A0000140DC /* SWCollectionViewController2.m in Sources */,
 				A469927C2579012C00B192BD /* SWSemaphoreDemo.m in Sources */,
 				B79D3A84269AFE6E00171C3B /* SWHelloAFNViewController.m in Sources */,
@@ -943,9 +959,11 @@
 				0CEC0D82257B84DE0075AA5A /* SWCollectionViewController.m in Sources */,
 				A455D97C25AC714F0053CE85 /* SWWKWebViewController.m in Sources */,
 				A47723D827F7069100802D55 /* YZDevRow.m in Sources */,
+				A4020BCE2A82646B0026BB32 /* CollectionViewSwipeCenterFlowLayout.m in Sources */,
 				A42462562570E34A00C643B7 /* SWBaseSampleListViewController.m in Sources */,
 				A42461B82570D86C00C643B7 /* SWHomeTabBarController.m in Sources */,
 				A47684502A77D72900159271 /* QADTailWithIconTextView.m in Sources */,
+				A4020BCB2A82635A0026BB32 /* CollectionViewPagingAndCenterFlowLayout.m in Sources */,
 				B72D2373265939C9006C7AF8 /* HelloFrameAndBoundsViewController.m in Sources */,
 				A42461BE2570D8C100C643B7 /* SWPureOCViewController.m in Sources */,
 				A4E3B18529C494C900BA8562 /* SWConvertRectViewController.m in Sources */,
