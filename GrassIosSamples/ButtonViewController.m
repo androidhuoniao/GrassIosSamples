@@ -27,11 +27,19 @@
                                             self.horReplayButton.frame.size.width,
                                             self.horReplayButton.frame.size.height);
     [self layoutHorReplaylButton];
+    NSLog(@"button_contentHorizontalAlignment:%ld", self.replayButton.contentHorizontalAlignment);
+    NSLog(@"button_contentVerticalAlignment:%ld", self.replayButton.contentVerticalAlignment);
+    NSLog(@"button_title.frame:%@", NSStringFromCGRect(self.replayButton.titleLabel.frame));
     NSLog(@"button_contentEdgeInsets:%@", NSStringFromUIEdgeInsets(self.replayButton.contentEdgeInsets));
     NSLog(@"button_imageEdgeInsets:%@", NSStringFromUIEdgeInsets(self.replayButton.imageEdgeInsets));
     NSLog(@"button_titleEdgeInsets:%@", NSStringFromUIEdgeInsets(self.replayButton.titleEdgeInsets));
     NSLog(@"button_image.frame:%@", NSStringFromCGRect(self.replayButton.imageView.frame));
     NSLog(@"button_title.frame:%@", NSStringFromCGRect(self.replayButton.titleLabel.frame));
+//    [self layoutReplaylButton];
+    [self layoutReplaylButton2];
+    NSLog(@"button_image.frame2:%@", NSStringFromCGRect(self.replayButton.imageView.frame));
+    NSLog(@"button_title.frame2:%@", NSStringFromCGRect(self.replayButton.titleLabel.frame));
+
 }
 
 - (void)layoutHorReplaylButton {
@@ -41,6 +49,8 @@
 }
 
 - (void)layoutReplaylButton {
+    self.replayButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    self.replayButton.contentVerticalAlignment = UIControlContentVerticalAlignmentTop;
     self.replayButton.titleLabel.backgroundColor = UIColor.redColor;
     self.replayButton.imageView.backgroundColor = UIColor.greenColor;
     CGFloat space = 6.f;
@@ -52,7 +62,12 @@
     CGFloat imageWidth = replayButtonImage.size.width;
     CGFloat titleHeight = [replayButtonTitle sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}].height;
     CGFloat imageLeft = titleWidth * 0.5;
-    imageLeft = (replayButtonWidth - imageWidth) * 0.5;
+//    imageLeft = (replayButtonWidth - imageWidth) * 0.5;
+//    self.replayButton.imageView.frame = CGRectMake(imageLeft, 0, imageWidth, imageHeight);
+//
+//    CGFloat titleLeft = (replayButtonWidth - titleWidth) / 2.f;
+//    self.replayButton.titleLabel.frame = CGRectMake(titleLeft, CGRectGetMaxY(self.replayButton.imageView.frame) + space, titleWidth, titleHeight);
+//
     [self.replayButton setImageEdgeInsets:UIEdgeInsetsMake(-(imageHeight * 0.5 + space * 0.5),
                                                            imageLeft,
                                                            imageHeight * 0.5 + space * 0.5,
@@ -66,23 +81,21 @@
 }
 
 - (void)layoutReplaylButton2 {
+    CGFloat iconAndTextSpace = 6.f;
     CGFloat replayButtonWidth = self.replayButton.frame.size.width;
     //设置水平和竖直的对齐方式
     self.replayButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     self.replayButton.contentVerticalAlignment = UIControlContentVerticalAlignmentTop;
     CGRect imageRect = self.replayButton.imageView.frame;
     CGRect titleRect = self.replayButton.titleLabel.frame;
+    CGFloat replayButtonHeight = imageRect.size.height + iconAndTextSpace + titleRect.size.height;
     CGRect buttonRect = self.replayButton.frame; //图中?1的值
     CGFloat image_l = (buttonRect.size.width - imageRect.size.width) / 2; //确定image的位置
-    self.replayButton.imageEdgeInsets = UIEdgeInsetsMake(20, image_l, -20, -image_l); //图中?2的值
+    self.replayButton.imageEdgeInsets = UIEdgeInsetsMake(0, image_l, 0, -image_l); //图中?2的值
     CGFloat title_l = imageRect.size.width - (buttonRect.size.width - titleRect.size.width) / 2; //图中?3的值
-    CGFloat title_t = imageRect.size.height + 40; //title的位置可以确定了
+    CGFloat title_t = imageRect.size.height + iconAndTextSpace; //title的位置可以确定了
     self.replayButton.titleEdgeInsets = UIEdgeInsetsMake(title_t, -title_l, -title_t, title_l); //图中?4的值
-    CGFloat button_b = titleRect.size.height + 60; //计算图中?5的值
-    CGFloat max_w = MAX(titleRect.size.width, imageRect.size.width);
-    CGFloat button_l = -(buttonRect.size.width-(max_w + 20 * 2)) / 2; //button要调整的大小确定了
-    self.replayButton.contentEdgeInsets = UIEdgeInsetsMake(0, button_l, button_b, button_l);
-    self.replayButton.bounds = CGRectMake(0, 0, replayButtonWidth, 60);
+    self.replayButton.bounds = CGRectMake(0, 0, replayButtonWidth, replayButtonHeight);
     self.replayButton.center = self.view.center;
 }
 
@@ -110,6 +123,8 @@
         UIImage *image = [UIImage imageNamed:@"player_end_btn_icon_replay"];
         [_replayButton setImage:image forState:UIControlStateNormal];
         _replayButton.backgroundColor = UIColor.grayColor;
+        _replayButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        _replayButton.contentVerticalAlignment = UIControlContentVerticalAlignmentTop;
     }
     return _replayButton;
 }
@@ -124,6 +139,8 @@
         _horReplayButton.backgroundColor = UIColor.grayColor;
         _horReplayButton.titleLabel.backgroundColor = UIColor.redColor;
         _horReplayButton.imageView.backgroundColor = UIColor.greenColor;
+        _horReplayButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        _horReplayButton.contentVerticalAlignment = UIControlContentVerticalAlignmentTop;
     }
     return _horReplayButton;
 }
