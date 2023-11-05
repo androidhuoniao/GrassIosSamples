@@ -52,6 +52,7 @@
 		A483034025A499D400561CE9 /* SWUITextViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A483033F25A499D400561CE9 /* SWUITextViewViewController.m */; };
 		A483F8BF25A3333300561CE9 /* UICustomTouchLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A483F8BE25A3333300561CE9 /* UICustomTouchLabel.m */; };
 		A483F8C525A3348000561CE9 /* SWHelloTouchEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A483F8C425A3348000561CE9 /* SWHelloTouchEventViewController.m */; };
+		A489AF232AF7A90000A1FA73 /* MHBannerCVFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A489AF222AF7A90000A1FA73 /* MHBannerCVFlowLayout.m */; };
 		A48AC66528A8A5A0000140DC /* SWCollectionViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = A48AC66428A8A5A0000140DC /* SWCollectionViewController2.m */; };
 		A48AC66A28A91AF8000140DC /* UILabelCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A48AC66928A91AF8000140DC /* UILabelCollectionViewCell.m */; };
 		A48C211B28BB51C200F261C0 /* MYURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = A48C211A28BB51C200F261C0 /* MYURLProtocol.m */; };
@@ -199,6 +200,8 @@
 		A483F8BE25A3333300561CE9 /* UICustomTouchLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICustomTouchLabel.m; sourceTree = "<group>"; };
 		A483F8C325A3348000561CE9 /* SWHelloTouchEventViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWHelloTouchEventViewController.h; sourceTree = "<group>"; };
 		A483F8C425A3348000561CE9 /* SWHelloTouchEventViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWHelloTouchEventViewController.m; sourceTree = "<group>"; };
+		A489AF212AF7A90000A1FA73 /* MHBannerCVFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHBannerCVFlowLayout.h; sourceTree = "<group>"; };
+		A489AF222AF7A90000A1FA73 /* MHBannerCVFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHBannerCVFlowLayout.m; sourceTree = "<group>"; };
 		A48AC66328A8A5A0000140DC /* SWCollectionViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWCollectionViewController2.h; sourceTree = "<group>"; };
 		A48AC66428A8A5A0000140DC /* SWCollectionViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWCollectionViewController2.m; sourceTree = "<group>"; };
 		A48AC66828A91AF8000140DC /* UILabelCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILabelCollectionViewCell.h; sourceTree = "<group>"; };
@@ -569,6 +572,8 @@
 				A4020BCA2A82635A0026BB32 /* CollectionViewPagingAndCenterFlowLayout.m */,
 				A4020BCC2A82646B0026BB32 /* CollectionViewSwipeCenterFlowLayout.h */,
 				A4020BCD2A82646B0026BB32 /* CollectionViewSwipeCenterFlowLayout.m */,
+				A489AF212AF7A90000A1FA73 /* MHBannerCVFlowLayout.h */,
+				A489AF222AF7A90000A1FA73 /* MHBannerCVFlowLayout.m */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -919,6 +924,7 @@
 				A4DEF5F0256517A30076D5D1 /* HelloNSNotificationViewController.m in Sources */,
 				B726291925B9C3650027ECD3 /* SWUIPageControlViewController.m in Sources */,
 				A48AC66A28A91AF8000140DC /* UILabelCollectionViewCell.m in Sources */,
+				A489AF232AF7A90000A1FA73 /* MHBannerCVFlowLayout.m in Sources */,
 				0C5A96AB255A876000C653AF /* ImageUIViewController.m in Sources */,
 				A4D178C32A5BF0090040CD16 /* SWTableViewAnimationViewController.m in Sources */,
 				0C5A9652255A3C1600C653AF /* AppDelegate.m in Sources */,

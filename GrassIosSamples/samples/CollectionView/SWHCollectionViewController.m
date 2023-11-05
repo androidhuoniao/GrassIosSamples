@@ -11,6 +11,7 @@
 #import "CollectionViewFlowTopLayout.h"
 #import "CollectionViewSwipeCenterFlowLayout.h"
 #import "CollectionViewPagingAndCenterFlowLayout.h"
+#import "MHBannerCVFlowLayout.h"
 
 @interface SWHCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate>
 
@@ -45,7 +46,7 @@
 
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
-        UICollectionViewFlowLayout *layout = [[CollectionViewPagingAndCenterFlowLayout alloc] init];
+        UICollectionViewFlowLayout *layout = [[MHBannerCVFlowLayout alloc] init];
         [layout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
         layout.minimumLineSpacing = 8;
         layout.minimumInteritemSpacing = 8;
