@@ -34,6 +34,7 @@
 #import "SWTableViewAnimationViewController.h"
 #import "SWHCollectionViewController.h"
 #import "SWHCollectionViewController2.h"
+#import "SWPresentViewController.h"
 
 @interface SampleListViewController () <UITableViewDataSource,UITableViewDelegate>
 @property(nonnull,nonatomic,strong) UITableView *myTableView;
@@ -109,7 +110,7 @@
                 return [[SWUITextViewViewController alloc] initWithTitle:@"UITextView"];
             }],
             [SampleInfo initWithName:@"WKWebView" andVCFactory:^UIViewController *{
-                return [[SWWKWebViewController alloc] initWithTitle:@"WKWebView"];
+                return [[SWWKWebViewController alloc] init];
             }],
             [SampleInfo initWithName:@"UIPageControl" andVCFactory:^UIViewController *{
                 return [[SWUIPageControlViewController alloc] initWithTitle:@"UIPageControl"];
@@ -144,6 +145,9 @@
             }],
             [SampleInfo initWithName:@"UITableview添加动画" andVCFactory:^UIViewController *{
                 return [[SWTableViewAnimationViewController alloc] init];
+            }],
+            [SampleInfo initWithName:@"模态打开ViewController" andVCFactory:^UIViewController *{
+                return [[SWPresentViewController alloc] init];
             }],
         ];
     }

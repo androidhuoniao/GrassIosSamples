@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,6 +34,8 @@
 		A424627A2570E99D00C643B7 /* SWTVSampleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42462792570E99D00C643B7 /* SWTVSampleListViewController.m */; };
 		A42462812570EC1100C643B7 /* SWGcdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42462802570EC1100C643B7 /* SWGcdViewController.m */; };
 		A424628D2570ED0E00C643B7 /* SWAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A424628C2570ED0E00C643B7 /* SWAlertViewController.m */; };
+		A43CFA6D2CE9F24A000ACECD /* SWPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43CFA6C2CE9F24A000ACECD /* SWPresentViewController.m */; };
+		A43CFA712CE9FAA8000ACECD /* SWPresentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43CFA702CE9FAA8000ACECD /* SWPresentedViewController.m */; };
 		A4419A7C2A6FBBE900F5D1D9 /* SWNSAttributeStringFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A4419A7B2A6FBBE900F5D1D9 /* SWNSAttributeStringFactory.m */; };
 		A44733242920A43E007E2F14 /* SWUIStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44733232920A43E007E2F14 /* SWUIStackViewController.m */; };
 		A455D97C25AC714F0053CE85 /* SWWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A455D97B25AC714F0053CE85 /* SWWKWebViewController.m */; };
@@ -163,6 +165,10 @@
 		A42462802570EC1100C643B7 /* SWGcdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWGcdViewController.m; sourceTree = "<group>"; };
 		A424628B2570ED0E00C643B7 /* SWAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWAlertViewController.h; sourceTree = "<group>"; };
 		A424628C2570ED0E00C643B7 /* SWAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWAlertViewController.m; sourceTree = "<group>"; };
+		A43CFA6B2CE9F24A000ACECD /* SWPresentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWPresentViewController.h; sourceTree = "<group>"; };
+		A43CFA6C2CE9F24A000ACECD /* SWPresentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWPresentViewController.m; sourceTree = "<group>"; };
+		A43CFA6F2CE9FAA8000ACECD /* SWPresentedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWPresentedViewController.h; sourceTree = "<group>"; };
+		A43CFA702CE9FAA8000ACECD /* SWPresentedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWPresentedViewController.m; sourceTree = "<group>"; };
 		A4419A7A2A6FBBE900F5D1D9 /* SWNSAttributeStringFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWNSAttributeStringFactory.h; sourceTree = "<group>"; };
 		A4419A7B2A6FBBE900F5D1D9 /* SWNSAttributeStringFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWNSAttributeStringFactory.m; sourceTree = "<group>"; };
 		A44733222920A43E007E2F14 /* SWUIStackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWUIStackViewController.h; sourceTree = "<group>"; };
@@ -456,6 +462,10 @@
 				A40EEB60298945C90044A645 /* SWTimeViewController.m */,
 				A4E3B18329C494C900BA8562 /* SWConvertRectViewController.h */,
 				A4E3B18429C494C900BA8562 /* SWConvertRectViewController.m */,
+				A43CFA6B2CE9F24A000ACECD /* SWPresentViewController.h */,
+				A43CFA6C2CE9F24A000ACECD /* SWPresentViewController.m */,
+				A43CFA6F2CE9FAA8000ACECD /* SWPresentedViewController.h */,
+				A43CFA702CE9FAA8000ACECD /* SWPresentedViewController.m */,
 			);
 			path = samples;
 			sourceTree = "<group>";
@@ -926,7 +936,9 @@
 				A48AC66A28A91AF8000140DC /* UILabelCollectionViewCell.m in Sources */,
 				A489AF232AF7A90000A1FA73 /* MHBannerCVFlowLayout.m in Sources */,
 				0C5A96AB255A876000C653AF /* ImageUIViewController.m in Sources */,
+				A43CFA712CE9FAA8000ACECD /* SWPresentedViewController.m in Sources */,
 				A4D178C32A5BF0090040CD16 /* SWTableViewAnimationViewController.m in Sources */,
+				A43CFA6D2CE9F24A000ACECD /* SWPresentViewController.m in Sources */,
 				0C5A9652255A3C1600C653AF /* AppDelegate.m in Sources */,
 				A47723DA27F7069100802D55 /* YZDevButtonCell.m in Sources */,
 				A4928F63255BEE2500D82EF3 /* CustomView.m in Sources */,
@@ -1149,7 +1161,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8G9J4VGYY3;
 				INFOPLIST_FILE = GrassIosSamples/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1169,7 +1181,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8G9J4VGYY3;
 				INFOPLIST_FILE = GrassIosSamples/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
